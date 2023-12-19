@@ -5,23 +5,23 @@ import "./ArtworkCard.scss";
 function ArtworkCard() {
   return (
     <section>
-      <div className="card">
+      <article className="card">
         <img
           src={Piton}
           alt="dessin du Piton de la fournaise"
           className="artwork"
         />
         <h2 className="artworkTitle">Le Piton</h2>
-      </div>
+      </article>
 
-      <div className="card">
+      <article className="card">
         <img
           src={LeTampon}
           alt="dessin du Piton de la fournaise"
           className="artwork"
         />
         <h2 className="artworkTitle">Le Tampon</h2>
-      </div>
+      </article>
     </section>
   );
 }

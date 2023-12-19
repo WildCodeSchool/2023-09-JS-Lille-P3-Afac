@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { GlobalContextProvider } from "./components/Context/GlobalContextProvider";
 import App from "./App";
 import Gallery from "./components/Gallery/Gallery";
+import Artists from "./components/Artists/Artists";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/Gallery",
     element: <Gallery />,
+  },
+  {
+    path: "/Artists",
+    element: <Artists />,
   },
 ]);
 
