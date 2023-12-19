@@ -13,7 +13,7 @@ function Gallery() {
         </button>
       </section>
       <section className="cardContainer">
-        <ArtworkCard ClassName="card" />
+        <ArtworkCard />
       </section>
     </main>
   );

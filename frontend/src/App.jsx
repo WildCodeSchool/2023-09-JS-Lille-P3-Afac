@@ -1,8 +1,5 @@
 import "./App.scss";
-import Artists from "./components/Artists/Artists";
 
-function App() {
-  return <Artists />;
-}
+function App() {}
 
 export default App;
