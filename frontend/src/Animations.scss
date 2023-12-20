@@ -1,0 +1,8 @@
+@keyframes fade-in {
+  from {
+    opacity: $opacity-none;
+  }
+  to {
+    opacity: $opacity-normal;
+  }
+}

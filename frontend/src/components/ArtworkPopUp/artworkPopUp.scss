@@ -1,0 +1,112 @@
+@import "./src/Variables.scss";
+@import "./src/Animations.scss";
+
+.popUp {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 1rem auto;
+  width: 90%;
+  height: auto;
+  background-color: $white;
+  box-shadow: 0 0 5px $black;
+  opacity: $opacity-none;
+  animation: 0.5s ease-in 0.2s 1 normal forwards running fade-in;
+
+  &__nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+
+    &__button {
+      background-color: $blueColor;
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 50%;
+      border: none;
+      margin-right: 0.5rem;
+      background-image: url(./src/assets/cross.svg);
+      background-size: cover;
+      cursor: pointer;
+    }
+
+    &__label {
+      width: 0;
+      height: 0;
+      opacity: $opacity-none;
+    }
+  }
+
+  &__content {
+    &__img {
+      display: block;
+      width: 90%;
+      height: auto;
+      margin: auto;
+      box-shadow: 0 0 2px $black;
+    }
+
+    &__info {
+      width: 90%;
+      margin: 0.5rem auto;
+
+      &__title {
+        margin: 0.2rem 0;
+        font-family: $fontBold;
+        font-size: 1.5rem;
+      }
+
+      &__details {
+        margin: 0.2rem 0;
+        font-family: $fontItalic;
+      }
+
+      &__fact {
+        padding: 0;
+        list-style: none;
+        margin: 0.5rem 0;
+        text-align: center;
+      }
+
+      &__artist {
+        text-align: right;
+        font-family: $font;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .popUp__content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    &__img {
+      width: 50%;
+      margin: 1rem;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      padding: 1rem 2rem;
+
+      &__title {
+        text-align: left;
+      }
+
+      &__details {
+        text-align: left;
+      }
+
+      &__fact {
+        text-align: left;
+      }
+    }
+  }
+}

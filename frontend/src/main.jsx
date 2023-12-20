@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { GlobalContextProvider } from "./components/Context/GlobalContextProvider";
+import { GlobalContextProvider } from "./components/contexts/GlobalContextProvider";
 import App from "./App";
 
 const router = createBrowserRouter([
