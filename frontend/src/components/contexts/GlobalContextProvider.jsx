@@ -92,9 +92,60 @@ function GlobalContextProvider({ children }) {
       artist: "Auguste Reblanc",
     },
   ]);
+
+  const [artists, setArtists] = useState([
+    {
+      id: 1,
+      name: "Salvador Dall-E",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
+    },
+    {
+      id: 2,
+      name: "Pablo Picassiettes",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
+    },
+    {
+      id: 3,
+      name: "Frida Kahloops",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
+    },
+    {
+      id: 4,
+      name: "Claude Monnaie",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
+    },
+    {
+      id: 5,
+      name: "Auguste Reblanc",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
+    },
+    {
+      id: 6,
+      name: "Marc Chacaille",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
+    },
+    {
+      id: 7,
+      name: "Eugène Delabière",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
+    },
+    {
+      id: 8,
+      name: "Gustave Klimteastwood",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
+    },
+  ]);
   const contextValue = useMemo(() => {
-    return { artwork, setArtwork };
-  }, [artwork]);
+    return { artwork, setArtwork, artists, setArtists };
+  }, [artwork, artists]);
 
   return (
     <GlobalContext.Provider value={contextValue}>
