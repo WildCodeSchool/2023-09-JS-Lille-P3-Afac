@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: $white;
   transition: 1s;
   justify-content: flex-end;
   align-items: flex-end;
@@ -131,5 +131,5 @@
 .carousel-third-slide-visit_button {
   top: 89%;
   right: 29%;
-  background-color: rgba(100, 43, 55, 1);
+  background-color: $redColor;
 }
