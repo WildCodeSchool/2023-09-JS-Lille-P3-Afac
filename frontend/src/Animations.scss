@@ -1,12 +1,3 @@
-@keyframes fade-in {
-  from {
-    opacity: $opacity-none;
-  }
-  to {
-    opacity: $opacity-full;
-  }
-}
-
 @keyframes overlayShow {
   from {
     opacity: $opacity-none;
