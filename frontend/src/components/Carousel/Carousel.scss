@@ -34,14 +34,11 @@
 }
 
 .alice-carousel .alice-carousel__dots-item.__active {
-  background-color: black;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
+  background-color: $black;
 }
 
-.alice-carousel .alice-carousel__dots-item:not(.__active) {
+.alice-carousel .alice-carousel__dots-item:not(.__active),
+.alice-carousel__dots-item.__active {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
@@ -87,7 +84,7 @@
   font-size: 15px;
 }
 .carousel-first-slide-visit_container {
-  background-color: rgba($blueColor, 0.8);
+  background-color: rgba($blueColor, $opacity-high);
   top: 20vh;
   left: 5vw;
 }
@@ -103,7 +100,7 @@
 }
 
 .carousel-second-slide-visit_container {
-  background-color: rgba($redColor, 0.8);
+  background-color: rgba($redColor, $opacity-high);
   top: 20vh;
   left: 35vw;
 }
@@ -119,7 +116,7 @@
 }
 
 .carousel-third-slide-visit_container {
-  background-color: rgba($purpleColor, 0.8);
+  background-color: rgba($purpleColor, $opacity-high);
   top: 20vh;
   left: 5vw;
 }
