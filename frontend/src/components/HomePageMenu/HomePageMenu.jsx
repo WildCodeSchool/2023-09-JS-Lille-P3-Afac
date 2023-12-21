@@ -2,7 +2,7 @@ import "./HomePageMenu.scss";
 
 function HomePageMenu() {
   return (
-    <main className="homepage-menu-container">
+    <nav className="homepage-menu-container">
       <section className="homepage-menu-buttons-container">
         <button
           type="button"
@@ -23,7 +23,7 @@ function HomePageMenu() {
           Nos artistes
         </button>
       </section>
-    </main>
+    </nav>
   );
 }
 
