@@ -1,17 +1,38 @@
 @import "./src/Variables.scss";
 @import "./src/Animations.scss";
 
-.popUp {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 1rem auto;
+.dialogOverlay {
+  background-color: rgb(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dialogContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 90%;
+  max-width: 1000px;
+  max-height: 100%;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: unset;
+  overflow-y: auto;
+}
+
+.dialogContent:focus {
+  outline: none;
+}
+
+.popUp {
+  margin: 1rem auto;
+  width: 100%;
   height: auto;
   background-color: $white;
   box-shadow: 0 0 5px $black;
-  opacity: $opacity-none;
-  animation: 0.5s ease-in 0.2s 1 normal forwards running fade-in;
+  opacity: $opacity-normal;
+  overflow-x: hidden;
 
   &__nav {
     display: flex;
@@ -22,8 +43,8 @@
 
     &__button {
       background-color: $blueColor;
-      width: 1.3rem;
-      height: 1.3rem;
+      width: 1.5rem;
+      height: 1.5rem;
       border-radius: 50%;
       border: none;
       margin-right: 0.5rem;
@@ -36,6 +57,7 @@
       width: 0;
       height: 0;
       opacity: $opacity-none;
+      z-index: -1;
     }
   }
 
@@ -50,16 +72,19 @@
 
     &__info {
       width: 90%;
-      margin: 0.5rem auto;
+      padding: 1rem 1.5rem;
+
+      &__title,
+      &__details {
+        margin: 0.2rem 0;
+      }
 
       &__title {
-        margin: 0.2rem 0;
         font-family: $fontBold;
         font-size: 1.5rem;
       }
 
       &__details {
-        margin: 0.2rem 0;
         font-family: $fontItalic;
       }
 
@@ -74,6 +99,7 @@
         text-align: right;
         font-family: $font;
         font-size: 1rem;
+        margin-bottom: 0;
       }
     }
   }
@@ -93,17 +119,12 @@
     &__info {
       display: flex;
       flex-direction: column;
+      justify-content: space-around;
       width: 50%;
       padding: 1rem 2rem;
 
-      &__title {
-        text-align: left;
-      }
-
-      &__details {
-        text-align: left;
-      }
-
+      &__title,
+      &__details,
       &__fact {
         text-align: left;
       }

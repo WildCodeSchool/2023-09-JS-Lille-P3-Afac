@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 const GlobalContext = createContext();
 
 function GlobalContextProvider({ children }) {
-  const [popUpDisplay, setPopUpDisplay] = useState(false);
   const [artwork, setArtwork] = useState([
     {
       id: 1,
@@ -20,6 +19,10 @@ function GlobalContextProvider({ children }) {
         },
         {
           id: 2,
+          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
+        },
+        {
+          id: 3,
           fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
         },
       ],
@@ -90,8 +93,8 @@ function GlobalContextProvider({ children }) {
     },
   ]);
   const contextValue = useMemo(() => {
-    return { artwork, setArtwork, popUpDisplay, setPopUpDisplay };
-  }, [artwork, popUpDisplay]);
+    return { artwork, setArtwork };
+  }, [artwork]);
 
   return (
     <GlobalContext.Provider value={contextValue}>
