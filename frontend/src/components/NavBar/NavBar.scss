@@ -10,8 +10,16 @@
   background-color: #406c82;
   color: white;
 }
+.navbar__logo {
+  color: white;
+}
 .navbar__links {
   display: flex;
+  list-style-type: none;
+}
+
+ul .navbar__links {
+  margin-left: 15.63vw;
 }
 .navbar__link {
   padding: 0 0.3rem;
@@ -22,19 +30,22 @@
   height: 40px;
   background: transparent;
   border: none;
-  color: inherit;
+  color: white;
+}
+a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 767px) {
   .navbar__links {
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     position: fixed;
     right: -100vw;
     bottom: 0;
     width: 0;
-    height: 100vh;
+    height: 85vh;
     padding: 1rem;
     visibility: hidden;
     background-color: #406c82;

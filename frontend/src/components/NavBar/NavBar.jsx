@@ -1,7 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable react/button-has-type */
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.scss";
 
 function Nav() {
@@ -13,30 +11,37 @@ function Nav() {
 
   return (
     <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
-      <a className="navbar__logo">Logo</a>
+      <Link href="icon" className="navbar__logo">
+        AFAC 974
+      </Link>
       <ul className="navbar__links">
         <li className="navbar__item slideInDown-1">
-          <a href="" className="navbar__link">
+          <Link href="s'inscrire" className="navbar__link">
             S'inscrire
-          </a>
+          </Link>
         </li>
         <li className="navbar__item slideInDown-2">
-          <a href="" className="navbar__link">
+          <Link href="profil" className="navbar__link">
             Profil
-          </a>
+          </Link>
         </li>
         <li className="navbar__item slideInDown-3">
-          <a href="" className="navbar__link">
+          <Link href="a propos" className="navbar__link">
             A Propos
-          </a>
+          </Link>
         </li>
         <li className="navbar__item slideInDown-4">
-          <a href="" className="navbar__link">
+          <Link href="contact" className="navbar__link">
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
-      <button className="navbar__burger" onClick={handleShowLinks}>
+      <button
+        type="button"
+        aria-label="menu-burger"
+        className="navbar__burger"
+        onClick={handleShowLinks}
+      >
         <span className="burger-bar" />
       </button>
     </nav>

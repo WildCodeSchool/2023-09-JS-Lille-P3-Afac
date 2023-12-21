@@ -1,5 +1,4 @@
 import "./App.scss";
-import "./components/NavBar/NavBar.scss";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
