@@ -1,18 +1,17 @@
 import { useGlobalContext } from "../Context/GlobalContextProvider";
 import "./Gallery.scss";
 import ArtworkCard from "./ArtworkCard";
+import FilterButton from "./FilterButton";
 
 function Gallery() {
   const { artwork } = useGlobalContext();
+  const { category } = useGlobalContext();
   return (
     <main className="galleryContainer">
       <section className="buttonContainer">
-        <button type="button" className="artworkType">
-          Dessins
-        </button>
-        <button type="button" className="artworkType">
-          Aquarelles
-        </button>
+        {category.map((e) => (
+          <FilterButton name={e.name} />
+        ))}
       </section>
       <section className="cardContainer">
         {artwork.map((e) => (

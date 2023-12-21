@@ -36,10 +36,19 @@ function GlobalContextProvider({ children }) {
       img: "./src/assets/LeTampon.png",
     },
   ];
+  const category = [
+    {
+      name: "Dessin",
+    },
+    {
+      name: "Aquarelle",
+    },
+  ];
   const contextValue = useMemo(() => {
     return {
       artists,
       artwork,
+      category,
     };
   });
 
