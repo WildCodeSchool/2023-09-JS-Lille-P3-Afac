@@ -1,5 +1,5 @@
 import Carousel from "../Carousel/Carousel";
-import "./HomePage.scss";
+import "./Homepage.scss";
 
 function HomePage() {
   return <Carousel />;
