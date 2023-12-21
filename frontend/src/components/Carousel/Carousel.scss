@@ -87,7 +87,7 @@
   font-size: 15px;
 }
 .carousel-first-slide-visit_container {
-  background-color: rgba(64, 108, 130, 0.8);
+  background-color: rgba($blueColor, 0.8);
   top: 20vh;
   left: 5vw;
 }
@@ -103,7 +103,7 @@
 }
 
 .carousel-second-slide-visit_container {
-  background-color: rgba(100, 43, 55, 0.8);
+  background-color: rgba($redColor, 0.8);
   top: 20vh;
   left: 35vw;
 }
@@ -119,7 +119,7 @@
 }
 
 .carousel-third-slide-visit_container {
-  background-color: rgba(106, 96, 122, 0.8);
+  background-color: rgba($purpleColor, 0.8);
   top: 20vh;
   left: 5vw;
 }
