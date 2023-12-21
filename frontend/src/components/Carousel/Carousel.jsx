@@ -35,7 +35,7 @@ function Carousel() {
           />
         </AliceCarousel>
         {currentSlide === 0 && (
-          <section className="carousel-slide-visit_container carousel-first-slide-visit_container">
+          <article className="carousel-slide-visit_container carousel-first-slide-visit_container">
             <h1 className="carousel-slide-visit_text carousel-first-slide-visit_text">
               L'aquarelle réunionnaise
             </h1>
@@ -45,10 +45,10 @@ function Carousel() {
             >
               Visiter
             </button>
-          </section>
+          </article>
         )}
         {currentSlide === 1 && (
-          <section className="carousel-slide-visit_container carousel-second-slide-visit_container">
+          <article className="carousel-slide-visit_container carousel-second-slide-visit_container">
             <h1 className="carousel-slide-visit_text carousel-second-slide-visit_text">
               Le dessin réunionnais
             </h1>
@@ -58,11 +58,11 @@ function Carousel() {
             >
               Visiter
             </button>
-          </section>
+          </article>
         )}
 
         {currentSlide === 2 && (
-          <section className="carousel-slide-visit_container carousel-third-slide-visit_container">
+          <article className="carousel-slide-visit_container carousel-third-slide-visit_container">
             <h1 className="carousel-slide-visit_text carousel-third-slide-visit_text">
               Une âme d'artiste ?
             </h1>
@@ -72,10 +72,10 @@ function Carousel() {
             >
               Publier
             </button>
-          </section>
+          </article>
         )}
         {currentSlide === 3 && (
-          <section className="carousel-slide-visit_container carousel-first-slide-visit_container">
+          <article className="carousel-slide-visit_container carousel-first-slide-visit_container">
             <h1 className="carousel-slide-visit_text carousel-first-slide-visit_text">
               L'aquarelle réunionnaise
             </h1>
@@ -85,7 +85,7 @@ function Carousel() {
             >
               Visiter
             </button>
-          </section>
+          </article>
         )}
       </section>
       <article className="hometext-container">

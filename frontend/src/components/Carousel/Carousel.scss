@@ -26,9 +26,8 @@
 .alice-carousel__dots {
   position: absolute;
   bottom: 26vh;
-  left: 35%;
+  left: 35vw;
   display: flex;
-  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -48,10 +47,10 @@
 .hometext-container {
   position: absolute;
   background-color: $white;
-  opacity: 0.8;
+  opacity: $opacity-high;
   top: 70vh;
   left: 20vw;
-  width: 80%;
+  width: 80vw;
   flex-direction: row-reverse;
 }
 .hometext {
