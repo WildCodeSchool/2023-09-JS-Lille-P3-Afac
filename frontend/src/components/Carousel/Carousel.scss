@@ -1,0 +1,135 @@
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+@import "./src/Variables.scss";
+
+.carousel-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  transition: 1s;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.carousel-item {
+  height: 100vh;
+  min-width: 100vw;
+  object-fit: cover;
+}
+
+.alice-carousel__prev-btn {
+  display: none;
+}
+.alice-carousel__next-btn {
+  display: none;
+}
+
+.alice-carousel__dots {
+  position: absolute;
+  bottom: 26vh;
+  left: 35%;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.alice-carousel .alice-carousel__dots-item.__active {
+  background-color: black;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.alice-carousel .alice-carousel__dots-item:not(.__active) {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.hometext-container {
+  position: absolute;
+  background-color: $white;
+  opacity: 0.8;
+  top: 75vh;
+  left: 20vw;
+  width: 80%;
+  flex-direction: row-reverse;
+}
+.hometext {
+  font-family: $fontBold;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  text-align: center;
+  font-size: 14.5px;
+}
+
+.carousel-slide-visit_container {
+  position: absolute;
+  width: 60vw;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.carousel-slide-visit_text {
+  color: $white;
+  font-family: $fontBold;
+}
+
+.carousel-slide-visit_button {
+  all: unset;
+  font-family: $fontBold;
+  color: $white;
+  position: absolute;
+  padding: 0.563rem 1.375rem;
+  font-size: 15px;
+}
+.carousel-first-slide-visit_container {
+  background-color: rgba(64, 108, 130, 0.8);
+  top: 20vh;
+  left: 5vw;
+}
+
+.carousel-first-slide-visit_text {
+  font-size: 28px;
+}
+
+.carousel-first-slide-visit_button {
+  top: 89%;
+  right: 28%;
+  background-color: $redColor;
+}
+
+.carousel-second-slide-visit_container {
+  background-color: rgba(100, 43, 55, 0.8);
+  top: 20vh;
+  left: 35vw;
+}
+
+.carousel-second-slide-visit_text {
+  font-size: 28px;
+}
+
+.carousel-second-slide-visit_button {
+  top: 89%;
+  right: 29%;
+  background-color: $greyColor;
+}
+
+.carousel-third-slide-visit_container {
+  background-color: rgba(106, 96, 122, 0.8);
+  top: 20vh;
+  left: 5vw;
+}
+
+.carousel-third-slide-visit_text {
+  font-size: 30px;
+}
+
+.carousel-third-slide-visit_button {
+  top: 89%;
+  right: 29%;
+  background-color: rgba(100, 43, 55, 1);
+}
