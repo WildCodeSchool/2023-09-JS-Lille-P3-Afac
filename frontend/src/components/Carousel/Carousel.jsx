@@ -76,7 +76,7 @@ function Carousel() {
         )}
         {currentSlide === 3 && (
           <section className="carousel-slide-visit_container carousel-first-slide-visit_container">
-            <h1 className="carousel-slide-visit_text">
+            <h1 className="carousel-slide-visit_text carousel-first-slide-visit_text">
               L'aquarelle réunionnaise
             </h1>
             <button

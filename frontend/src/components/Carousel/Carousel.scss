@@ -11,7 +11,7 @@
   align-items: flex-end;
 }
 .carousel-item {
-  height: 100vh;
+  height: 89.5vh;
   min-width: 100vw;
   object-fit: cover;
 }
@@ -52,7 +52,7 @@
   position: absolute;
   background-color: $white;
   opacity: 0.8;
-  top: 75vh;
+  top: 70vh;
   left: 20vw;
   width: 80%;
   flex-direction: row-reverse;
@@ -93,7 +93,7 @@
 }
 
 .carousel-first-slide-visit_text {
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .carousel-first-slide-visit_button {
