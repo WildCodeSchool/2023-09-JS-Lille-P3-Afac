@@ -1,18 +1,18 @@
 import PropTypes from "prop-types";
 import * as Dialog from "@radix-ui/react-dialog";
-import "./artworkModal.scss";
+import "../ArtworkModal/artworkModal.scss";
 import { useGlobalContext } from "../contexts/GlobalContextProvider";
 
-function ArtworkModal({ id, title, date, technique, format, src, artistId }) {
+function ArtistModal({ id }) {
   const { artworks, artists } = useGlobalContext();
-  const { facts } = artworks.find((element) => element.id === id);
-  const artist = artists.find((e) => e.id === artistId);
+  const artist = artists.find((e) => e.id === id);
+  const arts = artworks.filter((e) => e.artistId === id);
 
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
         <button type="button" className="Button violet">
-          {title}
+          {artist.name}
         </button>
       </Dialog.Trigger>
       <Dialog.Portal>
@@ -33,21 +33,27 @@ function ArtworkModal({ id, title, date, technique, format, src, artistId }) {
               </Dialog.Close>
             </nav>
             <section className="popUp__content">
-              <img src={src} alt="" className="popUp__content__img" />
+              <img src={artist.src} alt="" className="popUp__content__img" />
               <hgroup className="popUp__content__info">
                 <header>
                   <Dialog.Title className="popUp__content__info__title">
-                    {title}
+                    {artist.name}
                   </Dialog.Title>
-                  <Dialog.Description className="popUp__content__info__details">{`${date} - ${technique} - ${format}`}</Dialog.Description>
+                  <Dialog.Description className="popUp__content__info__details">
+                    {artist.biography}
+                  </Dialog.Description>
                 </header>
-                {facts.map((element) => (
-                  <p key={element.id} className="popUp__content__info__fact">
-                    {element.fact}
-                  </p>
-                ))}
-                <h3 className="popUp__content__info__artist">{artist.name}</h3>
               </hgroup>
+            </section>
+            <section>
+              <h3 className="popUp__content__info__artist">Ses Oeuvres</h3>
+              <ul>
+                {arts.map((artwork) => (
+                  <li>
+                    <img src={artwork.src} alt="" />
+                  </li>
+                ))}
+              </ul>
             </section>
           </article>
         </Dialog.Content>
@@ -56,14 +62,8 @@ function ArtworkModal({ id, title, date, technique, format, src, artistId }) {
   );
 }
 
-ArtworkModal.propTypes = {
+ArtistModal.propTypes = {
   id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  technique: PropTypes.string.isRequired,
-  format: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired,
-  artistId: PropTypes.number.isRequired,
 };
 
-export default ArtworkModal;
+export default ArtistModal;
