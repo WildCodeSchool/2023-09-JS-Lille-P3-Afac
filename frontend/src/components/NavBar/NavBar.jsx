@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.scss";
 
-function Nav() {
+function NavBar() {
   return (
     <nav className="navbar">
       <Link to="/" className="navbarLogo">
@@ -24,4 +24,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default NavBar;
