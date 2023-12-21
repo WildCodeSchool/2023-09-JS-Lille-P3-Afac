@@ -1,0 +1,46 @@
+@import "./src/Variables.scss";
+
+.homepage-menu-container::before {
+  content: "";
+  display: block;
+  height: 5vh;
+  width: 100vw;
+  background-color: $blueColor;
+}
+
+.homepage-menu-container {
+  background-image: url("./src/assets/menupaysage.png");
+  height: 100vh;
+  background-position: top;
+}
+
+.homepage-menu-buttons-container {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+
+  align-items: center;
+}
+
+.homepage-menu-button {
+  all: unset;
+  font-family: $fontBold;
+  color: $white;
+  height: 10vh;
+  width: 70vw;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.homepage-menu-museum-button {
+  background-color: rgba($greyColor, 0.8);
+  margin-top: 15vh;
+}
+.homepage-menu-gallery-button {
+  background-color: rgba($redColor, 0.8);
+  margin: 13vh 0 13vh 0;
+}
+.homepage-menu-artists-button {
+  background-color: rgba($blueColor, 0.8);
+}
