@@ -34,13 +34,13 @@
 }
 
 .homepage-menu-museum-button {
-  background-color: rgba($greyColor, 0.8);
+  background-color: rgba($greyColor, $opacity-high);
   margin-top: 15vh;
 }
 .homepage-menu-gallery-button {
-  background-color: rgba($redColor, 0.8);
+  background-color: rgba($redColor, $opacity-high);
   margin: 13vh 0 13vh 0;
 }
 .homepage-menu-artists-button {
-  background-color: rgba($blueColor, 0.8);
+  background-color: rgba($blueColor, $opacity-high);
 }
