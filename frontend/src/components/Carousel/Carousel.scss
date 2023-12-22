@@ -11,7 +11,7 @@
   align-items: flex-end;
 }
 .carousel-item {
-  height: 89.5vh;
+  height: 100vh;
   min-width: 100vw;
   object-fit: cover;
 }
@@ -23,8 +23,8 @@
 
 .alice-carousel__dots {
   position: absolute;
-  bottom: 26vh;
-  left: 35vw;
+  bottom: 26%;
+  left: 35%;
   display: flex;
   padding: 0;
   margin: 0;
