@@ -29,7 +29,7 @@ function ArtworkModal({
               <Dialog.Close asChild>
                 <button
                   type="button"
-                  aria-label="Close"
+                  aria-label="Fermer"
                   className="popUp__nav__button"
                 />
               </Dialog.Close>
