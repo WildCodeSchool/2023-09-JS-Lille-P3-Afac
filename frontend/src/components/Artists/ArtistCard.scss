@@ -1,0 +1,20 @@
+@import "../../Variables.scss";
+
+.artistCard {
+  flex-direction: column;
+  width: 9rem;
+  height: 17rem;
+}
+
+.artistPic {
+  width: 9rem;
+  height: 13rem;
+}
+
+.artistName {
+  font-family: $fontBold;
+  text-align: center;
+  font-size: 0.9rem;
+  width: 9rem;
+  height: 2rem;
+}

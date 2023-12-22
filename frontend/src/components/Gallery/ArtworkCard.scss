@@ -1,0 +1,12 @@
+@import "../../Variables.scss";
+
+.artwork {
+  width: 21rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $fontBold;
+}
