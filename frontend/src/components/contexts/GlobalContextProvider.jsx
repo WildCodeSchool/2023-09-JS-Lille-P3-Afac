@@ -12,6 +12,7 @@ function GlobalContextProvider({ children }) {
       date: "2023",
       format: "1024 x 1024",
       src: "./src/assets/images/RougailSaucisse.jpg",
+      alt: "Aquarelle 'Rougail-Saucisses' par Salvador Dall-E",
       facts: [
         {
           id: 1,
@@ -35,6 +36,7 @@ function GlobalContextProvider({ children }) {
       date: "2020",
       format: "1024 x 1024",
       src: "./src/assets/images/Reunion.jpg",
+      alt: "Aquarelle 'Reunion' par Pablo Picassiettes",
       facts: [
         {
           id: 1,
@@ -54,6 +56,7 @@ function GlobalContextProvider({ children }) {
       date: "2012",
       format: "1790 x 1276",
       src: "./src/assets/images/LeTampon.png",
+      alt: "Aquarelle 'Le Tampon' par Eugène Delabière",
       facts: [],
       artistId: 7,
     },
@@ -64,6 +67,7 @@ function GlobalContextProvider({ children }) {
       date: "2008",
       format: "1792 x 1220",
       src: "./src/assets/images/Abris-côtier.png",
+      alt: "Aquarelle 'Abris-côtier' par Marc Chacaille",
       facts: [
         {
           id: 1,
@@ -79,6 +83,7 @@ function GlobalContextProvider({ children }) {
       date: "2004",
       format: "1282 x 852",
       src: "./src/assets/images/Piton.png",
+      alt: "Aquarelle 'Le Piton' par Auguste Reblanc",
       facts: [
         {
           id: 1,
