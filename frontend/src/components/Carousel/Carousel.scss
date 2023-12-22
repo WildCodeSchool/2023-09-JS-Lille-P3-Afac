@@ -16,9 +16,7 @@
   object-fit: cover;
 }
 
-.alice-carousel__prev-btn {
-  display: none;
-}
+.alice-carousel__prev-btn,
 .alice-carousel__next-btn {
   display: none;
 }
@@ -33,6 +31,10 @@
 }
 
 .alice-carousel .alice-carousel__dots-item.__active {
+  background-color: $white;
+}
+
+.alice-carousel .alice-carousel__dots-item:not(.__active) {
   background-color: $black;
 }
 
@@ -48,17 +50,16 @@
   position: absolute;
   background-color: $white;
   opacity: $opacity-high;
-  top: 70vh;
+  bottom: 0;
   left: 20vw;
   width: 80vw;
-  flex-direction: row-reverse;
 }
 .hometext {
   font-family: $fontBold;
   margin-left: 0.625rem;
   margin-right: 0.625rem;
   text-align: center;
-  font-size: 14.5px;
+  font-size: 0.96rem;
 }
 
 .carousel-slide-visit_container {
@@ -80,7 +81,7 @@
   color: $white;
   position: absolute;
   padding: 0.563rem 1.375rem;
-  font-size: 15px;
+  font-size: 0.938rem;
 }
 .carousel-first-slide-visit_container {
   background-color: rgba($blueColor, $opacity-high);
@@ -89,11 +90,11 @@
 }
 
 .carousel-first-slide-visit_text {
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .carousel-first-slide-visit_button {
-  top: 89%;
+  bottom: -9%;
   right: 28%;
   background-color: $redColor;
 }
@@ -105,11 +106,11 @@
 }
 
 .carousel-second-slide-visit_text {
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 .carousel-second-slide-visit_button {
-  top: 89%;
+  bottom: -9%;
   right: 29%;
   background-color: $greyColor;
 }
@@ -121,11 +122,20 @@
 }
 
 .carousel-third-slide-visit_text {
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .carousel-third-slide-visit_button {
-  top: 89%;
+  bottom: -10%;
   right: 29%;
   background-color: $redColor;
+}
+
+.alice-carousel__play-btn-wrapper {
+  background-color: transparent;
+  padding: 0;
+}
+.alice-carousel__play-btn-item::before,
+.alice-carousel__play-btn-item::after {
+  border-left-color: $blueColor;
 }
