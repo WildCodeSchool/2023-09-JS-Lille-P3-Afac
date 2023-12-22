@@ -1,0 +1,41 @@
+@import "../../Variables.scss";
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 75px;
+  padding: 1rem;
+  background-color: $blueColor;
+  color: $white;
+}
+.navbarLogo {
+  color: $white;
+}
+.navbar__links {
+  display: flex;
+  list-style-type: none;
+  margin: 2rem;
+}
+
+ul .navbar__links {
+  margin-left: 15.63vw;
+}
+.navbarLink {
+  padding: 0 0.3rem;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 450px) {
+  .navbarLink {
+    display: block;
+    padding: 1.5rem;
+    font-size: 3vw;
+  }
+}
