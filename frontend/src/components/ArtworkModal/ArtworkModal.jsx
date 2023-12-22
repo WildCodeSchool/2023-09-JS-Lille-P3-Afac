@@ -3,46 +3,55 @@ import * as Dialog from "@radix-ui/react-dialog";
 import "./artworkModal.scss";
 import { useGlobalContext } from "../contexts/GlobalContextProvider";
 
-function ArtworkModal({ id, title, date, technique, format, src, artist }) {
-  const { artwork } = useGlobalContext();
-  const { facts } = artwork.find((element) => element.id === id);
+function ArtworkModal({
+  id,
+  title,
+  date,
+  technique,
+  format,
+  src,
+  alt,
+  artistId,
+}) {
+  const { artworks, artists } = useGlobalContext();
+  const { facts } = artworks.find((element) => element.id === id);
+  const artist = artists.find((e) => e.id === artistId);
 
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild />
-      {/* { Insert element to trigger the modal } */}
+      {/* { Add element to trigger the modal } */}
       <Dialog.Portal>
         <Dialog.Overlay className="dialogOverlay" />
         <Dialog.Content className="dialogContent">
           <article className="popUp">
             <nav className="popUp__nav">
-              <label className="popUp__nav__label" htmlFor="close_button">
-                Fermer
-              </label>
               <Dialog.Close asChild>
-                <input
-                  className="popUp__nav__button"
+                <button
                   type="button"
-                  id="close_button"
-                  name="close_button"
+                  aria-label="Fermer"
+                  className="popUp__nav__button"
                 />
               </Dialog.Close>
             </nav>
             <section className="popUp__content">
-              <img src={src} alt="" className="popUp__content__img" />
+              <img src={src} alt={alt} className="popUp__content__img" />
               <hgroup className="popUp__content__info">
-                <header>
-                  <Dialog.Title className="popUp__content__info__title">
-                    {title}
-                  </Dialog.Title>
-                  <Dialog.Description className="popUp__content__info__details">{`${date} - ${technique} - ${format}`}</Dialog.Description>
-                </header>
+                <Dialog.Title className="popUp__content__info__title">
+                  {title}
+                </Dialog.Title>
+                <Dialog.Description className="popUp__content__info__details">{`${date} - ${technique} - ${format}`}</Dialog.Description>
                 {facts.map((element) => (
-                  <p key={element.id} className="popUp__content__info__fact">
+                  <Dialog.Description
+                    key={element.id}
+                    className="popUp__content__info__fact"
+                  >
                     {element.fact}
-                  </p>
+                  </Dialog.Description>
                 ))}
-                <h3 className="popUp__content__info__artist">{artist}</h3>
+                <Dialog.Description className="popUp__content__info__artist">
+                  {artist.name}
+                </Dialog.Description>
               </hgroup>
             </section>
           </article>
@@ -59,7 +68,8 @@ ArtworkModal.propTypes = {
   technique: PropTypes.string.isRequired,
   format: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
-  artist: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  artistId: PropTypes.number.isRequired,
 };
 
 export default ArtworkModal;
