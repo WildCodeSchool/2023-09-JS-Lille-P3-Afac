@@ -96,54 +96,6 @@ function GlobalContextProvider({ children }) {
       ],
       artistId: 5,
     },
-    {
-      id: 6,
-      title: "Rougail-Saucisses",
-      technique: "Aquarelle",
-      date: "2023",
-      format: "1024 x 1024",
-      src: "./src/assets/images/RougailSaucisse.jpg",
-      alt: "Aquarelle 'Rougail-Saucisses' par Salvador Dall-E",
-      facts: [
-        {
-          id: 1,
-          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
-        },
-        {
-          id: 2,
-          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
-        },
-        {
-          id: 3,
-          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
-        },
-      ],
-      artistId: 1,
-    },
-    {
-      id: 7,
-      title: "Rougail-Saucisses",
-      technique: "Aquarelle",
-      date: "2023",
-      format: "1024 x 1024",
-      src: "./src/assets/images/RougailSaucisse.jpg",
-      alt: "Aquarelle 'Rougail-Saucisses' par Salvador Dall-E",
-      facts: [
-        {
-          id: 1,
-          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
-        },
-        {
-          id: 2,
-          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
-        },
-        {
-          id: 3,
-          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
-        },
-      ],
-      artistId: 1,
-    },
   ]);
 
   const [artists, setArtists] = useState([

@@ -11,9 +11,8 @@ function ArtistModal({ id }) {
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger asChild>
-        <button type="button">{artist.name}</button>
-      </Dialog.Trigger>
+      <Dialog.Trigger asChild />
+      {/* { Add element to trigger the modal } */}
       <Dialog.Portal>
         <Dialog.Overlay className="dialogOverlay" />
         <Dialog.Content className="dialogContent">
@@ -38,17 +37,17 @@ function ArtistModal({ id }) {
                 </Dialog.Description>
               </section>
             </section>
-            <section className="popUp__content">
-              <Dialog.Title className="popUp__content__title">
+            <section className="popUp__artworks">
+              <Dialog.Title className="popUp__artworks__title">
                 Ses Oeuvres
               </Dialog.Title>
-              <ul className="popUp__content__artworks">
+              <ul className="popUp__artworks__list">
                 {arts.map((artwork) => (
                   <li>
                     <img
                       src={artwork.src}
                       alt={artwork.alt}
-                      className="popUp__content__artworks__img"
+                      className="popUp__artworks__list__img"
                     />
                   </li>
                 ))}

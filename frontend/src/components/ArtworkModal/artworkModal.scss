@@ -52,16 +52,10 @@
       background-size: cover;
       cursor: pointer;
     }
-
-    &__label {
-      width: 0;
-      height: 0;
-      opacity: $opacity-none;
-      z-index: -1;
-    }
   }
 
   &__content {
+    padding: 0 1.5rem;
     &__img {
       display: block;
       width: 90%;
