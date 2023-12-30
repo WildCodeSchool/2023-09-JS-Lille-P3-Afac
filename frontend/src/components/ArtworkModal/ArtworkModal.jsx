@@ -19,11 +19,8 @@ function ArtworkModal({
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger asChild>
-        <button type="button" className="Button violet">
-          {title}
-        </button>
-      </Dialog.Trigger>
+      <Dialog.Trigger asChild />
+      {/* { Add element to trigger the modal } */}
       <Dialog.Portal>
         <Dialog.Overlay className="dialogOverlay" />
         <Dialog.Content className="dialogContent">
