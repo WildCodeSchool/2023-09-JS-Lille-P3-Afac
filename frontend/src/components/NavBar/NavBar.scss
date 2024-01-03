@@ -6,15 +6,16 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-height: 3rem;
-  padding: 1rem;
+  min-height: 10%;
   color: $white;
+  font-family: $fontBold;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .navbar {
   @include navbar;
   background-color: $blueColor;
-  font-family: $fontBold;
 }
 
 .navbar_transparent {
@@ -26,11 +27,12 @@
 }
 .navbarLogo {
   color: $white;
+  padding-left: 1%;
 }
 .navbar__links {
   display: flex;
   list-style-type: none;
-  margin-right: 3rem;
+  margin-right: 1rem;
 }
 
 .navbarLink {
