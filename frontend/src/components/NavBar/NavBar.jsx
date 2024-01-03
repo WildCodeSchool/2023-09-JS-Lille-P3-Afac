@@ -9,12 +9,12 @@ function NavBar() {
         AFAC 974
       </Link>
       <ul className="navbarLink">
-        <li className="navbar__item">
+        <li>
           <Link to="/" className="navbarLink">
             S'inscrire
           </Link>
         </li>
-        <li className="navbar__item">
+        <li>
           <Link to="/" className="navbarLink">
             A Propos
           </Link>
