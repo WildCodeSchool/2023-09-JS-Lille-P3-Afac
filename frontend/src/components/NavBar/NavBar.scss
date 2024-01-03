@@ -29,15 +29,12 @@
   color: $white;
   padding-left: 1%;
 }
-.navbar__links {
-  display: flex;
-  list-style-type: none;
-  margin-right: 1rem;
-}
-
 .navbarLink {
   padding: 0 0.3rem;
   color: inherit;
+  display: flex;
+  list-style-type: none;
+  margin-right: 1rem;
 }
 
 a {

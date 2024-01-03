@@ -8,7 +8,7 @@ function NavBar() {
       <Link to="/" className="navbarLogo">
         AFAC 974
       </Link>
-      <ul className="navbar__links">
+      <ul className="navbarLink">
         <li className="navbar__item">
           <Link to="/" className="navbarLink">
             S'inscrire
