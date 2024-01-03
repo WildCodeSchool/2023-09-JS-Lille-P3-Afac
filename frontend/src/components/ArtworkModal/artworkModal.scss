@@ -18,6 +18,9 @@
   max-height: 100%;
   animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
+  @media screen and (min-width: 768px) {
+    width: 80%;
+  }
 }
 
 .dialogContent:focus {
@@ -56,16 +59,33 @@
 
   &__content {
     padding: 0 1.5rem;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     &__img {
       display: block;
       width: 90%;
       height: auto;
       margin: auto;
       box-shadow: 0 0 2px $black;
+      @media screen and (min-width: 768px) {
+        width: 50%;
+        margin: 1rem;
+        object-fit: contain;
+      }
     }
 
     &__info {
       padding: 1rem 1.5rem;
+      @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+        padding: 1rem 2rem;
+      }
 
       &__title {
         font-family: $fontBold;
@@ -86,44 +106,17 @@
         text-align: left;
       }
 
-      &__artist {
-        text-align: right;
-        font-family: $fontBold;
-        font-size: 1rem;
-        margin-top: 1rem;
-        margin-bottom: 0;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .dialogContent {
-    width: 80%;
-  }
-
-  .popUp__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &__img {
-      width: 50%;
-      margin: 1rem;
-      object-fit: contain;
-    }
-
-    &__info {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      width: 50%;
-      padding: 1rem 2rem;
-
       &__title,
       &__details,
       &__fact {
-        text-align: left;
+        @media screen and (min-width: 768px) {
+          text-align: left;
+        }
+      }
+
+      &__artist {
+        text-align: right;
+        font-family: $fontBold;
       }
     }
   }
