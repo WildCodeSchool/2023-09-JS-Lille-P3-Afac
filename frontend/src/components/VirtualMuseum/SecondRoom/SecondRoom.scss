@@ -1,0 +1,196 @@
+@import "../../../Variables.scss";
+
+.secondRoom {
+  background-image: url("../../../assets/secondRoom.png");
+  background-size: 100% 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  perspective: 600px;
+}
+
+.moveOnTheFirstRoom {
+  position: absolute;
+  right: 45%;
+  bottom: 2%;
+  width: 3vw;
+  transform: rotate(180deg);
+}
+
+// First artwork from the left
+
+.firstArtworkLeftSideSecondRoom {
+  position: absolute;
+  bottom: 28%;
+  left: 1%;
+  width: 13%;
+  transform: rotateX(6deg) rotateY(70deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+}
+
+.firstArtworkLeftSideSecondRoomInformations {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0.5px solid black;
+  background-color: $white;
+  padding-inline: 0.1rem;
+  height: 2.5%;
+  width: 1.5%;
+  font-size: 0.1rem;
+  left: 15%;
+  bottom: 34%;
+  line-height: 0;
+  transform: rotateX(6deg) rotateY(70deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+}
+
+// Second artwork from the left
+
+.secondArtworkLeftSideSecondRoom {
+  position: absolute;
+  bottom: 34%;
+  left: 19.5%;
+  width: 9%;
+  transform: rotateX(6deg) rotateY(70deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+}
+
+.secondArtworkLeftSideSecondRoomInformations {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0.5px solid black;
+  background-color: $white;
+  padding-inline: 0.1rem;
+  height: 2.5%;
+  width: 1.5%;
+  font-size: 0.1rem;
+  left: 28%;
+  bottom: 36%;
+  line-height: 0;
+  transform: rotateX(6deg) rotateY(70deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+}
+
+// Third artwork from the left
+
+.firstArtworkBackRoomSecondRoom {
+  position: absolute;
+  left: 32%;
+  bottom: 30%;
+  width: 10%;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+.firstArtworkBackRoomSecondRoomInformations {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0.5px solid black;
+  background-color: $white;
+  padding-inline: 0.1rem;
+  height: 2.5%;
+  width: 2.5%;
+  font-size: 0.1rem;
+  left: 42.5%;
+  bottom: 32%;
+  line-height: 0;
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+}
+
+// Fourth artwork from the left
+
+.secondArtworkBackRoomSecondRoom {
+  position: absolute;
+  right: 32%;
+  bottom: 30%;
+  width: 20%;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+.secondArtworkBackRoomSecondRoomInformations {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0.5px solid black;
+  background-color: $white;
+  padding-inline: 0.1rem;
+  height: 2.5%;
+  width: 2.5%;
+  font-size: 0.1rem;
+  right: 28.5%;
+  bottom: 32%;
+  line-height: 0;
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+}
+
+// Fift artwork from the left
+
+.firstArtworkRightSideSecondRoom {
+  position: absolute;
+  bottom: 34%;
+  width: 11%;
+  right: 15.5%;
+  transform: rotateX(4deg) rotateY(260deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+}
+
+.firstArtworkRightSideSecondRoomInformations {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0.5px solid black;
+  background-color: $white;
+  padding-inline: 0.1rem;
+  height: 2.5%;
+  width: 1.5%;
+  font-size: 0.1rem;
+  right: 23%;
+  bottom: 36%;
+  line-height: 0;
+  transform: rotateX(6deg) rotateY(260deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+}
+
+// Sixt artwork from the left
+
+.secondArtworkRightSideSecondRoom {
+  position: absolute;
+  bottom: 28%;
+  width: 18%;
+  right: 0%;
+  transform: rotateX(4deg) rotateY(260deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+}
+
+.secondArtworkRightSideSecondRoomInformations {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0.5px solid black;
+  background-color: $white;
+  padding-inline: 0.1rem;
+  height: 2.5%;
+  width: 1.5%;
+  font-size: 0.1rem;
+  right: 14.5%;
+  bottom: 34%;
+  line-height: 0;
+  transform: rotateX(6deg) rotateY(260deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+}
