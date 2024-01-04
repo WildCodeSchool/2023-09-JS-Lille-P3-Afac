@@ -14,10 +14,10 @@ function Artwork(Artworks) {
     <>
       <img src={img} alt="" className={classNameArtwork} />
       <article className={classNameThumbnail}>
-        <h1 className="painter">{painter}</h1>
-        <h2 className="date">{date}</h2>
-        <h3 className="information">{information}</h3>
-        <h4 className="title">{title}</h4>
+        <p className="painter">{painter}</p>
+        <p className="date">{date}</p>
+        <p className="information">{information}</p>
+        <p className="title">{title}</p>
         <p className="description">{description}</p>
       </article>
     </>
