@@ -1,29 +1,30 @@
 import "./HomePageMenu.scss";
+import HomePageMenuLink from "./HomePageMenuButton/HomePageMenuLink";
 
 function HomePageMenu() {
   return (
-    <nav className="homepage-menu-container">
-      <section className="homepage-menu-buttons-container">
-        <button
+    <main className="homepage-menu-container">
+      <nav className="homepage-menu-buttons-container">
+        <HomePageMenuLink
+          to="/"
           type="button"
           className="homepage-menu-button homepage-menu-museum-button"
-        >
-          Musée virtuel
-        </button>
-        <button
+          label="Musée virtuel"
+        />
+        <HomePageMenuLink
+          to="/"
           type="button"
           className="homepage-menu-button homepage-menu-gallery-button"
-        >
-          Collection
-        </button>
-        <button
+          label="Collection"
+        />
+        <HomePageMenuLink
+          to="/"
           type="button"
           className="homepage-menu-button homepage-menu-artists-button"
-        >
-          Nos artistes
-        </button>
-      </section>
-    </nav>
+          label="Nos artistes"
+        />
+      </nav>
+    </main>
   );
 }
 
