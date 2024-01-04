@@ -1,5 +1,8 @@
 import "./App.scss";
+import NavBar from "./components/NavBar/NavBar";
 
-function App() {}
+function App() {
+  return <NavBar />;
+}
 
 export default App;
