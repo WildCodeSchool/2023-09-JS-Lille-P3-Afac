@@ -11,49 +11,44 @@ function ArtistModal({ id }) {
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger asChild />
-      {/* { Add element to trigger the modal } */}
+      <Dialog.Trigger asChild>
+        <button type="button">{artist.name}</button>
+      </Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className="dialogOverlay" />
-        <Dialog.Content className="dialogContent">
-          <article className="popUp">
-            <nav className="popUp__nav">
-              <Dialog.Close asChild>
-                <button
-                  type="button"
-                  aria-label="Fermer"
-                  className="popUp__nav__button"
-                />
-              </Dialog.Close>
-            </nav>
-            <section className="popUp__content">
-              <img src={artist.src} alt="" className="popUp__content__img" />
-              <section className="popUp__content__info">
-                <Dialog.Title className="popUp__content__info__title">
-                  {artist.name}
-                </Dialog.Title>
-                <Dialog.Description className="popUp__content__info__biography">
-                  {artist.biography}
-                </Dialog.Description>
-              </section>
-            </section>
-            <section className="popUp__artworks">
-              <Dialog.Title className="popUp__artworks__title">
-                Ses Oeuvres
+        <Dialog.Overlay className="modalOverlay" />
+        <Dialog.Content className="modal modal--artist">
+          <Dialog.Close asChild>
+            <button
+              type="button"
+              aria-label="Fermer"
+              className="modal__button"
+            />
+          </Dialog.Close>
+          <figure className="modal__content">
+            <img src={artist.src} alt="" className="modal__content__img" />
+            <figcaption>
+              <Dialog.Title className="modal__content__title">
+                <cite>{artist.name}</cite>
               </Dialog.Title>
-              <ul className="popUp__artworks__list">
-                {arts.map((artwork) => (
-                  <li>
-                    <img
-                      src={artwork.src}
-                      alt={artwork.alt}
-                      className="popUp__artworks__list__img"
-                    />
-                  </li>
-                ))}
-              </ul>
-            </section>
-          </article>
+              <Dialog.Description className="modal__content__biography">
+                {artist.biography}
+              </Dialog.Description>
+            </figcaption>
+          </figure>
+          <section className="modal__artworks">
+            <h3 className="modal__artworks__title">Ses Oeuvres</h3>
+            <ul className="modal__artworks__list">
+              {arts.map((e) => (
+                <li key={e.id}>
+                  <img
+                    src={e.src}
+                    alt={e.alt}
+                    className="modal__artworks__list__img"
+                  />
+                </li>
+              ))}
+            </ul>
+          </section>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
