@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import arrow from "../../../assets/arrow.png";
 import "./SecondRoom.scss";
 import { useGlobalContext } from "../../Context/GlobalContextProvider";
-import Artwork from "../../Artwork/Artwork";
+import Artwork from "../Artwork";
 
 function SecondRoom() {
   const { ArtworksSecondRoom } = useGlobalContext();

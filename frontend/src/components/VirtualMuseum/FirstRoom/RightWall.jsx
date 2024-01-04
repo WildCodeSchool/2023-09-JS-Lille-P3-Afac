@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import arrow from "../../../assets/arrow.png";
-import Artwork from "../../Artwork/Artwork";
+import Artwork from "../Artwork";
 import "./RightWall.scss";
 
 function RightWall() {

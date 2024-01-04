@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import arrow from "../../../assets/arrow.png";
 import "./FirstRoom.scss";
-import Artwork from "../../Artwork/Artwork";
+import Artwork from "../Artwork";
 import AnimationButton from "../AnimationButton";
 import { useGlobalContext } from "../../Context/GlobalContextProvider";
 
