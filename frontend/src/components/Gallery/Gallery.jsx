@@ -4,8 +4,7 @@ import ArtworkCard from "./ArtworkCard";
 import FilterButton from "./FilterButton";
 
 function Gallery() {
-  const { artwork } = useGlobalContext();
-  const { category } = useGlobalContext();
+  const { artwork, category } = useGlobalContext();
   return (
     <main className="galleryContainer">
       <section className="buttonContainer">

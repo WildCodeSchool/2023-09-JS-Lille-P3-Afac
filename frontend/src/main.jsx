@@ -5,6 +5,8 @@ import { GlobalContextProvider } from "./components/Context/GlobalContextProvide
 import App from "./App";
 import Gallery from "./components/Gallery/Gallery";
 import Artists from "./components/Artists/Artists";
+import Profil from "./components/Profil/Profil";
+import NavBar from "./components/NavBar/NavBar";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,15 @@ const router = createBrowserRouter([
   {
     path: "/Artists",
     element: <Artists />,
+  },
+  {
+    path: "/Profil",
+    element: (
+      <>
+        <NavBar />,
+        <Profil />,
+      </>
+    ),
   },
 ]);
 
