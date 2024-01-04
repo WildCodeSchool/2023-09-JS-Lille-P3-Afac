@@ -2,13 +2,15 @@
 
 .artistCard {
   flex-direction: column;
-  width: 9rem;
-  height: 17rem;
 }
 
 .artistPic {
   width: 9rem;
   height: 13rem;
+  @media screen and (min-width: 900px) {
+    width: 12rem;
+    height: 18rem;
+  }
 }
 
 .artistName {
@@ -17,4 +19,8 @@
   font-size: 0.9rem;
   width: 9rem;
   height: 2rem;
+  @media screen and (min-width: 900px) {
+    width: 12rem;
+    height: 2.5rem;
+  }
 }
