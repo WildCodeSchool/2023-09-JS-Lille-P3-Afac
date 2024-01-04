@@ -26,18 +26,19 @@
   }
 }
 .navbarLogo {
-  color: $white;
-  padding-left: 1%;
+  width: 50%;
+  height: 50%;
+  img {
+    height: 5rem;
+  }
 }
+
 .navbarLink {
   padding: 0 0.3rem;
   color: inherit;
   display: flex;
   list-style-type: none;
   margin-right: 1rem;
-}
-
-a {
   text-decoration: none;
 }
 

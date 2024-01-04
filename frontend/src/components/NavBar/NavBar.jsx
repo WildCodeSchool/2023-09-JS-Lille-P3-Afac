@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.scss";
+import logoImg from "../../assets/VirtuArt.png";
 
 function NavBar() {
   return (
     <nav className="navbar">
       <Link to="/" className="navbarLogo">
-        AFAC 974
+        <img src={logoImg} alt="logo" className="logo" />
       </Link>
       <ul className="navbarLink">
         <li>
