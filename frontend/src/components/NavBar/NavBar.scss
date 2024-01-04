@@ -9,8 +9,6 @@
   min-height: 10%;
   color: $white;
   font-family: $fontBold;
-  padding-top: 1%;
-  padding-bottom: 1%;
 }
 
 .navbar {
@@ -21,9 +19,6 @@
 .navbar_transparent {
   @include navbar;
   background-color: transparent;
-  .navbarLogo {
-    color: $black;
-  }
 }
 .navbarLogo {
   width: 50%;
@@ -44,7 +39,7 @@
 
 @media screen and (min-width: 1030px) {
   .navbarLink {
-    display: block;
+    display: flex;
     padding: 1.5rem;
   }
 }
