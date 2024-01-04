@@ -242,12 +242,13 @@
 .moveOnTheSecondRoom {
   all: unset;
   position: absolute;
+  width: 60%;
   left: 31%;
-  bottom: 25%;
+  bottom: 27%;
 }
 
 .arrow {
-  width: 3vw;
+  width: 3%;
   transform: rotate(270deg);
   cursor: pointer;
 }
