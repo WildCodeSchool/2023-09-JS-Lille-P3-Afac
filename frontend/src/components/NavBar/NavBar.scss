@@ -24,7 +24,8 @@
   width: 50%;
   height: 50%;
   img {
-    height: 5rem;
+    display: inline-block;
+    width: 20%;
   }
 }
 
@@ -33,11 +34,11 @@
   color: inherit;
   display: flex;
   list-style-type: none;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   text-decoration: none;
 }
 
-@media screen and (min-width: 1030px) {
+@media screen and (min-width: 1450px) {
   .navbarLink {
     display: flex;
     padding: 1.5rem;
