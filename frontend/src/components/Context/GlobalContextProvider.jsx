@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 
 const GlobalContext = createContext();
 
+const homeText =
+  "Bienvenue dans notre musée virtuel. Vous retrouverez ici toutes les oeuvres de nos artistes réunionnais. Le principe est simple, vous pouvez visiter nos salles et naviguer en cliquant sur les petites pastilles au sol. Bonne visite !";
+
 function GlobalContextProvider({ children }) {
   const ArtworksFirstRoom = [
     {
@@ -147,7 +150,7 @@ function GlobalContextProvider({ children }) {
       animationClassName: "zoomLeft",
     },
   ];
-  
+
   const artists = [
     {
       name: "Salvador Dall-e",
@@ -166,7 +169,7 @@ function GlobalContextProvider({ children }) {
       img: "./src/assets/Klimteastwood.png",
     },
   ];
-  
+
   const artwork = [
     {
       name: "Le Piton",
@@ -181,7 +184,7 @@ function GlobalContextProvider({ children }) {
       img: "./src/assets/LeTampon.png",
     },
   ];
-  
+
   const category = [
     {
       name: "Dessin",
@@ -219,8 +222,19 @@ function GlobalContextProvider({ children }) {
       category,
       userProfil,
       favoriteArtwork,
+      homeText,
     };
-  });
+  }, [
+    ArtworksFirstRoom,
+    ArtworksSecondRoom,
+    buttonInformations,
+    artists,
+    artwork,
+    category,
+    userProfil,
+    favoriteArtwork,
+    homeText,
+  ]);
 
   return (
     <GlobalContext.Provider value={contextValue}>
