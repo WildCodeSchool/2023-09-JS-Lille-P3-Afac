@@ -1,0 +1,15 @@
+@import "../../Variables.scss";
+
+h2 {
+  color: $black;
+  text-align: center;
+  background-color: $redColor;
+  padding: 1rem;
+}
+
+p {
+  color: $black;
+  text-align: center;
+  padding: 1rem;
+  background-color: $purpleColor;
+}
