@@ -1,0 +1,30 @@
+@import "../../Variables.scss";
+
+.profilContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profilTitle {
+  all: unset;
+  font-size: 2rem;
+  font-family: $fontBold;
+}
+
+.favoriteArtworkContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.favoriteTitle {
+  width: 100%;
+  text-align: center;
+}
+
+.favoriteArtwork {
+  display: flex;
+  width: 30%;
+}

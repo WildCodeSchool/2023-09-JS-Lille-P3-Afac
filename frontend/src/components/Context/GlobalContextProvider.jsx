@@ -191,6 +191,24 @@ function GlobalContextProvider({ children }) {
     },
   ];
 
+  const userProfil = {
+    name: "Jonathan",
+    lastname: "Selin",
+    email: "jonathan.selin@wild.com",
+    password: "***********",
+  };
+
+  const favoriteArtwork = [
+    {
+      name: "Le Piton",
+      img: "./src/assets/Piton.png",
+    },
+    {
+      name: "Abris-côtier",
+      img: "./src/assets/Abris-côtier.png",
+    },
+  ];
+
   const contextValue = useMemo(() => {
     return {
       ArtworksFirstRoom,
@@ -199,6 +217,8 @@ function GlobalContextProvider({ children }) {
       artists,
       artwork,
       category,
+      userProfil,
+      favoriteArtwork,
     };
   });
 

@@ -10,6 +10,7 @@ import SecondWall from "./components/VirtualMuseum/FirstRoom/RightWall";
 import ThirdWall from "./components/VirtualMuseum/FirstRoom/LeftWall";
 import Gallery from "./components/Gallery/Gallery";
 import Artists from "./components/Artists/Artists";
+import Profil from "./components/Profil/Profil";
 import NavBar from "./components/NavBar/NavBar";
 
 
@@ -55,6 +56,18 @@ const router = createBrowserRouter([
         <Artists />
       </>
     ),
+
+  },
+  {
+    path: "/Profil",
+    element: (
+      <>
+        <NavBar />
+        <Profil />
+      </>
+    ),
+  },
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
