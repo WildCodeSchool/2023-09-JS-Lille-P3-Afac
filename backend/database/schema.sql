@@ -1,3 +1,6 @@
+create database VA_DB;
+use VA_DB;
+
 create table user (
   id int primary key auto_increment not null,
   lastname varchar(50) not null,
@@ -16,14 +19,14 @@ create table artist (
 create table administrator (
   id int primary key auto_increment not null,
   user_id int,
-  constraint fk_artist_user
+  constraint fk_administrator_user
   foreign key (user_id)
   references user(id)
 );
 create table logged_user (
   id int primary key auto_increment not null,
   user_id int,
-  constraint fk_artist_user
+  constraint fk_lu_user
   foreign key (user_id)
   references user(id)
 );
@@ -38,13 +41,13 @@ create table artwork (
   user_id_ar int not null,
   constraint fk_artwork_artist
   foreign key (user_id_ar)
-  references artist(user_id)
+  references artist(id)
 );
 create table management (
   user_id_ad int not null,
   constraint fk_management_administrator
   foreign key (user_id_ad)
-  references administrator(user_id),
+  references administrator(id),
   artwork_id int not null,
   constraint fk_management_artwork
   foreign key (artwork_id)
@@ -57,12 +60,11 @@ create table favorite (
   user_id_lu int not null,
   constraint fk_favorite_logged_user
   foreign key (user_id_lu)
-  references logged_user(user_id),
+  references logged_user(id),
   artwork_id int not null,
   constraint fk_favorite_artwork
   foreign key (artwork_id)
   references artwork(id),
-  liked boolean not null
 );
 create table fact (
   id int primary key auto_increment not null,
