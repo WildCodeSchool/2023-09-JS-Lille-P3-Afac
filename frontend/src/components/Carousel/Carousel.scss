@@ -4,18 +4,17 @@
 .carousel-container {
   display: flex;
   flex-wrap: nowrap;
-  overflow: hidden;
   background-color: $white;
   transition: 1s;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.carousel-item {
-  height: 100vh;
-  min-width: 100vw;
-  object-fit: cover;
-}
 
+.carousel-item {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
 .alice-carousel__prev-btn,
 .alice-carousel__next-btn {
   display: none;
@@ -23,10 +22,11 @@
 
 .alice-carousel__dots {
   position: absolute;
-  bottom: 20%;
-  left: 33%;
   transform: translate(-50%, -50%);
   display: flex;
+  width: 100vw;
+  height: 100vh;
+  bottom: 10%;
   padding: 0;
   margin: 0;
   @media screen and (min-width: 493px) {
@@ -70,8 +70,8 @@
 
 .alice-carousel .alice-carousel__dots-item:not(.__active),
 .alice-carousel__dots-item.__active {
-  width: 1rem;
-  height: 1rem;
+  width: 1vw;
+  height: 1vh;
   border-radius: 50%;
   transition: background-color 0.3s ease;
 }
@@ -82,9 +82,9 @@
   opacity: $opacity-high;
   bottom: 0;
   left: 20%;
-  width: 80%;
+  width: 80vw;
   @media screen and (min-width: 600px) {
-    width: 55%;
+    width: 55vw;
     left: 45%;
   }
 }
@@ -104,25 +104,25 @@
 
 .carousel-slide-visit_container {
   position: absolute;
-  width: 60%;
-  height: 25%;
+  width: 60vw;
+  height: 25vh;
   display: flex;
   align-items: center;
   text-align: center;
   @media screen and (min-width: 600px) {
-    width: 55%;
-    height: 30%;
+    width: 55vw;
+    height: 30vh;
   }
   @media screen and (min-width: 800px) {
-    width: 50%;
-    height: 35%;
+    width: 50vw;
+    height: 35vh;
   }
   @media screen and (min-width: 1000px) {
-    width: 45%;
-    height: 40%;
+    width: 45vw;
+    height: 40vh;
   }
   @media screen and (min-width: 1200px) {
-    width: 35%;
+    width: 35vw;
   }
 }
 .carousel-slide-visit_text {
@@ -148,6 +148,10 @@
   @media screen and (min-width: 1000px) {
     padding: 1.1rem 2.5rem;
     font-size: 1.3rem;
+  }
+  @media screen and (min-width: 1500px) {
+    padding: 1.4rem 4rem;
+    font-size: 1.6rem;
   }
 }
 .carousel-first-slide-visit_container {
