@@ -1,0 +1,46 @@
+@import "../../Variables.scss";
+
+@mixin navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 10%;
+  color: $white;
+  font-family: $fontBold;
+}
+
+.navbar {
+  @include navbar;
+  background-color: $blueColor;
+}
+
+.navbar_transparent {
+  @include navbar;
+  background-color: transparent;
+}
+.navbarLogo {
+  width: 50%;
+  height: 50%;
+  img {
+    display: inline-block;
+    width: 20%;
+  }
+}
+
+.navbarLink {
+  padding: 0 0.3rem;
+  color: inherit;
+  display: flex;
+  list-style-type: none;
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1450px) {
+  .navbarLink {
+    display: flex;
+    padding: 1.5rem;
+  }
+}

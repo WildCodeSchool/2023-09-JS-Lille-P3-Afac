@@ -1,8 +1,8 @@
 import "./App.scss";
-import HomePage from "./components/Homepage/Homepage";
+import HomePageMenu from "./components/HomePageMenu/HomePageMenu";
 
 function App() {
-  return <HomePage />;
+  return <HomePageMenu />;
 }
 
 export default App;
