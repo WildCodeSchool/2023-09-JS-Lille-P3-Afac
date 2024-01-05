@@ -3,10 +3,10 @@ import "./FavoriteArtwork.scss";
 function FavoriteArtwork(artwork) {
   const { name, img } = artwork;
   return (
-    <section className="FavoriteArtworkCard">
+    <figure className="FavoriteArtworkCard">
       <img src={img} alt={name} className="artwork" />
-      <h2 className="favoriteArtworkCardTitle">{name}</h2>
-    </section>
+      <figcaption className="favoriteArtworkCardTitle">{name}</figcaption>
+    </figure>
   );
 }
 

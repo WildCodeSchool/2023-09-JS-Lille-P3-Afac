@@ -25,8 +25,8 @@ const router = createBrowserRouter([
     path: "/Profil",
     element: (
       <>
-        <NavBar />,
-        <Profil />,
+        <NavBar />
+        <Profil />
       </>
     ),
   },

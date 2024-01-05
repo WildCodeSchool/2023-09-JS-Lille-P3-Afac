@@ -8,14 +8,13 @@ function Profil() {
   return (
     <main className="profilContainer">
       <h2 className="profilTitle">Mon Profil</h2>
-      {userProfil.map((e) => (
-        <ProfilCard
-          name={e.name}
-          lastname={e.lastname}
-          email={e.email}
-          password={e.password}
-        />
-      ))}
+      <ProfilCard
+        name={userProfil.name}
+        lastname={userProfil.lastname}
+        email={userProfil.email}
+        password={userProfil.password}
+      />
+
       <section className="favoriteArtworkContainer">
         <h3 className="favoriteTitle">Mes oeuvres favorites</h3>
         {favoriteArtwork.map((e) => (

@@ -10,7 +10,7 @@ function ProfilCard(userProfil) {
         <p className="profilName">Prénom: {name}</p>
         <p className="profilLastname">Nom: {lastname}</p>
         <p className="profilEmail">E-mail: {email}</p>
-        <p className="profilPassword"> Password :{password}</p>
+        <p className="profilPassword"> Password: {password}</p>
       </article>
     </section>
   );

@@ -44,14 +44,13 @@ function GlobalContextProvider({ children }) {
       name: "Aquarelle",
     },
   ];
-  const userProfil = [
-    {
-      name: "Jonathan",
-      lastname: "Selin",
-      email: "jonathan.selin@wild.com",
-      password: "***********",
-    },
-  ];
+  const userProfil = {
+    name: "Jonathan",
+    lastname: "Selin",
+    email: "jonathan.selin@wild.com",
+    password: "***********",
+  };
+
   const favoriteArtwork = [
     {
       name: "Le Piton",
