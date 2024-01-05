@@ -15,11 +15,21 @@ const router = createBrowserRouter([
   },
   {
     path: "/Gallery",
-    element: <Gallery />,
+    element: (
+      <>
+        <NavBar />
+        <Gallery />
+      </>
+    ),
   },
   {
     path: "/Artists",
-    element: <Artists />,
+    element: (
+      <>
+        <NavBar />
+        <Artists />
+      </>
+    ),
   },
   {
     path: "/Profil",
