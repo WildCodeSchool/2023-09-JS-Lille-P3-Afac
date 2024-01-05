@@ -8,14 +8,14 @@ function NavBar() {
       <Link to="/" className="navbarLogo">
         AFAC 974
       </Link>
-      <ul className="navbar__links">
-        <li className="navbar__item slideInDown-1">
+      <ul className="navbarLinks">
+        <li className="navbarItem">
           <Link to="/" className="navbarLink">
             S'inscrire
           </Link>
         </li>
-        <li className="navbar__item slideInDown-3">
-          <Link to="/" className="navbarLink">
+        <li className="navbarItem">
+          <Link to="/About" className="navbarLink">
             A Propos
           </Link>
         </li>

@@ -44,11 +44,18 @@ function GlobalContextProvider({ children }) {
       name: "Aquarelle",
     },
   ];
+  const about = [
+    {
+      name: "About",
+      src: "./src/components/AboutPage/AboutPage.jsx",
+    },
+  ];
   const contextValue = useMemo(() => {
     return {
       artists,
       artwork,
       category,
+      about,
     };
   });
 
