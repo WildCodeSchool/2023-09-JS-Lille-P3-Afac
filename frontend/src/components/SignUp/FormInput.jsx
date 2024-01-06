@@ -35,17 +35,14 @@ function FormInput({
           type="button"
           name={togglePassword}
           id={togglePassword}
+          aria-label="Afficher/Cacher le Mot de Passe"
           className={
             passwordVisible
               ? "form__password form__password--show"
               : "form__password"
           }
           onClick={() => setPasswordVisible(!passwordVisible)}
-        >
-          <label htmlFor={togglePassword} className="form__password__label">
-            Afficher/Cacher le Mot de Passe
-          </label>
-        </button>
+        />
       )}
     </fieldset>
   );

@@ -9,19 +9,19 @@ import "./signUp.scss";
 
 YupPassword(yup);
 const passRequirements =
-  "Le mot de passe doit contenir au moins 8 caractères dont une lettre miniscule, une majuscule, un chiffre et 1 caractère spécial";
+  "Le mot de passe doit contenir au moins 8 caractères dont une lettre minuscule, une majuscule, un chiffre et 1 caractère spécial";
 const validationSchema = yup
   .object({
     firstname: yup
       .string()
       .required("Prenom requis")
       .max(50)
-      .matches("[a-zA-Z]", "Ce champ ne doit contenir que des lettres"),
+      .matches(/^[a-zA-Z]+$/, "Ce champ ne doit contenir que des lettres"),
     lastname: yup
       .string()
       .required("Nom requis")
       .max(50)
-      .matches("[a-zA-Z]", "Ce champ ne doit contenir que des lettres"),
+      .matches(/^[a-zA-Z]+$/, "Ce champ ne doit contenir que des lettres"),
     email: yup
       .string()
       .required("E-mail requis")
@@ -124,7 +124,7 @@ function SignUp() {
         <span className="form__error">
           {errors.passwordConfirm ? errors.passwordConfirm.message : ""}
         </span>
-        <label htmlFor="submit" className="form__submit__label">
+        <label htmlFor="submit" className="form__label--hidden">
           M'inscrire
         </label>
         <input
