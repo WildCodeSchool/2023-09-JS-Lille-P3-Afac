@@ -1,5 +1,23 @@
 @import "../../Variables.scss";
 
+@mixin hiddenLabel {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@mixin message {
+  width: 90%;
+  margin: auto;
+  min-height: 1rem;
+}
+
 .container {
   width: 100%;
   margin: auto;
@@ -57,8 +75,16 @@
     }
   }
 
-  &__group:focus-within > &__label,
-  &__input:not(:placeholder-shown) + &__label {
+  // &__group:focus-within > &__label,
+  // &__input:not(:placeholder-shown) + &__label {
+  //   transform: translate(-2px, -16px);
+  //   font-size: 0.7rem;
+  //   padding: 0 0.2rem;
+  //   color: $black;
+  // }
+
+  &__group:has(&__input:not(:placeholder-shown)) > &__label,
+  &__group:focus-within > &__label {
     transform: translate(-2px, -16px);
     font-size: 0.7rem;
     padding: 0 0.2rem;
@@ -77,6 +103,10 @@
     @media screen and (min-width: 768px) {
       background-color: $blueColor;
       color: $white;
+    }
+
+    &__label {
+      @include hiddenLabel;
     }
   }
 
@@ -97,15 +127,19 @@
     }
 
     &__label {
-      border: 0;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
+      @include hiddenLabel;
     }
+  }
+
+  &__error {
+    @include message;
+    color: red;
+  }
+
+  &__success {
+    @include message;
+    color: green;
+    text-align: center;
+    font-weight: bold;
   }
 }
