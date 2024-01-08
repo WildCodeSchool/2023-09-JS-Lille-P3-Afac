@@ -13,7 +13,6 @@ import Artists from "./components/Artists/Artists";
 import Profil from "./components/Profil/Profil";
 import NavBar from "./components/NavBar/NavBar";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,7 +37,7 @@ const router = createBrowserRouter([
   {
     path: "/VirtualMuseumThirdWall",
     element: <ThirdWall />,
-    },
+  },
   {
     path: "/Gallery",
     element: (
@@ -56,7 +55,6 @@ const router = createBrowserRouter([
         <Artists />
       </>
     ),
-
   },
   {
     path: "/Profil",
@@ -67,7 +65,6 @@ const router = createBrowserRouter([
       </>
     ),
   },
-
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
