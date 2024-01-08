@@ -11,13 +11,16 @@ $fontBoldItalic: "atkinson_BoldItalic";
 $fontItalic: "atkinson_Italic";
 $font: "atkinson_Regular";
 
+$opacity-none: 0;
+$opacity-medium: 0.5;
 $opacity-high: 0.8;
+$opacity-full: 1;
 
 @font-face {
   font-family: "atkinson_Bold";
   src:
-    url("font/atkinsonhyperlegible-bold-webfont.woff2") format("woff2"),
-    url("font/atkinsonhyperlegible-bold-webfont.woff") format("woff");
+    url("./src/font/atkinsonhyperlegible-bold-webfont.woff2") format("woff2"),
+    url("./src/font/atkinsonhyperlegible-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -25,8 +28,10 @@ $opacity-high: 0.8;
 @font-face {
   font-family: "atkinson_BoldItalic";
   src:
-    url("font/atkinsonhyperlegible-bolditalic-webfont.woff2") format("woff2"),
-    url("font/atkinsonhyperlegible-bolditalic-webfont.woff") format("woff");
+    url("./src/font/atkinsonhyperlegible-bolditalic-webfont.woff2")
+      format("woff2"),
+    url("./src/font/atkinsonhyperlegible-bolditalic-webfont.woff")
+      format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -34,8 +39,8 @@ $opacity-high: 0.8;
 @font-face {
   font-family: "atkinson_Italic";
   src:
-    url("font/atkinsonhyperlegible-italic-webfont.woff2") format("woff2"),
-    url("font/atkinsonhyperlegible-italic-webfont.woff") format("woff");
+    url("./src/font/atkinsonhyperlegible-italic-webfont.woff2") format("woff2"),
+    url("./src/font/atkinsonhyperlegible-italic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -43,8 +48,8 @@ $opacity-high: 0.8;
 @font-face {
   font-family: "atkinson_Regular";
   src:
-    url("font/atkinsonhyperlegible-regular-webfont.woff2") format("woff2"),
-    url("font/atkinsonhyperlegible-regular-webfont.woff") format("woff");
+    url("./src/font/atkinsonhyperlegible-regular-webfont.woff2") format("woff2"),
+    url("./src/font/atkinsonhyperlegible-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

@@ -153,35 +153,174 @@ function GlobalContextProvider({ children }) {
 
   const artists = [
     {
+      id: 1,
       name: "Salvador Dall-e",
-      img: "./src/assets/Dall-e.png",
+      src: "./src/assets/Dall-e.png",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
     },
     {
+      id: 2,
       name: "Pablo Picassiettes",
-      img: "./src/assets/Picassiettes.png",
+      src: "./src/assets/Picassiettes.png",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
     },
     {
+      id: 3,
+      name: "Frida Kahloops",
+      src: "./src/assets/kahloops.png",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
+    },
+    {
+      id: 4,
+      name: "Claude Monnaie",
+      src: "./src/assets/monnaie.png",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
+    },
+    {
+      id: 5,
+      name: "Auguste Reblanc",
+      src: "./src/assets/reblanc.png",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
+    },
+    {
+      id: 6,
+      name: "Marc Chacaille",
+      src: "./src/assets/chacaille.png",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
+    },
+    {
+      id: 7,
       name: "Eugène Delabière",
-      img: "./src/assets/Delabiere.png",
+      src: "./src/assets/Delabiere.png",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
     },
     {
+      id: 8,
       name: "Gustave Klimteastwood",
-      img: "./src/assets/Klimteastwood.png",
+      src: "./src/assets/Klimteastwood.png",
+      biography:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sapiente cum illo distinctio quas facere quia. Totam sunt voluptate tempore nulla ea, unde, debitis aliquam molestiae perspiciatis, maxime expedita eos!",
     },
   ];
 
-  const artwork = [
+  const artworks = [
     {
-      name: "Le Piton",
-      img: "./src/assets/Piton.png",
+      id: 1,
+      title: "Rougail-Saucisses",
+      technique: "Aquarelle",
+      date: "2023",
+      format: "1024 x 1024",
+      src: "./src/assets/RougailSaucisse.jpg",
+      alt: "Aquarelle 'Rougail-Saucisses' par Salvador Dall-E",
+      facts: [
+        {
+          id: 1,
+          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
+        },
+        {
+          id: 2,
+          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
+        },
+        {
+          id: 3,
+          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
+        },
+      ],
+      artistId: 1,
     },
     {
-      name: "Abris-côtier",
-      img: "./src/assets/Abris-côtier.png",
+      id: 2,
+      title: "Reunion",
+      technique: "Aquarelle",
+      date: "2020",
+      format: "1024 x 1024",
+      src: "./src/assets/Reunion.jpg",
+      alt: "Aquarelle 'Reunion' par Pablo Picassiettes",
+      facts: [
+        {
+          id: 1,
+          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
+        },
+        {
+          id: 2,
+          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
+        },
+      ],
+      artistId: 2,
     },
     {
-      name: "Le Tampon",
-      img: "./src/assets/LeTampon.png",
+      id: 3,
+      title: "Le Tampon",
+      src: "./src/assets/LeTampon.png",
+      technique: "Aquarelle",
+      date: "2012",
+      format: "1790 x 1276",
+      alt: "Aquarelle 'Le Tampon' par Eugène Delabière",
+      facts: [],
+      artistId: 7,
+    },
+    {
+      id: 4,
+      title: "Abris-côtier",
+      src: "./src/assets/Abris-côtier.png",
+      technique: "Aquarelle",
+      date: "2008",
+      format: "1792 x 1220",
+      alt: "Aquarelle 'Abris-côtier' par Marc Chacaille",
+      facts: [
+        {
+          id: 1,
+          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
+        },
+      ],
+      artistId: 6,
+    },
+    {
+      id: 5,
+      title: "Le Piton",
+      src: "./src/assets/Piton.png",
+      technique: "Dessin",
+      date: "2004",
+      format: "1282 x 852",
+      alt: "Aquarelle 'Le Piton' par Auguste Reblanc",
+      facts: [
+        {
+          id: 1,
+          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
+        },
+        {
+          id: 2,
+          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
+        },
+      ],
+      artistId: 5,
+    },
+    {
+      id: 6,
+      title: "Payet",
+      src: "./src/assets/Payet.png",
+      technique: "Aquerelle",
+      date: "2023",
+      format: "1282 x 852",
+      alt: "Aquarelle 'Payet' par Frida Kahloops",
+      facts: [
+        {
+          id: 1,
+          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
+        },
+        {
+          id: 2,
+          fact: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, quia harum. Vitae recusandae iste magnam, ad voluptatum atque facere quas deleniti ex aperiam. Non, eligendi accusantium sit laudantium blanditiis nobis.",
+        },
+      ],
+      artistId: 3,
     },
   ];
 
@@ -218,7 +357,7 @@ function GlobalContextProvider({ children }) {
       ArtworksSecondRoom,
       buttonInformations,
       artists,
-      artwork,
+      artworks,
       category,
       userProfil,
       favoriteArtwork,
@@ -229,7 +368,7 @@ function GlobalContextProvider({ children }) {
     ArtworksSecondRoom,
     buttonInformations,
     artists,
-    artwork,
+    artworks,
     category,
     userProfil,
     favoriteArtwork,
