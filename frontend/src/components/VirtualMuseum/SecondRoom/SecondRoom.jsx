@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import arrow from "../../../assets/arrow.png";
 import "./SecondRoom.scss";
-import { useGlobalContext } from "../../Context/GlobalContextProvider";
 import Artwork from "../Artwork";
+import AnimationButton from "../AnimationButton";
+import { useGlobalContext } from "../../Context/GlobalContextProvider";
 
 function SecondRoom() {
-  const { ArtworksSecondRoom } = useGlobalContext();
+  const { ArtworksSecondRoom, buttonInformations } = useGlobalContext();
+  const [animation] = useState(false);
+
   return (
     <main className="secondRoom">
       {ArtworksSecondRoom.map((e) => (
@@ -29,6 +33,14 @@ function SecondRoom() {
           aria-label="flèche pour aller dans la première salle du musée virtuel"
         />
       </Link>
+      {buttonInformations.map((e) => (
+        <AnimationButton
+          url={e.url}
+          className={e.className}
+          animationClassName={e.animationClassName}
+          animation={animation}
+        />
+      ))}
     </main>
   );
 }
