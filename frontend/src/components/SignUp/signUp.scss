@@ -12,12 +12,6 @@
   width: 1px;
 }
 
-@mixin message {
-  width: 90%;
-  margin: auto;
-  min-height: 1rem;
-}
-
 .container {
   width: 100%;
   margin: auto;
@@ -34,6 +28,11 @@
   flex-direction: column;
   width: 80%;
   margin: 1rem auto;
+  @media screen and (min-width: 768px) {
+    margin: 2rem auto;
+    width: 60%;
+    border: 1px solid $black;
+  }
 
   &__group {
     all: unset;
@@ -42,6 +41,14 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
+    @media screen and (min-width: 768px) {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    &--margin {
+      margin-bottom: 1rem;
+    }
   }
 
   &__label {
@@ -79,14 +86,6 @@
     }
   }
 
-  // &__group:focus-within > &__label,
-  // &__input:not(:placeholder-shown) + &__label {
-  //   transform: translate(-2px, -16px);
-  //   font-size: 0.7rem;
-  //   padding: 0 0.2rem;
-  //   color: $black;
-  // }
-
   &__group:has(&__input:not(:placeholder-shown)) > &__label,
   &__group:focus-within > &__label {
     transform: translate(-2px, -16px);
@@ -107,13 +106,15 @@
     @media screen and (min-width: 768px) {
       background-color: $blueColor;
       color: $white;
+      border: none;
+      width: 85%;
     }
   }
 
   &__password {
     position: absolute;
     top: 24%;
-    right: 6%;
+    right: 7%;
     width: 2rem;
     height: 2rem;
     background-image: url("./src/assets/eye-slash.svg");
@@ -127,15 +128,20 @@
     }
   }
 
-  &__error {
-    @include message;
-    color: red;
-  }
+  &__message {
+    width: fit-content;
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    color: white;
+    background-color: $blueColor;
+    border-radius: 1rem;
+    @media screen and (min-width: 768px) {
+      max-width: 70%;
+    }
 
-  &__success {
-    @include message;
-    color: green;
-    text-align: center;
-    font-weight: bold;
+    &--success {
+      margin-bottom: 1rem;
+    }
   }
 }

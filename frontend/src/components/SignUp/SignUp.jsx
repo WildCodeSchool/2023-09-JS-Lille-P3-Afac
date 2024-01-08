@@ -8,7 +8,7 @@ import FormInput from "./FormInput";
 import "./signUp.scss";
 
 YupPassword(yup);
-const passRequirements =
+const passwordRequirements =
   "Le mot de passe doit contenir au moins 8 caractères dont une lettre minuscule, une majuscule, un chiffre et 1 caractère spécial";
 const validationSchema = yup
   .object({
@@ -29,11 +29,11 @@ const validationSchema = yup
       .max(255),
     password: yup
       .string()
-      .minLowercase(1, passRequirements)
-      .minUppercase(1, passRequirements)
-      .minNumbers(1, passRequirements)
-      .minSymbols(1, passRequirements)
-      .min(8, passRequirements)
+      .minLowercase(1, passwordRequirements)
+      .minUppercase(1, passwordRequirements)
+      .minNumbers(1, passwordRequirements)
+      .minSymbols(1, passwordRequirements)
+      .min(8, passwordRequirements)
       .required("Mot de passe requis"),
     passwordConfirm: yup
       .string()
@@ -78,28 +78,22 @@ function SignUp() {
           type="text"
           name="firstname"
           placeholder="Prenom"
+          errorMessage={errors.firstname ? errors.firstname.message : ""}
         />
-        <span className="form__error">
-          {errors.firstname ? errors.firstname.message : ""}
-        </span>
         <FormInput
           register={register}
           type="text"
           name="lastname"
           placeholder="Nom"
+          errorMessage={errors.lastname ? errors.lastname.message : ""}
         />
-        <span className="form__error">
-          {errors.lastname ? errors.lastname.message : ""}
-        </span>
         <FormInput
           register={register}
           type="email"
           name="email"
           placeholder="E-mail"
+          errorMessage={errors.email ? errors.email.message : ""}
         />
-        <span className="form__error">
-          {errors.email ? errors.email.message : ""}
-        </span>
         <FormInput
           register={register}
           type="password"
@@ -108,10 +102,8 @@ function SignUp() {
           passwordVisible={passwordVisible}
           setPasswordVisible={setPasswordVisible}
           togglePassword="togglePassword"
+          errorMessage={errors.password ? errors.password.message : ""}
         />
-        <span className="form__error">
-          {errors.password ? errors.password.message : ""}
-        </span>
         <FormInput
           register={register}
           type="password"
@@ -120,10 +112,10 @@ function SignUp() {
           passwordVisible={passwordConfirmVisible}
           setPasswordVisible={setPasswordConfirmVisible}
           togglePassword="togglePasswordConfirm"
+          errorMessage={
+            errors.passwordConfirm ? errors.passwordConfirm.message : ""
+          }
         />
-        <span className="form__error">
-          {errors.passwordConfirm ? errors.passwordConfirm.message : ""}
-        </span>
         <label htmlFor="submit" className="form__label--hidden">
           M'inscrire
         </label>
@@ -135,9 +127,9 @@ function SignUp() {
           className="form__submit"
         />
         {validatedForm && (
-          <span className="form__success">
+          <p className="form__message form__message--success">
             Votre compte à été créé avec succès!
-          </span>
+          </p>
         )}
       </form>
     </main>

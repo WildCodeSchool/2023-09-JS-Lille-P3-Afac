@@ -9,6 +9,7 @@ function FormInput({
   passwordVisible,
   setPasswordVisible,
   togglePassword,
+  errorMessage,
 }) {
   const getType = () => {
     if (type === "password") {
@@ -18,33 +19,42 @@ function FormInput({
   };
 
   return (
-    <fieldset className="form__group">
-      <label htmlFor={name} className="form__label">
-        {placeholder}
-      </label>
-      <input
-        type={getType()}
-        name={name}
-        id={name}
-        placeholder={placeholder}
-        className="form__input"
-        {...register(name)}
-      />
-      {type === "password" && (
-        <button
-          type="button"
-          name={togglePassword}
-          id={togglePassword}
-          aria-label="Afficher/Cacher le Mot de Passe"
-          className={
-            passwordVisible
-              ? "form__password form__password--show"
-              : "form__password"
-          }
-          onClick={() => setPasswordVisible(!passwordVisible)}
+    <>
+      <fieldset
+        className={
+          errorMessage === ""
+            ? "form__group form__group--margin"
+            : "form__group"
+        }
+      >
+        <label htmlFor={name} className="form__label">
+          {placeholder}
+        </label>
+        <input
+          type={getType()}
+          name={name}
+          id={name}
+          placeholder={placeholder}
+          className="form__input"
+          {...register(name)}
         />
-      )}
-    </fieldset>
+        {type === "password" && (
+          <button
+            type="button"
+            name={togglePassword}
+            id={togglePassword}
+            aria-label="Afficher/Cacher le Mot de Passe"
+            className={
+              passwordVisible
+                ? "form__password form__password--show"
+                : "form__password"
+            }
+            onClick={() => setPasswordVisible(!passwordVisible)}
+          />
+        )}
+      </fieldset>
+      {errorMessage && <p className="form__message">{errorMessage}</p>}
+    </>
   );
 }
 
@@ -56,6 +66,7 @@ FormInput.propTypes = {
   passwordVisible: PropTypes.bool,
   setPasswordVisible: PropTypes.func,
   togglePassword: PropTypes.string,
+  errorMessage: PropTypes.string.isRequired,
 };
 
 FormInput.defaultProps = {
