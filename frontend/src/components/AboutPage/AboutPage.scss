@@ -1,6 +1,6 @@
 @import "../../Variables.scss";
 
-h2 {
+.title {
   color: $black;
   text-align: center;
   background-color: $redColor;
@@ -11,5 +11,4 @@ p {
   color: $black;
   text-align: center;
   padding: 1rem;
-  background-color: $purpleColor;
 }
