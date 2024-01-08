@@ -1,0 +1,23 @@
+@import "../../Variables.scss";
+
+.profilCard {
+  font-family: $fontBold;
+  font-size: 0.7rem;
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-around;
+  @media screen and (min-width: 800px) {
+    font-size: 1.2rem;
+  }
+}
+
+.profilPic {
+  width: 28%;
+  @media screen and (min-width: 800px) {
+    max-width: 20%;
+  }
+}
+
+.favoriteTitle {
+  font-family: $fontBold;
+}
