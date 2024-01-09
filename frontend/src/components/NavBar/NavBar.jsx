@@ -15,8 +15,8 @@ function NavBar() {
             S'inscrire
           </Link>
         </li>
-        <li>
-          <Link to="/" className="navbarLink">
+        <li className="navbarItem">
+          <Link to="/About" className="navbarLink">
             A Propos
           </Link>
         </li>

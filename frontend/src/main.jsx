@@ -12,6 +12,7 @@ import Gallery from "./components/Gallery/Gallery";
 import Artists from "./components/Artists/Artists";
 import Profil from "./components/Profil/Profil";
 import NavBar from "./components/NavBar/NavBar";
+import AboutPage from "./components/AboutPage/AboutPage";
 import SignUp from "./components/SignUp/SignUp";
 
 const router = createBrowserRouter([
@@ -67,11 +68,17 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/About",
+    element: (
+      <>
+        <NavBar />
+        <AboutPage />,
     path: "/Sign-Up",
     element: (
       <>
         <NavBar />
         <SignUp />
+
       </>
     ),
   },

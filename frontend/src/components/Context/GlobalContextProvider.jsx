@@ -210,6 +210,7 @@ function GlobalContextProvider({ children }) {
     },
   ];
 
+
   const artworks = [
     {
       id: 1,
