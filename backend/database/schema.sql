@@ -44,6 +44,7 @@ create table artwork (
   references artist(id)
 );
 create table management (
+  id int primary key auto_increment not null,
   user_id_ad int not null,
   constraint fk_management_administrator
   foreign key (user_id_ad)
@@ -57,6 +58,7 @@ create table management (
   modification_date date not null
 );
 create table favorite (
+    id int primary key auto_increment not null,
   user_id_lu int not null,
   constraint fk_favorite_logged_user
   foreign key (user_id_lu)
@@ -64,7 +66,7 @@ create table favorite (
   artwork_id int not null,
   constraint fk_favorite_artwork
   foreign key (artwork_id)
-  references artwork(id),
+  references artwork(id)
 );
 create table fact (
   id int primary key auto_increment not null,
