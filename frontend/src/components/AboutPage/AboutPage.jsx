@@ -15,7 +15,10 @@ function AboutPage() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quia
         perferendis eligendi rerum blanditiis doloremque dignissimos! Harum
         excepturi, obcaecati beatae sed autem exercitationem iste labore! Modi
-        quisquam veniam aliquid dolore.
+        quisquam veniam aliquid Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Soluta beatae quasi architecto, pariatur dolorem
+        repellendus non quas quaerat? Iste ipsa expedita dolorem quae labore
+        iure sequi odit recusandae doloremque totam.
       </p>
     </>
   );
