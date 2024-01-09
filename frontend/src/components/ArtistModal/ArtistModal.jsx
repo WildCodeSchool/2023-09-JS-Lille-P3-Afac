@@ -1,19 +1,27 @@
 import PropTypes from "prop-types";
 import * as Dialog from "@radix-ui/react-dialog";
+import ArtistCard from "../Artists/Artistcard";
 import "../ArtworkModal/artworkModal.scss";
 import "./artistModal.scss";
 import { useGlobalContext } from "../Context/GlobalContextProvider";
+import ArtworkModal from "../ArtworkModal/ArtworkModal";
 
-function ArtistModal({ id }) {
+function ArtistModal({ id, page }) {
   const { artworks, artists } = useGlobalContext();
   const artist = artists.find((e) => e.id === id);
   const arts = artworks.filter((e) => e.artistId === id);
+  // Modal triggers for each page
+  const triggers = {
+    artist: (
+      <section className="artistCard">
+        <ArtistCard name={artist.name} img={artist.src} />
+      </section>
+    ),
+  };
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger asChild>
-        <button type="button">{artist.name}</button>
-      </Dialog.Trigger>
+      <Dialog.Trigger asChild>{triggers[page]}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="modalOverlay" />
         <Dialog.Content className="modal modal--artist">
@@ -40,11 +48,7 @@ function ArtistModal({ id }) {
             <ul className="modal__artworks__list">
               {arts.map((e) => (
                 <li key={e.id}>
-                  <img
-                    src={e.src}
-                    alt={e.alt}
-                    className="modal__artworks__list__img"
-                  />
+                  <ArtworkModal id={e.id} page="artistModal" />
                 </li>
               ))}
             </ul>
@@ -57,6 +61,7 @@ function ArtistModal({ id }) {
 
 ArtistModal.propTypes = {
   id: PropTypes.number.isRequired,
+  page: PropTypes.string.isRequired,
 };
 
 export default ArtistModal;

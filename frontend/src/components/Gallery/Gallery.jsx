@@ -14,7 +14,7 @@ function Gallery() {
       </section>
       <section className="cardContainer">
         {artworks.map((e) => (
-          <ArtworkModal key={e.id} id={e.id} />
+          <ArtworkModal key={e.id} id={e.id} page="gallery" />
         ))}
       </section>
     </main>

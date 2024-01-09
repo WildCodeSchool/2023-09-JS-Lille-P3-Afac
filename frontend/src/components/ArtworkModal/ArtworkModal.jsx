@@ -4,18 +4,29 @@ import ArtworkCard from "../Gallery/ArtworkCard";
 import "./artworkModal.scss";
 import { useGlobalContext } from "../Context/GlobalContextProvider";
 
-function ArtworkModal({ id }) {
+function ArtworkModal({ id, page }) {
   const { artworks, artists } = useGlobalContext();
   const artwork = artworks.find((e) => e.id === id);
   const artist = artists.find((e) => e.id === artwork.artistId);
+  // Modal triggers for each page
+  const triggers = {
+    gallery: (
+      <section className="card">
+        <ArtworkCard name={artwork.title} img={artwork.src} />
+      </section>
+    ),
+    artistModal: (
+      <img
+        src={artwork.src}
+        alt={artwork.alt}
+        className="modal__artworks__list__img"
+      />
+    ),
+  };
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger asChild>
-        <section className="card">
-          <ArtworkCard name={artwork.title} img={artwork.src} />
-        </section>
-      </Dialog.Trigger>
+      <Dialog.Trigger asChild>{triggers[page]}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="modalOverlay" />
         <Dialog.Content className="modal modal--artwork">
@@ -53,6 +64,7 @@ function ArtworkModal({ id }) {
 
 ArtworkModal.propTypes = {
   id: PropTypes.number.isRequired,
+  page: PropTypes.string.isRequired,
 };
 
 export default ArtworkModal;

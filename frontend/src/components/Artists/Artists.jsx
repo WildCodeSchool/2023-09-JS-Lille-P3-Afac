@@ -1,5 +1,5 @@
 import { useGlobalContext } from "../Context/GlobalContextProvider";
-import ArtistCard from "./Artistcard";
+import ArtistModal from "../ArtistModal/ArtistModal";
 import "./Artists.scss";
 
 function Artists() {
@@ -7,7 +7,7 @@ function Artists() {
   return (
     <main className="artistsContainer">
       {artists.map((e) => (
-        <ArtistCard name={e.name} img={e.src} />
+        <ArtistModal key={e.id} id={e.id} page="artist" />
       ))}
     </main>
   );
