@@ -72,7 +72,7 @@ function SignUp() {
   return (
     <main className="container">
       <form onSubmit={handleSubmit(onSubmit)} className="form">
-        <h1 className="title">Inscription</h1>
+        <h1 className="registrationTitle">Inscription</h1>
         <FormInput
           register={register}
           type="text"
