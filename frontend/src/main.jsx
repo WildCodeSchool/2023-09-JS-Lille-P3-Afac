@@ -10,6 +10,7 @@ import SecondWall from "./components/VirtualMuseum/FirstRoom/RightWall";
 import ThirdWall from "./components/VirtualMuseum/FirstRoom/LeftWall";
 import Gallery from "./components/Gallery/Gallery";
 import Artists from "./components/Artists/Artists";
+import Profil from "./components/Profil/Profil";
 import NavBar from "./components/NavBar/NavBar";
 import SignUp from "./components/SignUp/SignUp";
 
@@ -53,6 +54,15 @@ const router = createBrowserRouter([
       <>
         <NavBar />
         <Artists />
+      </>
+    ),
+  },
+  {
+    path: "/Profil",
+    element: (
+      <>
+        <NavBar />
+        <Profil />
       </>
     ),
   },
