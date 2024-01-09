@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import * as Dialog from "@radix-ui/react-dialog";
 import "../ArtworkModal/artworkModal.scss";
 import "./artistModal.scss";
-import { useGlobalContext } from "../contexts/GlobalContextProvider";
+import { useGlobalContext } from "../Context/GlobalContextProvider";
 
 function ArtistModal({ id }) {
   const { artworks, artists } = useGlobalContext();
