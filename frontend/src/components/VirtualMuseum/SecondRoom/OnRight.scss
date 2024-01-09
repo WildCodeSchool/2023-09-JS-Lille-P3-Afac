@@ -2,10 +2,10 @@
 
 // Left artwork
 
-.firstArtworkRightWall {
+.firstArtworkRightSideSecondRoom2 {
   position: absolute;
-  bottom: 43%;
-  left: 15%;
+  bottom: 35%;
+  left: 10%;
   width: 25%;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
   &:hover {
@@ -14,7 +14,7 @@
   }
 }
 
-.firstArtworkRightWallInformations {
+.firstArtworkRightSideSecondInformations2 {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -24,8 +24,8 @@
   padding-inline: 0.1rem;
   height: 5%;
   width: 5%;
-  font-size: 0.2rem;
-  left: 42%;
+  font-size: 0.15rem;
+  left: 37%;
   bottom: 49%;
   line-height: 0;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
@@ -38,9 +38,9 @@
 
 // Right artwork
 
-.secondArtworkRightWall {
+.secondArtworkRightSideSecondRoom3 {
   position: absolute;
-  bottom: 33%;
+  bottom: 35%;
   right: 15%;
   width: 25%;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
@@ -50,7 +50,7 @@
   }
 }
 
-.secondArtworkRightWallInformations {
+.secondArtworkRightSideSecondInformations3 {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -60,8 +60,8 @@
   padding-inline: 0.1rem;
   height: 5%;
   width: 5%;
-  font-size: 0.2rem;
-  right: 8%;
+  font-size: 0.15rem;
+  right: 7%;
   bottom: 49%;
   line-height: 0;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));

@@ -6,8 +6,8 @@ import "./OnRight.scss";
 function OnRight() {
   const firstArtwork = {
     img: "./src/assets/pinkVillage.png",
-    classNameArtwork: "firstArtworkRightSideSecondRoom",
-    classNameThumbnail: "firstArtworkRightSideSecondRoomInformations",
+    classNameArtwork: "firstArtworkRightSideSecondRoom2",
+    classNameThumbnail: "firstArtworkRightSideSecondInformations2",
     painter: "Auguste Reblanc",
     date: "1876-2021",
     information: "Aquarelle (1000cm x 800cm)",
@@ -16,14 +16,14 @@ function OnRight() {
   };
 
   const secondArtwork = {
-    img: "./src/assets/fusionColorWithFrame.png",
-    classNameArtwork: "secondArtworkBackRoomSecondRoom",
-    classNameThumbnail: "secondArtworkBackRoomSecondRoomInformations",
+    img: "./src/assets/roseVillageWithFrame.png",
+    classNameArtwork: "secondArtworkRightSideSecondRoom3",
+    classNameThumbnail: "secondArtworkRightSideSecondInformations3",
     painter: "Auguste Reblanc",
     date: "1876-2021",
     information: "Aquarelle (1000cm x 800cm)",
     title: "L'ile de la Réunion",
-    description: "L'ile de la Réunion avec de fortes nuances roses et bleues",
+    description: "L'ile de la Réunion avec de fortes nuances roses",
   };
 
   return (

@@ -146,6 +146,21 @@ function GlobalContextProvider({ children }) {
       className: "wallZoomLeft",
       animationClassName: "zoomLeft",
     },
+    {
+      url: "/VirtualMuseumFontWall",
+      className: "wallZoomFont",
+      animationClassName: "zoomFont",
+    },
+    {
+      url: "/VirtualMuseumOnRight",
+      className: "wallZoomRight",
+      animationClassName: "zoomOnRight",
+    },
+    {
+      url: "/VirtualMuseumOnLeft",
+      className: "wallZoomLeft",
+      animationClassName: "zoomOnLeft",
+    },
   ];
   const artists = [
     {

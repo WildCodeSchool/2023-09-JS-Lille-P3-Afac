@@ -4,8 +4,8 @@
 
 .firstArtworkFontRoomSecondRoom {
   position: absolute;
-  bottom: 20%;
-  left: 25%;
+  bottom: 28%;
+  left: 10%;
   width: 25%;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
   &:hover {
@@ -14,7 +14,7 @@
   }
 }
 
-.leftArtworkFontRoomInformations {
+.firstArtworkFontRoomSecondRoomInformations {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -24,8 +24,8 @@
   padding-inline: 0.1rem;
   height: 5%;
   width: 5%;
-  font-size: 0.2rem;
-  right: 48%;
+  font-size: 0.15rem;
+  right: 55%;
   bottom: 49%;
   line-height: 0;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
@@ -41,7 +41,7 @@
 .secondArtworkFontRoomSecondRoom {
   position: absolute;
   bottom: 46%;
-  right: 10%;
+  right: 15%;
   width: 30%;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
   &:hover {
@@ -50,7 +50,7 @@
   }
 }
 
-.rightArtworkFontRoomInformations {
+.secondArtworkFontRoomSecondRoomInformations {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -60,8 +60,8 @@
   padding-inline: 0.1rem;
   height: 5%;
   width: 5%;
-  font-size: 0.2rem;
-  right: 3%;
+  font-size: 0.15rem;
+  right: 7%;
   bottom: 49%;
   line-height: 0;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));

@@ -16,13 +16,6 @@
   width: 3%;
   transform: rotate(180deg);
 }
-.moveOnTheSecondRoom {
-  position: absolute;
-  left: 50%;
-  bottom: 2%;
-  width: 3%;
-  transform: rotate(180deg);
-}
 
 // First artwork from the left
 
@@ -31,12 +24,12 @@
   bottom: 28%;
   left: 1%;
   width: 13%;
-  transform: rotateX(6deg) rotateY(70deg);
+  transform: rotateX(6deg) rotateY(65deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
 }
 
-.firstArtworkLeftSideSecondInformations {
+.firstArtworkLeftSideSecondRoomInformations {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -46,11 +39,11 @@
   padding-inline: 0.1rem;
   height: 2.5%;
   width: 1.5%;
-  font-size: 0.1rem;
-  left: 15%;
+  font-size: 0.05rem;
+  left: 14%;
   bottom: 34%;
   line-height: 0;
-  transform: rotateX(6deg) rotateY(70deg);
+  transform: rotateX(6deg) rotateY(60deg);
   transform-style: preserve-3d;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
 }
@@ -62,7 +55,7 @@
   bottom: 34%;
   left: 19.5%;
   width: 9%;
-  transform: rotateX(6deg) rotateY(70deg);
+  transform: rotateX(6deg) rotateY(60deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
 }
@@ -77,11 +70,11 @@
   padding-inline: 0.1rem;
   height: 2.5%;
   width: 1.5%;
-  font-size: 0.1rem;
+  font-size: 0.05rem;
   left: 28%;
   bottom: 36%;
   line-height: 0;
-  transform: rotateX(6deg) rotateY(70deg);
+  transform: rotateX(6deg) rotateY(60deg);
   transform-style: preserve-3d;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
 }
@@ -106,7 +99,7 @@
   padding-inline: 0.1rem;
   height: 2.5%;
   width: 2.5%;
-  font-size: 0.1rem;
+  font-size: 0.05rem;
   left: 42.5%;
   bottom: 32%;
   line-height: 0;
@@ -133,7 +126,7 @@
   padding-inline: 0.1rem;
   height: 2.5%;
   width: 2.5%;
-  font-size: 0.1rem;
+  font-size: 0.05rem;
   right: 28.5%;
   bottom: 32%;
   line-height: 0;
@@ -147,7 +140,7 @@
   bottom: 34%;
   width: 11%;
   right: 15.5%;
-  transform: rotateX(4deg) rotateY(260deg);
+  transform: rotateX(4deg) rotateY(270deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
 }
@@ -162,11 +155,11 @@
   padding-inline: 0.1rem;
   height: 2.5%;
   width: 1.5%;
-  font-size: 0.1rem;
+  font-size: 0.05rem;
   right: 23%;
   bottom: 36%;
   line-height: 0;
-  transform: rotateX(6deg) rotateY(260deg);
+  transform: rotateX(6deg) rotateY(270deg);
   transform-style: preserve-3d;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
 }
@@ -178,7 +171,7 @@
   bottom: 28%;
   width: 18%;
   right: 0%;
-  transform: rotateX(4deg) rotateY(260deg);
+  transform: rotateX(4deg) rotateY(270deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
 }
@@ -193,11 +186,40 @@
   padding-inline: 0.1rem;
   height: 2.5%;
   width: 1.5%;
-  font-size: 0.1rem;
+  font-size: 0.05rem;
   right: 14.5%;
   bottom: 34%;
   line-height: 0;
-  transform: rotateX(6deg) rotateY(260deg);
+  transform: rotateX(6deg) rotateY(280deg);
   transform-style: preserve-3d;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+}
+
+.zoomFont {
+  background-image: url("../../../assets/fullRoom2.png");
+  width: 103%;
+  height: 100%;
+  left: -3%;
+  bottom: 0%;
+  z-index: 1;
+  animation: myZoom 4s ease 0s 1 alternate forwards;
+}
+@keyframes myZoom {
+  0% {
+    background-position: center;
+    background-size: 100%;
+  }
+
+  100% {
+    background-position: 54% 60%;
+    background-size: 330%;
+  }
+}
+.wallZoomFont {
+  all: unset;
+  position: absolute;
+  right: 45%;
+  bottom: 24%;
+  font-size: 10rem;
+  cursor: pointer;
 }

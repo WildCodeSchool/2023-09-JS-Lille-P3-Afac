@@ -5,25 +5,24 @@ import "./OnLeft.scss";
 
 function OnLeft() {
   const firstArtwork = {
+    img: "./src/assets/playaWithFrame.png",
+    classNameArtwork: "firstArtworkLeftSideSecondRoom2",
+    classNameThumbnail: "firstArtworkLeftSideSecondInformations",
+    painter: "Frida Kahloops",
+    date: "1976-2002",
+    information: "Aquarelle (1000cm x 700cm)",
+    title: "Plage réunionnaise",
+    description: "Plage de l'ile de la Réunion",
+  };
+  const secondArtwork = {
     img: "./src/assets/blueWithFrame.png",
-    classNameArtwork: "secondArtworkLeftSideSecondRoom",
-    classNameThumbnail: "secondArtworkLeftSideSecondRoomInformations",
+    classNameArtwork: "secondArtworkLeftSideSecondRoom1",
+    classNameThumbnail: "secondArtworkLeftSideSecondInformations",
     painter: "Auguste Reblanc",
     date: "1876-2021",
     information: "Aquarelle (1000cm x 800cm)",
     title: "L'ile de la Réunion",
     description: "L'ile de la Réunion avec de fortes nuances bleues",
-  };
-
-  const secondArtwork = {
-    img: "./src/assets/roseVillageWithFrame.png",
-    classNameArtwork: "secondArtworkRightSideSecondRoom",
-    classNameThumbnail: "secondArtworkRightSideSecondRoomInformations",
-    painter: "Auguste Reblanc",
-    date: "1876-2021",
-    information: "Aquarelle (1000cm x 800cm)",
-    title: "L'ile de la Réunion",
-    description: "L'ile de la Réunion avec de fortes nuances roses",
   };
 
   return (
