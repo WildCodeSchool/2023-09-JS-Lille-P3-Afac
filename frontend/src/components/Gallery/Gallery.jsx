@@ -1,6 +1,6 @@
 import { useGlobalContext } from "../Context/GlobalContextProvider";
 import "./Gallery.scss";
-import ArtworkCard from "./ArtworkCard";
+import ArtworkModal from "../ArtworkModal/ArtworkModal";
 import FilterButton from "./FilterButton";
 
 function Gallery() {
@@ -9,12 +9,12 @@ function Gallery() {
     <main className="galleryContainer">
       <section className="buttonContainer">
         {category.map((e) => (
-          <FilterButton name={e.name} />
+          <FilterButton key={e.id} name={e.name} />
         ))}
       </section>
       <section className="cardContainer">
         {artworks.map((e) => (
-          <ArtworkCard name={e.title} img={e.src} />
+          <ArtworkModal key={e.id} id={e.id} />
         ))}
       </section>
     </main>

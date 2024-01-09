@@ -1,13 +1,18 @@
 import "./ArtworkCard.scss";
+import PropTypes from "prop-types";
 
-function ArtworkCard(artwork) {
-  const { name, img } = artwork;
+function ArtworkCard({ name, img }) {
   return (
-    <section className="card">
+    <>
       <img src={img} alt={name} className="artwork" />
-      <h2 className={name}>{name}</h2>
-    </section>
+      <h2>{name}</h2>
+    </>
   );
 }
+
+ArtworkCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+};
 
 export default ArtworkCard;

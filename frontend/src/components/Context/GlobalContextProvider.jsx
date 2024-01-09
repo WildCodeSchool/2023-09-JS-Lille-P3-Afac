@@ -326,9 +326,11 @@ function GlobalContextProvider({ children }) {
 
   const category = [
     {
+      id: 1,
       name: "Dessin",
     },
     {
+      id: 2,
       name: "Aquarelle",
     },
   ];
