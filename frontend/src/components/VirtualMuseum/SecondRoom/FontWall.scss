@@ -2,11 +2,11 @@
 
 // Left artwork
 
-.leftArtworkFontWall {
+.firstArtworkFontRoomSecondRoom {
   position: absolute;
-  bottom: 40%;
-  left: 5%;
-  width: 40%;
+  bottom: 20%;
+  left: 25%;
+  width: 25%;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
   &:hover {
     animation: shake 2s ease 0s 1 alternate forwards;
@@ -38,7 +38,7 @@
 
 // Right artwork
 
-.rightArtworkFontWall {
+.secondArtworkFontRoomSecondRoom {
   position: absolute;
   bottom: 46%;
   right: 10%;

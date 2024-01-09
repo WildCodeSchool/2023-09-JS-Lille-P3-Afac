@@ -16,14 +16,14 @@ function FontWall() {
   };
 
   const secondArtwork = {
-    img: "./src/assets/playaWithFrame.png",
-    classNameArtwork: "firstArtworkLeftSideSecondRoom",
-    classNameThumbnail: "firstArtworkLeftSideSecondRoomInformations",
-    painter: "Frida Kahloops",
-    date: "1976-2002",
-    information: "Aquarelle (1000cm x 700cm)",
-    title: "Plage réunionnaise",
-    description: "Plage de l'ile de la Réunion",
+    img: "./src/assets/fusionColorWithFrame.png",
+    classNameArtwork: "secondArtworkBackRoomSecondRoom",
+    classNameThumbnail: "secondArtworkBackRoomSecondRoomInformations",
+    painter: "Auguste Reblanc",
+    date: "1876-2021",
+    information: "Aquarelle (1000cm x 800cm)",
+    title: "L'ile de la Réunion",
+    description: "L'ile de la Réunion avec de fortes nuances roses et bleues",
   };
 
   return (

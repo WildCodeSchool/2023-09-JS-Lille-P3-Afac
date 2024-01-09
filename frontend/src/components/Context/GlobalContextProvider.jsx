@@ -147,7 +147,6 @@ function GlobalContextProvider({ children }) {
       animationClassName: "zoomLeft",
     },
   ];
-  
   const artists = [
     {
       name: "Salvador Dall-e",
@@ -166,7 +165,6 @@ function GlobalContextProvider({ children }) {
       img: "./src/assets/Klimteastwood.png",
     },
   ];
-  
   const artwork = [
     {
       name: "Le Piton",
@@ -181,7 +179,6 @@ function GlobalContextProvider({ children }) {
       img: "./src/assets/LeTampon.png",
     },
   ];
-  
   const category = [
     {
       name: "Dessin",
