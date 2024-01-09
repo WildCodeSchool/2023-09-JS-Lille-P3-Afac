@@ -55,9 +55,14 @@
           width: 33%;
         }
       }
-      &__img {
-        width: 90%;
-        height: auto;
+      &__button {
+        border: none;
+        background-color: $white;
+        padding: 0;
+        &__img {
+          width: 90%;
+          height: auto;
+        }
       }
     }
   }

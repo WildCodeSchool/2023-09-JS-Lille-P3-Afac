@@ -9,7 +9,6 @@
 }
 
 // Triggers animation when the modal is closed
-.modalOverlay[data-state="closed"],
 .modal[data-state="closed"] {
   animation: fadeOut 0.5s ease-out;
 }
