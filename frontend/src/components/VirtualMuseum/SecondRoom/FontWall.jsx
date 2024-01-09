@@ -17,8 +17,8 @@ function FontWall() {
 
   const secondArtwork = {
     img: "./src/assets/fusionColorWithFrame.png",
-    classNameArtwork: "secondArtworkBackRoomSecondRoom",
-    classNameThumbnail: "secondArtworkBackRoomSecondRoomInformations",
+    classNameArtwork: "secondArtworkFontRoomSecondRoom",
+    classNameThumbnail: "secondArtworkFontRoomSecondRoomInformations",
     painter: "Auguste Reblanc",
     date: "1876-2021",
     information: "Aquarelle (1000cm x 800cm)",
