@@ -16,9 +16,6 @@ function NavBar() {
           </Link>
         </li>
         <li className="navbarItem">
-          <Link to="/About" className="navbarLink" />
-        </li>
-        <li>
           <Link to="/About" className="navbarLink">
             A Propos
           </Link>

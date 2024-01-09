@@ -209,12 +209,6 @@ function GlobalContextProvider({ children }) {
     },
   ];
 
-  const about = [
-    {
-      name: "About",
-      src: "./src/components/AboutPage/AboutPage.jsx",
-    },
-  ];
   const contextValue = useMemo(() => {
     return {
       ArtworksFirstRoom,
@@ -225,7 +219,6 @@ function GlobalContextProvider({ children }) {
       category,
       userProfil,
       favoriteArtwork,
-      about,
     };
   });
 
