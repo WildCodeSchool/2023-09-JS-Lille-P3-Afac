@@ -268,12 +268,12 @@ function GlobalContextProvider({ children }) {
     },
     {
       id: 4,
-      title: "Abris-côtier",
+      title: "Abri-côtier",
       src: "./src/assets/Abri-côtier.png",
       technique: "Aquarelle",
       date: "2008",
       format: "1792 x 1220",
-      alt: "Aquarelle 'Abris-côtier' par Marc Chacaille",
+      alt: "Aquarelle 'Abri-côtier' par Marc Chacaille",
       facts: [
         {
           id: 1,

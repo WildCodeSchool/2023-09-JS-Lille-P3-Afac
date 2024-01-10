@@ -4,15 +4,10 @@ import { useGlobalContext } from "../Context/GlobalContextProvider";
 import "./artworkModal.scss";
 
 function ArtworkModal({ id, page }) {
-  // Import artworks and artists array from the context
   const { artworks, artists } = useGlobalContext();
-  // Using the id to find the corresponding artwork
   const artwork = artworks.find((e) => e.id === id);
-  // Using the id to find the corresponding artist
   const artist = artists.find((e) => e.id === artwork.artistId);
-  // Modal triggers for each page
   const triggers = {
-    // Trigger when inside the Gallery page
     gallery: (
       <button type="button" aria-label={artwork.alt} className="trigger">
         <img
@@ -23,11 +18,10 @@ function ArtworkModal({ id, page }) {
         <span className="artworkTitle">{artwork.title}</span>
       </button>
     ),
-    // Trigger when inside the artist modal
     artistModal: (
       <button
         type="button"
-        aria-label={artwork.title}
+        aria-label={artwork.alt}
         className="modal__artworks__list__button"
       >
         <img
@@ -40,17 +34,11 @@ function ArtworkModal({ id, page }) {
   };
 
   return (
-    // Using Radix UI Dialog, Documentation : https://www.radix-ui.com/primitives/docs/components/dialog
-
     <Dialog.Root>
-      {/* Trigger contains the element that will open the modal on click */}
       <Dialog.Trigger asChild>{triggers[page]}</Dialog.Trigger>
       <Dialog.Portal>
-        {/* Overlay traps the keyboard focus inside the modal */}
         <Dialog.Overlay className="modalOverlay" />
-        {/* Content contains everything we want to display inside the modal */}
         <Dialog.Content className="modal modal--artwork">
-          {/* Close contains the element that will close the modal on click */}
           <Dialog.Close asChild>
             <button
               type="button"
@@ -65,11 +53,9 @@ function ArtworkModal({ id, page }) {
           />
           <figure className="modal__content__info">
             <figcaption>
-              {/* The content inside Title will be announced when the modal opens */}
               <Dialog.Title className="modal__content__info__title">
                 {artwork.title}
               </Dialog.Title>
-              {/* Description is an optional element that announces its content when the modal opens */}
               <Dialog.Description className="modal__content__info__details">{`${artwork.date} - ${artwork.technique} - ${artwork.format}`}</Dialog.Description>
             </figcaption>
             {artwork.facts.map((e) => (

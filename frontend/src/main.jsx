@@ -9,9 +9,10 @@ import FirstWall from "./components/VirtualMuseum/FirstRoom/BackWall";
 import SecondWall from "./components/VirtualMuseum/FirstRoom/RightWall";
 import ThirdWall from "./components/VirtualMuseum/FirstRoom/LeftWall";
 import Gallery from "./components/Gallery/Gallery";
+import NavBar from "./components/NavBar/NavBar";
 import Artists from "./components/Artists/Artists";
 import Profil from "./components/Profil/Profil";
-import NavBar from "./components/NavBar/NavBar";
+import SignUp from "./components/SignUp/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,15 @@ const router = createBrowserRouter([
       <>
         <NavBar />
         <Profil />
+      </>
+    ),
+  },
+  {
+    path: "/Sign-Up",
+    element: (
+      <>
+        <NavBar />
+        <SignUp />
       </>
     ),
   },
