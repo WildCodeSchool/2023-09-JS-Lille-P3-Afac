@@ -18,12 +18,24 @@
 .navbar_transparent {
   @include navbar;
   background-color: transparent;
+  position: absolute;
+  z-index: 1;
 }
 .navbarLogo {
-  justify-content: flex-start;
-  width: 18%;
+  max-width: 20%;
+  height: auto;
   img {
-    width: 70%;
+    display: inline-block;
+    width: 100%;
+  }
+  @media screen and (min-width: 490px) {
+    max-width: 16%;
+  }
+  @media screen and (min-width: 790px) {
+    max-width: 14%;
+  }
+  @media screen and (min-width: 1000px) {
+    max-width: 12%;
   }
 }
 
@@ -34,11 +46,11 @@
   list-style-type: none;
   margin-right: 0.3rem;
   text-decoration: none;
-}
-
-@media screen and (min-width: 1440px) {
-  .navbarLink {
-    display: flex;
-    font-size: large;
+  font-size: 1rem;
+  @media screen and (min-width: 800px) {
+    font-size: 1.2rem;
+  }
+  @media screen and (min-width: 1450px) {
+    padding: 1.5rem;
   }
 }
