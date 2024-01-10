@@ -1,8 +1,8 @@
 import "./App.scss";
-import NavBar from "./components/NavBar/NavBar";
+import HomePage from "./components/Homepage/Homepage";
 
 function App() {
-  return <NavBar />;
+  return <HomePage />;
 }
 
 export default App;

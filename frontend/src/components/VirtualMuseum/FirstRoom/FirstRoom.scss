@@ -6,7 +6,16 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  perspective: 600px;
+  perspective: 300px;
+  @media screen and (min-width: 700px) {
+    perspective: 400px;
+  }
+  @media screen and (min-width: 900px) {
+    perspective: 450px;
+  }
+  @media screen and (min-width: 1100px) {
+    perspective: 600px;
+  }
 }
 
 .painter {
@@ -28,6 +37,7 @@
   position: absolute;
   bottom: 42%;
   width: 6.5%;
+  left: -1%;
   transform: rotateX(0deg) rotateY(70deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
@@ -44,13 +54,16 @@
   padding-inline: 0.1rem;
   height: 2%;
   width: 1%;
-  font-size: 0.08rem;
+  font-size: 0.04rem;
   left: 8%;
   bottom: 45%;
   line-height: 0;
   transform: rotateX(0deg) rotateY(70deg);
   transform-style: preserve-3d;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.08rem;
+  }
 }
 
 // Left artwork, the second from the left
@@ -76,13 +89,16 @@
   padding-inline: 0.1rem;
   height: 2%;
   width: 1.5%;
-  font-size: 0.08rem;
+  font-size: 0.04rem;
   left: 28.1%;
   bottom: 45%;
   line-height: 0;
   transform: rotateX(0deg) rotateY(70deg);
   transform-style: preserve-3d;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.08rem;
+  }
 }
 
 // Back artwork, the third from the left
@@ -162,13 +178,16 @@
   padding-inline: 0.1rem;
   height: 2.5%;
   width: 1.5%;
-  font-size: 0.1rem;
+  font-size: 0.04rem;
   right: 18.3%;
   bottom: 42%;
   line-height: 0;
   transform: rotateX(0deg) rotateY(300deg);
   transform-style: preserve-3d;
   filter: drop-shadow(-1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.1rem;
+  }
 }
 
 // Right artwork, the sixth from the left
@@ -181,6 +200,11 @@
   transform: rotateX(0deg) rotateY(90deg);
   transform-style: preserve-3d;
   filter: drop-shadow(6px 5px 2px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    bottom: 35%;
+    right: 4%;
+    width: 15%;
+  }
 }
 
 .secondArtworkRightSideInformations {
@@ -194,13 +218,16 @@
   padding-inline: 0.1rem;
   height: 3%;
   width: 1.5%;
-  font-size: 0.1rem;
+  font-size: 0.04rem;
   right: 0.8%;
   bottom: 40%;
   line-height: 0;
   transform: rotateX(0deg) rotateY(300deg);
   transform-style: preserve-3d;
   filter: drop-shadow(-1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.1rem;
+  }
 }
 
 // Animation for the artworks
@@ -242,9 +269,13 @@
 .moveOnTheSecondRoom {
   all: unset;
   position: absolute;
-  width: 60%;
-  left: 31%;
-  bottom: 27%;
+  width: 70%;
+  left: 32%;
+  bottom: 24%;
+  @media screen and (min-width: 1000px) {
+    bottom: 20%;
+    font-size: 10rem;
+  }
 }
 
 .arrow {
@@ -280,9 +311,13 @@
   all: unset;
   position: absolute;
   right: 45%;
-  bottom: 24%;
-  font-size: 10rem;
+  bottom: 21%;
+  font-size: 6rem;
   cursor: pointer;
+  @media screen and (min-width: 1000px) {
+    bottom: 24%;
+    font-size: 10rem;
+  }
 }
 
 .zoom {
@@ -301,8 +336,12 @@
   }
 
   100% {
-    background-position: 54% 60%;
+    background-position: 54% 57%;
     background-size: 330%;
+    @media screen and (min-width: 1100px) {
+      background-position: 54% 60%;
+      background-size: 330%;
+    }
   }
 }
 
@@ -312,9 +351,13 @@
   all: unset;
   position: absolute;
   right: 20%;
-  bottom: 13%;
-  font-size: 10rem;
+  bottom: 10%;
+  font-size: 6rem;
   cursor: pointer;
+  @media screen and (min-width: 1000px) {
+    bottom: 12%;
+    font-size: 10rem;
+  }
 }
 
 .zoomRight {
@@ -344,9 +387,13 @@
   all: unset;
   position: absolute;
   left: 16%;
-  bottom: 6%;
-  font-size: 10rem;
+  bottom: 3%;
+  font-size: 6rem;
   cursor: pointer;
+  @media screen and (min-width: 1000px) {
+    bottom: 6%;
+    font-size: 10rem;
+  }
 }
 
 .zoomLeft {
