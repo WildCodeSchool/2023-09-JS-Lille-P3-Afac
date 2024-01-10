@@ -13,6 +13,7 @@ import Artists from "./components/Artists/Artists";
 import Profil from "./components/Profil/Profil";
 import NavBar from "./components/NavBar/NavBar";
 import SignUp from "./components/SignUp/SignUp";
+import PostArtwork from "./components/PostArtwork/PostArtwork";
 
 const router = createBrowserRouter([
   {
@@ -72,6 +73,15 @@ const router = createBrowserRouter([
       <>
         <NavBar />
         <SignUp />
+      </>
+    ),
+  },
+  {
+    path: "/PostArtwork",
+    element: (
+      <>
+        <NavBar />
+        <PostArtwork />
       </>
     ),
   },
