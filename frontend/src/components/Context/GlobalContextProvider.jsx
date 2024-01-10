@@ -257,14 +257,14 @@ function GlobalContextProvider({ children }) {
     },
     {
       id: 3,
-      title: "Le Tampon",
-      src: "./src/assets/LeTampon.png",
-      technique: "Aquarelle",
-      date: "2012",
+      title: "Pink Village",
+      src: "./src/assets/pinkVillage.png",
+      technique: "Dessin",
+      date: "2017",
       format: "1790 x 1276",
-      alt: "Aquarelle 'Le Tampon' par Eugène Delabière",
+      alt: "Dessin 'Pink Village' par Frida Khaloops",
       facts: [],
-      artistId: 7,
+      artistId: 3,
     },
     {
       id: 4,
@@ -326,9 +326,11 @@ function GlobalContextProvider({ children }) {
 
   const category = [
     {
+      id: 1,
       name: "Dessin",
     },
     {
+      id: 2,
       name: "Aquarelle",
     },
   ];
@@ -347,7 +349,7 @@ function GlobalContextProvider({ children }) {
     },
     {
       name: "Abris-côtier",
-      img: "./src/assets/Abris-côtier.png",
+      img: "./src/assets/Abri-côtier.png",
     },
   ];
 

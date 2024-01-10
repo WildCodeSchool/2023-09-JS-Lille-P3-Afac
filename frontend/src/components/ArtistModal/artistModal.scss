@@ -1,5 +1,13 @@
 @import "./src/variables.scss";
 
+.trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: $white;
+}
+
 .modal {
   &--artist {
     @media screen and (min-width: 768px) {
@@ -55,9 +63,14 @@
           width: 33%;
         }
       }
-      &__img {
-        width: 90%;
-        height: auto;
+      &__button {
+        border: none;
+        background-color: $white;
+        padding: 0;
+        &__img {
+          width: 90%;
+          height: auto;
+        }
       }
     }
   }

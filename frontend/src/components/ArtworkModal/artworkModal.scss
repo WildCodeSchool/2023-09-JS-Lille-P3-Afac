@@ -8,6 +8,16 @@
   animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+// Triggers animation when the modal is closed
+.modal[data-state="closed"] {
+  animation: fadeOut 0.5s ease-out;
+}
+
+// Immediately removes the overlay when the modal is closed
+.modalOverlay[data-state="closed"] {
+  opacity: 0;
+}
+
 .modal {
   position: fixed;
   top: 50%;
@@ -16,7 +26,7 @@
   width: 85%;
   max-width: 50rem;
   max-height: 90%;
-  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  animation: contentShow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
   background-color: $white;
   box-shadow: 0 0 5px $black;
