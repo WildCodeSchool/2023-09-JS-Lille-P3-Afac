@@ -268,8 +268,8 @@ function GlobalContextProvider({ children }) {
     },
     {
       id: 4,
-      title: "Abris-côtier",
-      src: "./src/assets/Abris-côtier.png",
+      title: "Abri-côtier",
+      src: "./src/assets/Abri-côtier.png",
       technique: "Aquarelle",
       date: "2008",
       format: "1792 x 1220",

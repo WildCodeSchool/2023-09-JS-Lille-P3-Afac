@@ -21,7 +21,7 @@ function Carousel() {
       <main className="carousel-container">
         <AliceCarousel
           autoPlay
-          autoPlayInterval={9000}
+          autoPlayInterval={7000}
           infinite
           autoPlayControls
           onSlideChanged={handleSlideChange}
