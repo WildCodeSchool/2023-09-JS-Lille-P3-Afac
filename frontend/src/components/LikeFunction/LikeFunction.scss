@@ -1,0 +1,14 @@
+@import "../../Variables.scss";
+
+.buttonLike {
+  all: unset;
+  position: relative;
+  top: 10%;
+  left: 41%;
+}
+
+.artworkCardLikeButton {
+  all: unset;
+  display: block;
+  position: absolute;
+}
