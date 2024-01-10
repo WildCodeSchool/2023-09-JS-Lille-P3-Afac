@@ -24,7 +24,7 @@
   padding-inline: 0.1rem;
   height: 5%;
   width: 5%;
-  font-size: 0.2rem;
+  font-size: 0.1rem;
   left: 32%;
   bottom: 49%;
   line-height: 0;
@@ -33,6 +33,9 @@
     transform: scale(1.3);
     transition-duration: 1s;
     cursor: pointer;
+  }
+  @media screen and (min-width: 1100px) {
+    font-size: 0.2rem;
   }
 }
 
@@ -60,7 +63,7 @@
   padding-inline: 0.1rem;
   height: 5%;
   width: 5%;
-  font-size: 0.2rem;
+  font-size: 0.1rem;
   right: 8%;
   bottom: 49%;
   line-height: 0;
@@ -69,5 +72,8 @@
     transform: scale(1.3);
     transition-duration: 1s;
     cursor: pointer;
+  }
+  @media screen and (min-width: 1100px) {
+    font-size: 0.2rem;
   }
 }

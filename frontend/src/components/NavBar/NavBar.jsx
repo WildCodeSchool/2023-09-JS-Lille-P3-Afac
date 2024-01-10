@@ -12,6 +12,7 @@ function NavBar() {
       <ul className="navbarLink">
         <li>
           <Link to="/Profil" className="navbarLink">
+          <Link to="/sign-up" className="navbarLink">
             S'inscrire
           </Link>
         </li>
