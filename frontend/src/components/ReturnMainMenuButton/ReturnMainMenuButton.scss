@@ -3,7 +3,7 @@
 .backMainMenuButton {
   position: absolute;
   border: 3px solid $black;
-  top: 2vh;
+  top: 1%;
   width: 3vw;
   height: 4vh;
   border-radius: 200px;
@@ -11,7 +11,7 @@
   right: 0.5vw;
   align-items: center;
   color: $black;
-  font-size: 1.4vw;
+  font-size: 1.2rem;
   cursor: pointer;
   @media screen and (min-width: 600px) {
     width: 2.5vw;
@@ -26,7 +26,6 @@
   @media screen and (min-width: 1100px) {
     width: 2.5vw;
     height: 4vh;
-    right: 1vw;
   }
 }
 
@@ -38,7 +37,7 @@
   color: $black;
   width: 30vw;
   height: 30vh;
-  font-size: 3vw;
+  font-size: 2.5rem;
   top: 30%;
   left: 35%;
   transition: transform 1000ms ease-in-out;
