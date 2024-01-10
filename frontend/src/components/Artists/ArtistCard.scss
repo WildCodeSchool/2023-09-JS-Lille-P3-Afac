@@ -1,9 +1,6 @@
 @import "../../Variables.scss";
 
 .artistCard {
-  flex-direction: column;
-  background-color: $white;
-  border: none;
   margin: 0.5rem;
 }
 
@@ -21,7 +18,7 @@
   font-family: $fontBold;
   font-size: 0.9rem;
   width: 9rem;
-  height: 2rem;
+  margin: 0.5rem 0;
   @media screen and (min-width: 900px) {
     font-size: 1.2rem;
     width: 12rem;

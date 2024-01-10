@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import * as Dialog from "@radix-ui/react-dialog";
-import ArtworkCard from "../Gallery/ArtworkCard";
 import { useGlobalContext } from "../Context/GlobalContextProvider";
 import "./artworkModal.scss";
 
@@ -15,9 +14,14 @@ function ArtworkModal({ id, page }) {
   const triggers = {
     // Trigger when inside the Gallery page
     gallery: (
-      <section className="card">
-        <ArtworkCard name={artwork.title} img={artwork.src} />
-      </section>
+      <button type="button" aria-label={artwork.alt} className="trigger">
+        <img
+          src={artwork.src}
+          alt={`portrait de ${artwork.alt}`}
+          className="artworkPic"
+        />
+        <span className="artworkTitle">{artwork.title}</span>
+      </button>
     ),
     // Trigger when inside the artist modal
     artistModal: (

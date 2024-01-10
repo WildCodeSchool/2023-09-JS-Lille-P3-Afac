@@ -1,7 +1,7 @@
 @import "../../Variables.scss";
 
-.artwork {
-  width: 21rem;
+.artworkPic {
+  width: 100%;
 }
 
 .card {
@@ -9,6 +9,20 @@
   flex-direction: column;
   align-items: center;
   font-family: $fontBold;
-  padding: 1rem;
+  width: 45vw;
+  margin: 0;
+  padding: 0;
   cursor: pointer;
+  @media screen and (min-width: 768px) {
+    width: 30vw;
+  }
+}
+
+.artworkTitle {
+  text-align: center;
+  font-family: $fontBold;
+  margin: 0.5rem 0;
+  @media screen and (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 }

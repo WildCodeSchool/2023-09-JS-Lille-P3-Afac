@@ -1,6 +1,6 @@
 import { useGlobalContext } from "../Context/GlobalContextProvider";
 import "./Gallery.scss";
-import ArtworkModal from "../ArtworkModal/ArtworkModal";
+import ArtworkCard from "./ArtworkCard";
 import FilterButton from "./FilterButton";
 
 function Gallery() {
@@ -14,7 +14,7 @@ function Gallery() {
       </section>
       <section className="cardContainer">
         {artworks.map((e) => (
-          <ArtworkModal key={e.id} id={e.id} page="gallery" />
+          <ArtworkCard key={e.id} id={e.id} />
         ))}
       </section>
     </main>

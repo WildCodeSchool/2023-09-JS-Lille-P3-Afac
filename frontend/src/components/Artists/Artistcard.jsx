@@ -1,13 +1,18 @@
+import PropTypes from "prop-types";
+import ArtistModal from "../ArtistModal/ArtistModal";
+
 import "./ArtistCard.scss";
 
-function ArtistCard(artists) {
-  const { name, img } = artists;
+function ArtistCard({ id }) {
   return (
-    <>
-      <img src={img} alt={`portrait de ${name}`} className="artistPic" />
-      <figcaption className="artistName">{name}</figcaption>
-    </>
+    <figure className="artistCard">
+      <ArtistModal id={id} page="artist" />
+    </figure>
   );
 }
+
+ArtistCard.propTypes = {
+  id: PropTypes.number.isRequired,
+};
 
 export default ArtistCard;

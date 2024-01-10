@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import * as Dialog from "@radix-ui/react-dialog";
-import ArtistCard from "../Artists/Artistcard";
 import ArtworkModal from "../ArtworkModal/ArtworkModal";
 import { useGlobalContext } from "../Context/GlobalContextProvider";
 import "../ArtworkModal/artworkModal.scss";
@@ -16,8 +15,13 @@ function ArtistModal({ id, page }) {
   // Modal triggers for each page
   const triggers = {
     artist: (
-      <button type="button" aria-label={artist.name} className="artistCard">
-        <ArtistCard name={artist.name} img={artist.src} />
+      <button type="button" aria-label={artist.name} className="trigger">
+        <img
+          src={artist.src}
+          alt={`portrait de ${artist.name}`}
+          className="artistPic"
+        />
+        <span className="artistName">{artist.name}</span>
       </button>
     ),
   };

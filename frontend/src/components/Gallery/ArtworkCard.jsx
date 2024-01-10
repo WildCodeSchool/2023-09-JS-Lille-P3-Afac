@@ -1,18 +1,17 @@
 import "./ArtworkCard.scss";
 import PropTypes from "prop-types";
+import ArtworkModal from "../ArtworkModal/ArtworkModal";
 
-function ArtworkCard({ name, img }) {
+function ArtworkCard({ id }) {
   return (
-    <>
-      <img src={img} alt={name} className="artwork" />
-      <h2>{name}</h2>
-    </>
+    <figure className="card">
+      <ArtworkModal id={id} page="gallery" />
+    </figure>
   );
 }
 
 ArtworkCard.propTypes = {
-  name: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default ArtworkCard;
