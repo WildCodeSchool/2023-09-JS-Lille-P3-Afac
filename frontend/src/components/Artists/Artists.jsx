@@ -7,7 +7,7 @@ function Artists() {
   return (
     <main className="artistsContainer">
       {artists.map((e) => (
-        <ArtistCard name={e.name} img={e.img} />
+        <ArtistCard name={e.name} img={e.src} />
       ))}
     </main>
   );

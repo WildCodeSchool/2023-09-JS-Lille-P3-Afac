@@ -1,0 +1,19 @@
+@keyframes overlayShow {
+  from {
+    opacity: $opacity-none;
+  }
+  to {
+    opacity: $opacity-full;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: $opacity-none;
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+  to {
+    opacity: $opacity-full;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
