@@ -13,6 +13,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Artists from "./components/Artists/Artists";
 import Profil from "./components/Profil/Profil";
 import SignUp from "./components/SignUp/SignUp";
+import ReturnMainMenuButton from "./components/ReturnMainMenuButton/ReturnMainMenuButton";
 
 const router = createBrowserRouter([
   {
@@ -21,23 +22,48 @@ const router = createBrowserRouter([
   },
   {
     path: "/VirtualMuseumFirstRoom",
-    element: <VirtualMuseum />,
+    element: (
+      <>
+        <VirtualMuseum />
+        <ReturnMainMenuButton />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumSecondRoom",
-    element: <SecondRoom />,
+    element: (
+      <>
+        <SecondRoom />
+        <ReturnMainMenuButton />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumFirstWall",
-    element: <FirstWall />,
+    element: (
+      <>
+        <FirstWall />
+        <ReturnMainMenuButton />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumSecondWall",
-    element: <SecondWall />,
+    element: (
+      <>
+        <SecondWall />
+        <ReturnMainMenuButton />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumThirdWall",
-    element: <ThirdWall />,
+    element: (
+      <>
+        <ThirdWall />
+        <ReturnMainMenuButton />
+      </>
+    ),
   },
   {
     path: "/Gallery",

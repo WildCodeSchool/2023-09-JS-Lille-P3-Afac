@@ -1,0 +1,69 @@
+@import "../../Variables.scss";
+
+.backMainMenuButton {
+  position: absolute;
+  border: 3px solid $black;
+  top: 2vh;
+  width: 3vw;
+  height: 4vh;
+  border-radius: 200px;
+  background-color: $white;
+  right: 0.5vw;
+  align-items: center;
+  color: $black;
+  font-size: 1.4vw;
+  cursor: pointer;
+  @media screen and (min-width: 600px) {
+    width: 2.5vw;
+    height: 4vh;
+    border: 1px solid $black;
+  }
+  @media screen and (min-width: 900px) {
+    width: 2.5vw;
+    height: 5vh;
+    border: 2px solid $black;
+  }
+  @media screen and (min-width: 1100px) {
+    width: 2.5vw;
+    height: 4vh;
+    right: 1vw;
+  }
+}
+
+.messagePopUp {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  color: $black;
+  width: 30vw;
+  height: 30vh;
+  font-size: 3vw;
+  top: 30%;
+  left: 35%;
+  transition: transform 1000ms ease-in-out;
+  padding: 3rem 1rem;
+  text-align: center;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border: 0.15rem solid $black;
+}
+
+.areYouSureButton {
+  margin-top: 1rem;
+}
+
+.backtoMainMenu {
+  all: unset;
+  border: 2px solid $black;
+  padding: 0.6rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: $white;
+  color: $black;
+  font-size: 0.7rem;
+  cursor: pointer;
+  @media screen and (min-width: 700px) {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
