@@ -94,7 +94,7 @@ function PostArtwork() {
         />
         <FormInput
           register={register}
-          type="text"
+          type="date"
           name="date"
           placeholder="Date de l'oeuvre"
           errorMessage={errors.date ? errors.date.message : ""}
