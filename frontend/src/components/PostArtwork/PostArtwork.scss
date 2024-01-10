@@ -23,6 +23,13 @@
   font-size: 1.5rem;
 }
 
+.addImage {
+  font-size: 0.6rem;
+  @media screen and (min-width: 768px) {
+    font-size: 0.8rem;
+  }
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -37,7 +44,7 @@
   }
 
   .selectedArtwork {
-    width: 30rem;
+    width: 40%;
     margin: 2rem;
   }
 

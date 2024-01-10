@@ -55,13 +55,14 @@ function PostArtwork() {
     <main className="container">
       <form onSubmit={handleSubmit(onSubmit)} className="form">
         <h1 className="postTitle">Poster mon oeuvre</h1>
-        <label htmlFor="photo">Sélectionne ton oeuvre !</label>
+        <label htmlFor="photo">Je sélectionne mon oeuvre :</label>
         <input
           type="file"
           id="photo"
           name="photo"
           accept=".jpeg,.png"
           onChange={onImageChange}
+          className="addImage"
         />
         {imageUrl && (
           <img
