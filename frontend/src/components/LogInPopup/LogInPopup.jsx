@@ -6,7 +6,7 @@ function LogInPopup() {
     <Dialog.Root>
       <Dialog.Trigger asChild>
         <button type="button" className="Button LogIn">
-          Connexion
+          S'identifier
         </button>
       </Dialog.Trigger>
       <Dialog.Portal>
@@ -34,24 +34,23 @@ function LogInPopup() {
               placeholder="Password"
             />
           </fieldset>
-          <div
-            style={{
-              display: "flex",
-              marginTop: 25,
-              justifyContent: "flex-end",
-            }}
-          >
+          <section className="PopUpClosingButtons">
+            <linkTo className="ForgottenPassword">Mot de passe oublié?</linkTo>
             <Dialog.Close asChild>
-              <button type="button" className="Button LogIn">
+              <button type="button" className="Button LogIn PopUP">
                 Connexion
               </button>
             </Dialog.Close>
-          </div>
-          <Dialog.Close asChild>
-            <button type="button" className="ClosingButton" aria-label="Close">
-              x
-            </button>
-          </Dialog.Close>
+            <Dialog.Close asChild>
+              <button
+                type="button"
+                className="ClosingButton"
+                aria-label="Close"
+              >
+                x
+              </button>
+            </Dialog.Close>
+          </section>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
