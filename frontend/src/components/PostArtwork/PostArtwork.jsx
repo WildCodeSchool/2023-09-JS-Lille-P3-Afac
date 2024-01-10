@@ -48,6 +48,7 @@ function PostArtwork() {
   const [validatedForm, setValidatedForm] = useState(false);
   const onSubmit = () => {
     setValidatedForm(true);
+    setImageUrl(null);
     reset();
   };
 
