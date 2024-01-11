@@ -33,7 +33,8 @@ const router = createBrowserRouter([
     path: "/VirtualMuseumSecondRoom",
     element: (
       <>
-        <SecondRoom /> <LandscapeMessage messageHidden="message__hidden" />{" "}
+        <SecondRoom />
+        <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
   },
@@ -41,7 +42,8 @@ const router = createBrowserRouter([
     path: "/VirtualMuseumFirstWall",
     element: (
       <>
-        <FirstWall /> <LandscapeMessage messageHidden="message__hidden" />{" "}
+        <FirstWall />
+        <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
   },
@@ -49,7 +51,8 @@ const router = createBrowserRouter([
     path: "/VirtualMuseumSecondWall",
     element: (
       <>
-        <SecondWall /> <LandscapeMessage messageHidden="message__hidden" />{" "}
+        <SecondWall />
+        <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
   },
@@ -57,7 +60,8 @@ const router = createBrowserRouter([
     path: "/VirtualMuseumThirdWall",
     element: (
       <>
-        <ThirdWall /> <LandscapeMessage messageHidden="message__hidden" />{" "}
+        <ThirdWall />
+        <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
   },
