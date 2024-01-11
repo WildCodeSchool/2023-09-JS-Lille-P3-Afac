@@ -1,8 +1,8 @@
 import "./App.scss";
-import FirstRoom from "./components/VirtualMuseum/FirstRoom/FirstRoom";
+import Homepage from "./components/Homepage/Homepage";
 
 function App() {
-  return <FirstRoom />;
+  return <Homepage />;
 }
 
 export default App;
