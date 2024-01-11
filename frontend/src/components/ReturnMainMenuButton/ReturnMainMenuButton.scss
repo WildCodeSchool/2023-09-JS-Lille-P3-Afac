@@ -55,6 +55,7 @@
   border-radius: 10rem;
   right: 1%;
   top: 1%;
+  cursor: pointer;
   @media screen and (min-width: 700px) {
     height: 1.5rem;
     padding: 0 0.5rem;
@@ -83,6 +84,7 @@
   font-weight: 500;
   height: 35px;
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .areYouSureButton:focus {
