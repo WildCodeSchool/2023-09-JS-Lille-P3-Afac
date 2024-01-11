@@ -13,10 +13,11 @@ function LogInPopup() {
       <Dialog.Portal>
         <Dialog.Overlay className="dialogOverlay" />
         <Dialog.Content className="dialogContent">
-          <Dialog.Title className="dialogTitle">Connexion</Dialog.Title>
+          <Dialog.Title className="dialogTitle">
+            Connexion à mon espace
+          </Dialog.Title>
           <Dialog.Description className="dialogDescription">
-            Veuillez vous connecter afin d'accéder à toutes les fonctionnalités
-            du site.
+            Déjà inscrit ? Connectez-vous.
           </Dialog.Description>
           <fieldset className="fieldset">
             <label className="label" htmlFor="UserName">
