@@ -109,9 +109,9 @@ function PostArtwork() {
             errors.passwordConfirm ? errors.passwordConfirm.message : ""
           }
         />
-        <label htmlFor="submit" className="form__label--hidden">
-          M'inscrire
-        </label>
+        <button type="button" htmlFor="submit" className="form__label--hidden">
+          Je poste mon oeuvre
+        </button>
         <input
           name="submit"
           id="submit"
