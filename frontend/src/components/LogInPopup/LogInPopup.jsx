@@ -21,9 +21,14 @@ function LogInPopup() {
           </Dialog.Description>
           <fieldset className="fieldset">
             <label className="label" htmlFor="UserName">
-              Nom d'utilisateur
+              e-mail
             </label>
-            <input className="input" id="UserName" placeholder="email" />
+            <input
+              type="email"
+              className="input"
+              id="UserName"
+              placeholder="e-mail"
+            />
           </fieldset>
           <fieldset className="fieldset">
             <label className="label" htmlFor="Password">
@@ -54,7 +59,7 @@ function LogInPopup() {
               <button
                 type="button"
                 className="closingButton"
-                aria-label="Close"
+                aria-label="fermer"
               >
                 x
               </button>
