@@ -167,6 +167,7 @@ function GlobalContextProvider({ children }) {
       animationClassName: "zoomOnLeft",
     },
   ];
+
   const artists = [
     {
       id: 1,
