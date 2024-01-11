@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import * as Dialog from "@radix-ui/react-dialog";
 import { useGlobalContext } from "../Context/GlobalContextProvider";
 import "./artworkModal.scss";
+import LikeFunction from "../LikeFunction/LikeFunction";
 
 function ArtworkModal({ id, page }) {
   const { artworks, artists } = useGlobalContext();
@@ -52,7 +53,8 @@ function ArtworkModal({ id, page }) {
             className="modal__content__img"
           />
           <figure className="modal__content__info">
-            <figcaption>
+            <figcaption className="modalLikeButton">
+              <LikeFunction className="artworkCardLikeButton" />
               <Dialog.Title className="modal__content__info__title">
                 {artwork.title}
               </Dialog.Title>
