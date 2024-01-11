@@ -14,6 +14,7 @@ import Artists from "./components/Artists/Artists";
 import Profil from "./components/Profil/Profil";
 import SignUp from "./components/SignUp/SignUp";
 import PostArtwork from "./components/PostArtwork/PostArtwork";
+import ReturnMainMenuButton from "./components/ReturnMainMenuButton/ReturnMainMenuButton";
 import LandscapeMessage from "./components/VirtualMuseum/LanscapeMessage/LandscapeMessage";
 
 
@@ -26,8 +27,9 @@ const router = createBrowserRouter([
     path: "/VirtualMuseumFirstRoom",
     element: (
       <>
-        <LandscapeMessage messageHidden="message__hidden" />
         <VirtualMuseum />
+        <ReturnMainMenuButton />
+        <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
   },
@@ -36,6 +38,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <SecondRoom />
+        <ReturnMainMenuButton />
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
@@ -45,6 +48,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <FirstWall />
+        <ReturnMainMenuButton />
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
@@ -54,6 +58,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <SecondWall />
+        <ReturnMainMenuButton />
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
@@ -63,6 +68,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <ThirdWall />
+        <ReturnMainMenuButton />
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
