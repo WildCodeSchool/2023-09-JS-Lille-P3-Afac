@@ -9,11 +9,15 @@ import FirstWall from "./components/VirtualMuseum/FirstRoom/BackWall";
 import SecondWall from "./components/VirtualMuseum/FirstRoom/RightWall";
 import ThirdWall from "./components/VirtualMuseum/FirstRoom/LeftWall";
 import Gallery from "./components/Gallery/Gallery";
+import NavBar from "./components/NavBar/NavBar";
 import Artists from "./components/Artists/Artists";
 import Profil from "./components/Profil/Profil";
-import NavBar from "./components/NavBar/NavBar";
 import SignUp from "./components/SignUp/SignUp";
 import AboutPage from "./components/AboutPage/AboutPage";
+import PostArtwork from "./components/PostArtwork/PostArtwork";
+import ReturnMainMenuButton from "./components/ReturnMainMenuButton/ReturnMainMenuButton";
+import LandscapeMessage from "./components/VirtualMuseum/LanscapeMessage/LandscapeMessage";
+
 
 const router = createBrowserRouter([
   {
@@ -22,23 +26,53 @@ const router = createBrowserRouter([
   },
   {
     path: "/VirtualMuseumFirstRoom",
-    element: <VirtualMuseum />,
+    element: (
+      <>
+        <VirtualMuseum />
+        <ReturnMainMenuButton />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumSecondRoom",
-    element: <SecondRoom />,
+    element: (
+      <>
+        <SecondRoom />
+        <ReturnMainMenuButton />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumFirstWall",
-    element: <FirstWall />,
+    element: (
+      <>
+        <FirstWall />
+        <ReturnMainMenuButton />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumSecondWall",
-    element: <SecondWall />,
+    element: (
+      <>
+        <SecondWall />
+        <ReturnMainMenuButton />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumThirdWall",
-    element: <ThirdWall />,
+    element: (
+      <>
+        <ThirdWall />
+        <ReturnMainMenuButton />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
   },
   {
     path: "/Gallery",
@@ -82,6 +116,11 @@ const router = createBrowserRouter([
       <>
         <NavBar />
         <AboutPage />,
+    path: "/PostArtwork",
+    element: (
+      <>
+        <NavBar />
+        <PostArtwork />
       </>
     ),
   },

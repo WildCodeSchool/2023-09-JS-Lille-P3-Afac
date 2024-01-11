@@ -12,6 +12,9 @@
     animation: shake 2s ease 0s 1 alternate forwards;
     cursor: pointer;
   }
+  @media screen and (orientation: portrait) {
+    display: none;
+  }
 }
 
 .firstArtworkLeftWallInformations {

@@ -1,27 +1,42 @@
 import PropTypes from "prop-types";
 import * as Dialog from "@radix-ui/react-dialog";
-import "./artworkModal.scss";
 import { useGlobalContext } from "../Context/GlobalContextProvider";
+import "./artworkModal.scss";
+import LikeFunction from "../LikeFunction/LikeFunction";
 
-function ArtworkModal({
-  id,
-  title,
-  date,
-  technique,
-  format,
-  src,
-  alt,
-  artistId,
-}) {
+function ArtworkModal({ id, page }) {
   const { artworks, artists } = useGlobalContext();
-  const { facts } = artworks.find((e) => e.id === id);
-  const artist = artists.find((e) => e.id === artistId);
+  const artwork = artworks.find((e) => e.id === id);
+  const artist = artists.find((e) => e.id === artwork.artistId);
+  const triggers = {
+    gallery: (
+      <button type="button" aria-label={artwork.alt} className="trigger">
+        <img
+          src={artwork.src}
+          alt={`portrait de ${artwork.alt}`}
+          className="artworkPic"
+        />
+        <span className="artworkTitle">{artwork.title}</span>
+      </button>
+    ),
+    artistModal: (
+      <button
+        type="button"
+        aria-label={artwork.alt}
+        className="modal__artworks__list__button"
+      >
+        <img
+          src={artwork.src}
+          alt={artwork.alt}
+          className="modal__artworks__list__button__img"
+        />
+      </button>
+    ),
+  };
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger asChild>
-        <button type="button">{title}</button>
-      </Dialog.Trigger>
+      <Dialog.Trigger asChild>{triggers[page]}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="modalOverlay" />
         <Dialog.Content className="modal modal--artwork">
@@ -32,15 +47,20 @@ function ArtworkModal({
               className="modal__button"
             />
           </Dialog.Close>
-          <img src={src} alt={alt} className="modal__content__img" />
+          <img
+            src={artwork.src}
+            alt={artwork.alt}
+            className="modal__content__img"
+          />
           <figure className="modal__content__info">
-            <figcaption>
+            <figcaption className="modalLikeButton">
+              <LikeFunction className="artworkCardLikeButton" />
               <Dialog.Title className="modal__content__info__title">
-                {title}
+                {artwork.title}
               </Dialog.Title>
-              <Dialog.Description className="modal__content__info__details">{`${date} - ${technique} - ${format}`}</Dialog.Description>
+              <Dialog.Description className="modal__content__info__details">{`${artwork.date} - ${artwork.technique} - ${artwork.format}`}</Dialog.Description>
             </figcaption>
-            {facts.map((e) => (
+            {artwork.facts.map((e) => (
               <p key={e.id} className="modal__content__info__fact">
                 {e.fact}
               </p>
@@ -55,13 +75,7 @@ function ArtworkModal({
 
 ArtworkModal.propTypes = {
   id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  technique: PropTypes.string.isRequired,
-  format: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  artistId: PropTypes.number.isRequired,
+  page: PropTypes.string.isRequired,
 };
 
 export default ArtworkModal;

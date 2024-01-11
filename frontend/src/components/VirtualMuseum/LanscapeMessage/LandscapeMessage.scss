@@ -1,0 +1,31 @@
+@import "../../../Variables.scss";
+
+.landscape__wrapper {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: $fontBold;
+  color: $black;
+  height: 100vh;
+}
+.landscape__portrait {
+  margin: 2rem;
+  width: 40vw;
+}
+
+.landscape__sign {
+  color: $black;
+  font-size: 4rem;
+}
+.landscape__portrait_message {
+  font-size: 1.2rem;
+}
+
+.message__hidden {
+  @media screen and (orientation: landscape) {
+    display: none;
+  }
+}

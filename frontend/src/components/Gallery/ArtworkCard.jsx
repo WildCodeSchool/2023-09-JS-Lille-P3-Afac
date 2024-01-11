@@ -1,13 +1,19 @@
 import "./ArtworkCard.scss";
+import PropTypes from "prop-types";
+import ArtworkModal from "../ArtworkModal/ArtworkModal";
+import LikeFunction from "../LikeFunction/LikeFunction";
 
-function ArtworkCard(artwork) {
-  const { name, img } = artwork;
+function ArtworkCard({ id }) {
   return (
-    <section className="card">
-      <img src={img} alt={name} className="artwork" />
-      <h2 className={name}>{name}</h2>
-    </section>
+    <figure className="card">
+      <LikeFunction className="buttonLike" />
+      <ArtworkModal id={id} page="gallery" />
+    </figure>
   );
 }
+
+ArtworkCard.propTypes = {
+  id: PropTypes.number.isRequired,
+};
 
 export default ArtworkCard;

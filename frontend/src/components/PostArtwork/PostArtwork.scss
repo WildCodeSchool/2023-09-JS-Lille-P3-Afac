@@ -1,0 +1,164 @@
+@import "../../Variables.scss";
+
+@mixin hiddenLabel {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  font-family: $font;
+}
+
+.postTitle {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.addImage {
+  font-size: 0.6rem;
+  @media screen and (min-width: 768px) {
+    font-size: 0.8rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  margin: 1rem auto;
+  border: 1px solid $black;
+  @media screen and (min-width: 768px) {
+    margin: 2rem auto;
+    width: 60%;
+    border: 1px solid $black;
+  }
+
+  .selectedArtwork {
+    width: 40%;
+    margin: 2rem;
+  }
+
+  &__group {
+    all: unset;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    @media screen and (min-width: 768px) {
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    &--margin {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 35%;
+    left: 8%;
+    pointer-events: none;
+    color: $blackLowOpacity;
+    background-color: $white;
+    transition: all 0.2s ease;
+    font-size: 1.2rem;
+
+    &--hidden {
+      @include hiddenLabel;
+    }
+  }
+
+  &__input {
+    margin: 0.8rem auto;
+    height: 2rem;
+    width: 85%;
+    border: 1px solid $blackLowOpacity;
+    box-shadow: 0 1px 2px $blackLowOpacity;
+    transition: all 0.1s;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+
+    &:focus-visible {
+      border-radius: 0;
+      outline: solid;
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &__group:has(&__input:not(:placeholder-shown)) > &__label,
+  &__group:focus-within > &__label {
+    transform: translate(-2px, -16px);
+    font-size: 0.7rem;
+    padding: 0 0.2rem;
+    color: $black;
+  }
+
+  &__submit {
+    all: unset;
+    text-align: center;
+    margin: 1.5rem auto;
+    height: 3rem;
+    width: 90%;
+    border: 2px solid $black;
+    font-family: $fontBold;
+    font-size: 1.4rem;
+    background-color: $blueColor;
+    color: $white;
+    cursor: pointer;
+    @media screen and (min-width: 768px) {
+      background-color: $blueColor;
+      color: $white;
+      width: 85%;
+      border: 2px solid $black;
+    }
+  }
+
+  &__password {
+    position: absolute;
+    top: 24%;
+    right: 7%;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("./src/assets/eye-slash.svg");
+    background-size: cover;
+    border: none;
+    background-color: $white;
+    z-index: 1;
+
+    &--show {
+      background-image: url("./src/assets/eye.svg");
+    }
+  }
+
+  &__message {
+    width: fit-content;
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    color: white;
+    background-color: $blueColor;
+    border-radius: 1rem;
+    @media screen and (min-width: 768px) {
+      max-width: 70%;
+    }
+
+    &--success {
+      margin-bottom: 1rem;
+    }
+  }
+}
