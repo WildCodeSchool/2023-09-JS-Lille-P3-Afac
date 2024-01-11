@@ -136,7 +136,8 @@ input {
   flex-direction: column;
   align-items: end;
 }
-.ForgottenPassword {
+.popUpPasswordlink {
+  all: unset;
   margin-bottom: 1rem;
   text-align: end;
   cursor: pointer;

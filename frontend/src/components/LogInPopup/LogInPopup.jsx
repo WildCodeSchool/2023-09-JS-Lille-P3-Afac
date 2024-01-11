@@ -1,11 +1,16 @@
 import * as Dialog from "@radix-ui/react-dialog";
+import { Link } from "react-router-dom";
 import "./LogInPopup.scss";
 
 function LogInPopup() {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <button type="button" className="Button LogIn">
+        <button
+          type="button"
+          className="navbarLink"
+          aria-label="Bouton se connecter"
+        >
           S'identifier
         </button>
       </Dialog.Trigger>
@@ -35,7 +40,14 @@ function LogInPopup() {
             />
           </fieldset>
           <section className="PopUpClosingButtons">
-            <linkTo className="ForgottenPassword">Mot de passe oublié?</linkTo>
+            <Dialog.Close asChild>
+              <p className="popUpPasswordlink">Mot de passe oublié?</p>
+            </Dialog.Close>
+            <Dialog.Close asChild>
+              <Link to="/sign-up" className="popUpPasswordlink">
+                S'inscrire
+              </Link>
+            </Dialog.Close>
             <Dialog.Close asChild>
               <button type="button" className="Button LogIn PopUP">
                 Connexion
