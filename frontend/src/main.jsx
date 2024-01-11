@@ -19,7 +19,6 @@ import SignUp from "./components/SignUp/SignUp";
 import ReturnMainMenuButton from "./components/ReturnMainMenuButton/ReturnMainMenuButton";
 import LandscapeMessage from "./components/VirtualMuseum/LanscapeMessage/LandscapeMessage";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
