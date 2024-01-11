@@ -130,7 +130,7 @@ function GlobalContextProvider({ children }) {
     },
   ];
 
-  const buttonInformations = [
+  const firstRoomButtonInformations = [
     {
       url: "/VirtualMuseumFirstWall",
       className: "wallZoomBack",
@@ -146,19 +146,21 @@ function GlobalContextProvider({ children }) {
       className: "wallZoomLeft",
       animationClassName: "zoomLeft",
     },
+  ];
+  const secondRoomButtonInformations = [
     {
-      url: "/VirtualMuseumFontWall",
-      className: "wallZoomFont",
-      animationClassName: "zoomFont",
+      url: "/VirtualMuseumFrontWall",
+      className: "secondRoomWallZoomFront",
+      animationClassName: "zoomFront",
     },
     {
       url: "/VirtualMuseumOnRight",
-      className: "wallZoomRight",
+      className: "secondRoomWallZoomRight",
       animationClassName: "zoomOnRight",
     },
     {
       url: "/VirtualMuseumOnLeft",
-      className: "wallZoomLeft",
+      className: "secondRoomWallZoomLeft",
       animationClassName: "zoomOnLeft",
     },
   ];
@@ -225,7 +227,8 @@ function GlobalContextProvider({ children }) {
     return {
       ArtworksFirstRoom,
       ArtworksSecondRoom,
-      buttonInformations,
+      firstRoomButtonInformations,
+      secondRoomButtonInformations,
       artists,
       artwork,
       category,

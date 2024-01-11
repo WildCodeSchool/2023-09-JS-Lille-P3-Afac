@@ -8,7 +8,7 @@ import FirstWall from "./components/VirtualMuseum/FirstRoom/BackWall";
 import SecondWall from "./components/VirtualMuseum/FirstRoom/RightWall";
 import ThirdWall from "./components/VirtualMuseum/FirstRoom/LeftWall";
 import SecondRoom from "./components/VirtualMuseum/SecondRoom/SecondRoom";
-import FontWall from "./components/VirtualMuseum/SecondRoom/FontWall";
+import FrontWall from "./components/VirtualMuseum/SecondRoom/FrontWall";
 import OnLeft from "./components/VirtualMuseum/SecondRoom/OnLeft";
 import OnRight from "./components/VirtualMuseum/SecondRoom/OnRight";
 import Gallery from "./components/Gallery/Gallery";
@@ -42,8 +42,8 @@ const router = createBrowserRouter([
     element: <SecondRoom />,
   },
   {
-    path: "/VirtualMuseumFontWall",
-    element: <FontWall />,
+    path: "/VirtualMuseumFrontWall",
+    element: <FrontWall />,
   },
   {
     path: "/VirtualMuseumOnLeft",

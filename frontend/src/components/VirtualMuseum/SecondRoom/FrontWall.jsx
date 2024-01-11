@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import arrow from "../../../assets/arrow.png";
 import Artwork from "../Artwork";
-import "./FontWall.scss";
+import "./FrontWall.scss";
 
 function FontWall() {
   const firstArtwork = {
@@ -52,7 +52,7 @@ function FontWall() {
         <img
           src={arrow}
           alt="flèche pour dézoomer"
-          className="moveOnTheSecondRoom"
+          className="moveOnTheFirstRoom"
           aria-label="flèche pour dézoomer"
         />
       </Link>

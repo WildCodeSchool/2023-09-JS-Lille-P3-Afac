@@ -7,7 +7,8 @@ import AnimationButton from "../AnimationButton";
 import { useGlobalContext } from "../../Context/GlobalContextProvider";
 
 function SecondRoom() {
-  const { ArtworksSecondRoom, buttonInformations } = useGlobalContext();
+  const { ArtworksSecondRoom, secondRoomButtonInformations } =
+    useGlobalContext();
   const [animation] = useState(false);
 
   return (
@@ -33,7 +34,7 @@ function SecondRoom() {
           aria-label="flèche pour aller dans la première salle du musée virtuel"
         />
       </Link>
-      {buttonInformations.map((e) => (
+      {secondRoomButtonInformations.map((e) => (
         <AnimationButton
           url={e.url}
           className={e.className}

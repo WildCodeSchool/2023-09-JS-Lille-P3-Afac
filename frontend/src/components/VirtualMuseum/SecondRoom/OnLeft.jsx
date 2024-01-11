@@ -51,7 +51,7 @@ function OnLeft() {
         <img
           src={arrow}
           alt="flèche pour dézoomer"
-          className="moveOnTheSecondRoom"
+          className="moveOnTheFirstRoom"
           aria-label="flèche pour dézoomer"
         />
       </Link>
