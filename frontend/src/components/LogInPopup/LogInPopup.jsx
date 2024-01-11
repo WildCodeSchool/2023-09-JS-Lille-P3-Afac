@@ -6,40 +6,36 @@ function LogInPopup() {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <button
-          type="button"
-          className="navbarLink"
-          aria-label="Bouton se connecter"
-        >
+        <button type="button" className="navbarLink">
           S'identifier
         </button>
       </Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className="DialogOverlay" />
-        <Dialog.Content className="DialogContent">
-          <Dialog.Title className="DialogTitle">Connexion</Dialog.Title>
-          <Dialog.Description className="DialogDescription">
+        <Dialog.Overlay className="dialogOverlay" />
+        <Dialog.Content className="dialogContent">
+          <Dialog.Title className="dialogTitle">Connexion</Dialog.Title>
+          <Dialog.Description className="dialogDescription">
             Veuillez vous connecter afin d'accéder à toutes les fonctionnalités
             du site.
           </Dialog.Description>
-          <fieldset className="Fieldset">
-            <label className="Label" htmlFor="UserName">
+          <fieldset className="fieldset">
+            <label className="label" htmlFor="UserName">
               Nom d'utilisateur
             </label>
-            <input className="Input" id="UserName" placeholder="email" />
+            <input className="input" id="UserName" placeholder="email" />
           </fieldset>
-          <fieldset className="Fieldset">
-            <label className="Label" htmlFor="Password">
+          <fieldset className="fieldset">
+            <label className="label" htmlFor="Password">
               Mot de passe
             </label>
             <input
               type="password"
-              className="Input"
+              className="input"
               id="Password"
               placeholder="Password"
             />
           </fieldset>
-          <section className="PopUpClosingButtons">
+          <section className="popUpClosingButtons">
             <Dialog.Close asChild>
               <p className="popUpPasswordlink">Mot de passe oublié?</p>
             </Dialog.Close>
@@ -49,14 +45,14 @@ function LogInPopup() {
               </Link>
             </Dialog.Close>
             <Dialog.Close asChild>
-              <button type="button" className="Button LogIn PopUP">
+              <button type="button" className="button LogIn PopUP">
                 Connexion
               </button>
             </Dialog.Close>
             <Dialog.Close asChild>
               <button
                 type="button"
-                className="ClosingButton"
+                className="closingButton"
                 aria-label="Close"
               >
                 x
