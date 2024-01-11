@@ -8,6 +8,7 @@
   width: 100%;
   overflow: hidden;
   perspective: 300px;
+  overflow: hidden;
   @media screen and (min-width: 700px) {
     perspective: 400px;
   }
@@ -35,6 +36,9 @@
   @media screen and (min-width: 2000px) {
     perspective: 1000px;
   }
+  @media screen and (orientation: portrait) {
+    display: none;
+  }
 }
 
 .painter {
@@ -48,6 +52,9 @@
   height: 100%;
   width: 100%;
   perspective: 600px;
+  @media screen and (orientation: portrait) {
+    display: none;
+  }
 }
 
 // Left artwork, the first from the left
