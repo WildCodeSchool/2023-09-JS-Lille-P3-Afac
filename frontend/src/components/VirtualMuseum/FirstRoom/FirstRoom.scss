@@ -6,15 +6,38 @@
   position: absolute;
   height: 100%;
   width: 100%;
+  overflow: hidden;
   perspective: 300px;
+  overflow: hidden;
   @media screen and (min-width: 700px) {
     perspective: 400px;
   }
   @media screen and (min-width: 900px) {
     perspective: 450px;
   }
+  @media screen and (min-width: 1000px) {
+    perspective: 525px;
+  }
   @media screen and (min-width: 1100px) {
     perspective: 600px;
+  }
+  @media screen and (min-width: 1200px) {
+    perspective: 645px;
+  }
+  @media screen and (min-width: 1300px) {
+    perspective: 675px;
+  }
+  @media screen and (min-width: 1500px) {
+    perspective: 750px;
+  }
+  @media screen and (min-width: 1750px) {
+    perspective: 900px;
+  }
+  @media screen and (min-width: 2000px) {
+    perspective: 1000px;
+  }
+  @media screen and (orientation: portrait) {
+    display: none;
   }
 }
 
@@ -29,6 +52,9 @@
   height: 100%;
   width: 100%;
   perspective: 600px;
+  @media screen and (orientation: portrait) {
+    display: none;
+  }
 }
 
 // Left artwork, the first from the left
@@ -269,12 +295,40 @@
 .moveOnTheSecondRoom {
   all: unset;
   position: absolute;
-  width: 70%;
+  width: 75%;
   left: 32%;
   bottom: 24%;
+  @media screen and (min-width: 600px) {
+    bottom: 14%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 700px) {
+    bottom: 15%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 800px) {
+    bottom: 16%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 900px) {
+    bottom: 17%;
+    font-size: 10rem;
+  }
   @media screen and (min-width: 1000px) {
     bottom: 20%;
     font-size: 10rem;
+  }
+  @media screen and (min-width: 1200px) {
+    bottom: 21%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 1400px) {
+    bottom: 22%;
+    font-size: 11rem;
+  }
+  @media screen and (min-width: 1800px) {
+    bottom: 23%;
+    font-size: 12rem;
   }
 }
 
@@ -311,12 +365,53 @@
   all: unset;
   position: absolute;
   right: 45%;
-  bottom: 21%;
+  bottom: 20%;
   font-size: 6rem;
   cursor: pointer;
+  @media screen and (min-width: 600px) {
+    bottom: 21%;
+    font-size: 7rem;
+  }
+  @media screen and (min-width: 700px) {
+    bottom: 21.5%;
+    font-size: 8rem;
+  }
+  @media screen and (min-width: 800px) {
+    bottom: 21.7%;
+    font-size: 8rem;
+  }
+  @media screen and (min-width: 900px) {
+    bottom: 22%;
+    font-size: 8rem;
+  }
   @media screen and (min-width: 1000px) {
     bottom: 24%;
     font-size: 10rem;
+  }
+  @media screen and (min-width: 1200px) {
+    bottom: 24.5%;
+    font-size: 11rem;
+  }
+  @media screen and (min-width: 1300px) {
+    bottom: 25%;
+    font-size: 11rem;
+  }
+  @media screen and (min-width: 1400px) {
+    bottom: 25.5%;
+    font-size: 12rem;
+  }
+  @media screen and (min-width: 1500px) {
+    bottom: 26%;
+    font-size: 12rem;
+  }
+  @media screen and (min-width: 1600px) {
+    font-size: 13rem;
+  }
+  @media screen and (min-width: 1800px) {
+    font-size: 14rem;
+  }
+  @media screen and (min-width: 2000px) {
+    font-size: 15rem;
   }
 }
 
@@ -354,9 +449,45 @@
   bottom: 10%;
   font-size: 6rem;
   cursor: pointer;
+  @media screen and (min-width: 600px) {
+    bottom: 10.5%;
+    font-size: 7rem;
+  }
+  @media screen and (min-width: 700px) {
+    bottom: 11%;
+    font-size: 8rem;
+  }
+  @media screen and (min-width: 800px) {
+    bottom: 11.5%;
+    font-size: 8rem;
+  }
   @media screen and (min-width: 1000px) {
     bottom: 12%;
     font-size: 10rem;
+  }
+  @media screen and (min-width: 1200px) {
+    bottom: 13%;
+    font-size: 11rem;
+  }
+  @media screen and (min-width: 1400px) {
+    bottom: 14%;
+    font-size: 12rem;
+  }
+  @media screen and (min-width: 1600px) {
+    bottom: 15%;
+    font-size: 13rem;
+  }
+  @media screen and (min-width: 1800px) {
+    bottom: 16%;
+    font-size: 14rem;
+  }
+  @media screen and (min-width: 2000px) {
+    bottom: 17%;
+    font-size: 15rem;
+  }
+  @media screen and (min-width: 2200px) {
+    bottom: 18%;
+    font-size: 16rem;
   }
 }
 
@@ -387,12 +518,39 @@
   all: unset;
   position: absolute;
   left: 16%;
-  bottom: 3%;
+  bottom: 3.5%;
   font-size: 6rem;
   cursor: pointer;
+  @media screen and (min-width: 600px) {
+    bottom: 4.5%;
+    font-size: 7rem;
+  }
+  @media screen and (min-width: 700px) {
+    bottom: 4%;
+    font-size: 8rem;
+  }
+  @media screen and (min-width: 800px) {
+    bottom: 4.5%;
+    font-size: 8rem;
+  }
   @media screen and (min-width: 1000px) {
     bottom: 6%;
     font-size: 10rem;
+  }
+  @media screen and (min-width: 1200px) {
+    bottom: 7%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 1400px) {
+    bottom: 8%;
+    font-size: 11rem;
+  }
+  @media screen and (min-width: 1600px) {
+    bottom: 9%;
+    font-size: 12rem;
+  }
+  @media screen and (min-width: 1800px) {
+    font-size: 13rem;
   }
 }
 
