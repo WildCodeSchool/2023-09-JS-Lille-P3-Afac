@@ -18,7 +18,11 @@ function LikeFunction({ className }) {
       aria-label="ajouter dans mes favoris"
       onClick={handleClick}
     >
-      <img src={liked ? like : unlike} alt="liker l'oeuvre" />
+      <img
+        className="likePic"
+        src={liked ? like : unlike}
+        alt="liker l'oeuvre"
+      />
     </button>
   );
 }
