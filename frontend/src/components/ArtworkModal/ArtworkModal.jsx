@@ -10,14 +10,16 @@ function ArtworkModal({ id, page }) {
   const artist = artists.find((e) => e.id === artwork.artistId);
   const triggers = {
     gallery: (
-      <button type="button" aria-label={artwork.alt} className="trigger">
-        <img
-          src={artwork.src}
-          alt={`portrait de ${artwork.alt}`}
-          className="artworkPic"
-        />
-        <span className="artworkTitle">{artwork.title}</span>
-      </button>
+      <div>
+        <button type="button" aria-label={artwork.alt} className="trigger">
+          <img
+            src={artwork.src}
+            alt={`portrait de ${artwork.alt}`}
+            className="artworkPic"
+          />
+          <span className="artworkTitle">{artwork.title}</span>
+        </button>
+      </div>
     ),
     artistModal: (
       <button
