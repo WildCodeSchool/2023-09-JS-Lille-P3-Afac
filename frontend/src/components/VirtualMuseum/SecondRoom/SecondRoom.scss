@@ -352,9 +352,9 @@
   left: -6%;
   bottom: -0.001%;
   z-index: 1;
-  animation: myZoom 4s ease 0s 1 alternate forwards;
+  animation: myZoomSecondRoom 4s ease 0s 1 alternate forwards;
 }
-@keyframes myZoom {
+@keyframes myZoomSecondRoom {
   0% {
     background-position: center;
     background-size: 130%;
@@ -390,9 +390,9 @@
   left: -6%;
   bottom: 0%;
   z-index: 1;
-  animation: myZoomRight 4s ease 0s 1 alternate forwards;
+  animation: myZoomSecondRight 4s ease 0s 1 alternate forwards;
 }
-@keyframes myZoomRight {
+@keyframes myZoomSecondRight {
   0% {
     background-position: center;
     background-size: 130%;
@@ -427,9 +427,9 @@
   left: -6%;
   bottom: 0%;
   z-index: 1;
-  animation: myZoomLeft 4s ease 0s 1 alternate forwards;
+  animation: myZoomSecondLeft 4s ease 0s 1 alternate forwards;
 }
-@keyframes myZoomLeft {
+@keyframes myZoomSecondLeft {
   0% {
     background-position: center;
     background-size: 130%;
