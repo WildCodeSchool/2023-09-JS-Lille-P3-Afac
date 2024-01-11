@@ -109,16 +109,13 @@ function PostArtwork() {
             errors.passwordConfirm ? errors.passwordConfirm.message : ""
           }
         />
-        <button type="button" htmlFor="submit" className="form__label--hidden">
+        <button
+          type="submit"
+          className="form__submit"
+          aria-label="Je poste mon oeuvre"
+        >
           Je poste mon oeuvre
         </button>
-        <input
-          name="submit"
-          id="submit"
-          type="submit"
-          value="Je poste mon oeuvre"
-          className="form__submit"
-        />
         {validatedForm && (
           <p className="form__message form__message--success">
             Merci ! Votre post est en cours d'analyse par nos équipes
