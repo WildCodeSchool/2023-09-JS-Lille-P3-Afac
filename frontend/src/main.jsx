@@ -9,11 +9,13 @@ import FirstWall from "./components/VirtualMuseum/FirstRoom/BackWall";
 import SecondWall from "./components/VirtualMuseum/FirstRoom/RightWall";
 import ThirdWall from "./components/VirtualMuseum/FirstRoom/LeftWall";
 import Gallery from "./components/Gallery/Gallery";
+import NavBar from "./components/NavBar/NavBar";
 import Artists from "./components/Artists/Artists";
 import Profil from "./components/Profil/Profil";
-import NavBar from "./components/NavBar/NavBar";
 import SignUp from "./components/SignUp/SignUp";
 import PostArtwork from "./components/PostArtwork/PostArtwork";
+import LandscapeMessage from "./components/VirtualMuseum/LanscapeMessage/LandscapeMessage";
+
 
 const router = createBrowserRouter([
   {
@@ -22,23 +24,48 @@ const router = createBrowserRouter([
   },
   {
     path: "/VirtualMuseumFirstRoom",
-    element: <VirtualMuseum />,
+    element: (
+      <>
+        <LandscapeMessage messageHidden="message__hidden" />
+        <VirtualMuseum />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumSecondRoom",
-    element: <SecondRoom />,
+    element: (
+      <>
+        <SecondRoom />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumFirstWall",
-    element: <FirstWall />,
+    element: (
+      <>
+        <FirstWall />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumSecondWall",
-    element: <SecondWall />,
+    element: (
+      <>
+        <SecondWall />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumThirdWall",
-    element: <ThirdWall />,
+    element: (
+      <>
+        <ThirdWall />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
   },
   {
     path: "/Gallery",

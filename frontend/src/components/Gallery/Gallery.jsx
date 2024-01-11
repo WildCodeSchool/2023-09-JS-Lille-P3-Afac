@@ -9,12 +9,12 @@ function Gallery() {
     <main className="galleryContainer">
       <section className="buttonContainer">
         {category.map((e) => (
-          <FilterButton name={e.name} />
+          <FilterButton key={e.id} name={e.name} />
         ))}
       </section>
       <section className="cardContainer">
         {artworks.map((e) => (
-          <ArtworkCard name={e.title} img={e.src} />
+          <ArtworkCard key={e.id} id={e.id} />
         ))}
       </section>
     </main>

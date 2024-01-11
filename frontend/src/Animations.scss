@@ -10,10 +10,19 @@
 @keyframes contentShow {
   from {
     opacity: $opacity-none;
-    transform: translate(-50%, -50%) scale(0.96);
+    transform: translate(-50%, 100%) scale(0.1);
   }
   to {
     opacity: $opacity-full;
     transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    transform: translate(-50%, 100%) scale(0.1);
   }
 }
