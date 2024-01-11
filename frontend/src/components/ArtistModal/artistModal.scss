@@ -1,0 +1,77 @@
+@import "./src/variables.scss";
+
+.trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: $white;
+}
+
+.modal {
+  &--artist {
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    margin: 0;
+    padding: 2.5rem 1rem 0.5rem;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+
+    & figcaption {
+      margin: 1rem 1rem 0;
+    }
+
+    &__title {
+      font-family: $fontBold;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    &__biography {
+      line-height: 1.2rem;
+    }
+  }
+
+  &__artworks {
+    margin: 0;
+    padding: 0 2rem;
+
+    &__title {
+      margin-top: 0;
+      @media screen and (min-width: 768px) {
+        margin-top: 1rem;
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 0;
+      & li {
+        text-align: center;
+        list-style: none;
+        width: 50%;
+        @media screen and (min-width: 768px) {
+          width: 33%;
+        }
+      }
+      &__button {
+        border: none;
+        background-color: $white;
+        padding: 0;
+        &__img {
+          width: 90%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

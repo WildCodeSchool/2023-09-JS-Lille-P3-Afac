@@ -1,23 +1,23 @@
+import HomePageMenuLink from "./HomePageMenuLink/HomePageMenuLink";
 import "./HomePageMenu.scss";
-import HomePageMenuLink from "./HomePageMenuButton/HomePageMenuLink";
 
 function HomePageMenu() {
   return (
     <nav className="homepage-menu-container">
       <HomePageMenuLink
-        to="/"
+        to="/VirtualMuseumFirstRoom"
         type="button"
         className="homepage-menu-button homepage-menu-museum-button"
         label="Musée virtuel"
       />
       <HomePageMenuLink
-        to="/"
+        to="/Gallery"
         type="button"
         className="homepage-menu-button homepage-menu-gallery-button"
         label="Collection"
       />
       <HomePageMenuLink
-        to="/"
+        to="/Artists"
         type="button"
         className="homepage-menu-button homepage-menu-artists-button"
         label="Nos artistes"

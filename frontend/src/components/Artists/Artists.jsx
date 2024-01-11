@@ -1,13 +1,13 @@
 import { useGlobalContext } from "../Context/GlobalContextProvider";
-import ArtistCard from "./Artistcard";
 import "./Artists.scss";
+import ArtistCard from "./Artistcard";
 
 function Artists() {
   const { artists } = useGlobalContext();
   return (
     <main className="artistsContainer">
       {artists.map((e) => (
-        <ArtistCard name={e.name} img={e.img} />
+        <ArtistCard key={e.id} id={e.id} />
       ))}
     </main>
   );

@@ -17,6 +17,7 @@
 
 .cardContainer {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
