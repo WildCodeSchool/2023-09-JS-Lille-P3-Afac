@@ -12,7 +12,11 @@ function ReturnMainMenuButton() {
   return (
     <AlertDialog.Root>
       <AlertDialog.Trigger asChild>
-        <button type="button" className="openModal">
+        <button
+          aria-label="Bouton pour revenir au menu principal"
+          type="button"
+          className="openModal"
+        >
           X
         </button>
       </AlertDialog.Trigger>
