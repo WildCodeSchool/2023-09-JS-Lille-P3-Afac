@@ -17,7 +17,6 @@ import PostArtwork from "./components/PostArtwork/PostArtwork";
 import ReturnMainMenuButton from "./components/ReturnMainMenuButton/ReturnMainMenuButton";
 import LandscapeMessage from "./components/VirtualMuseum/LanscapeMessage/LandscapeMessage";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
