@@ -1,0 +1,176 @@
+@import "../../Variables.scss";
+
+/* reset */
+button,
+fieldset,
+input {
+  all: unset;
+}
+
+.dialogOverlay {
+  background-color: rgba($black, 0.6);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dialogOverlay[data-state="closed"] {
+  animation: overlayHide 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dialogContent {
+  font-family: $font;
+  background-color: $white;
+  border-radius: 6px;
+  box-shadow:
+    hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
+    hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  max-width: 28rem;
+  max-height: 85vh;
+  padding: 1.5rem;
+  animation: appear 1.5s ease 0s 1 normal forwards;
+}
+
+.dialogContent[data-state="closed"] {
+  animation: disappear 1.5s ease 0s 1 normal backwards;
+}
+
+.dialogContent:focus {
+  outline: none;
+}
+
+.dialogTitle {
+  font-family: $fontBold;
+  text-align: center;
+  margin: 0;
+}
+
+.dialogDescription {
+  font-family: $font;
+  margin: 0.6rem 0 1.25rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0 1rem;
+  font-family: $fontBold;
+  height: 4vh;
+  box-shadow: 0 2px 10px black;
+  width: 4.5rem;
+}
+
+.button.LogIn:hover {
+  background-color: $blueColor;
+  color: $white;
+}
+
+.button:hover {
+  background-color: $blueColor;
+}
+
+.closingButton {
+  font-family: $fontBold;
+  border-radius: 100%;
+  height: 3vh;
+  width: 1.6vw;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+}
+
+.closingButton:hover {
+  background-color: $blueColor;
+  color: $white;
+}
+
+.fieldset {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-family: $font;
+  text-align: right;
+  flex: 1;
+}
+
+.input {
+  width: 100%;
+  flex: 2;
+  border-radius: 4px;
+  padding: 0 0.6rem;
+  font-family: $font;
+  box-shadow: 0 0 0 1px;
+  height: 4vh;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2px $redColor;
+}
+
+.popUpClosingButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.popUpPasswordlink {
+  all: unset;
+  margin-bottom: 1rem;
+  text-align: end;
+  cursor: pointer;
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes overlayHide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+}

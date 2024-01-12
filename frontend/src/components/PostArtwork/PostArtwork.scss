@@ -55,6 +55,7 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
+    width: 90%;
     @media screen and (min-width: 768px) {
       width: 85%;
       margin: 0 auto;
@@ -73,7 +74,7 @@
     color: $blackLowOpacity;
     background-color: $white;
     transition: all 0.2s ease;
-    font-size: 1.2rem;
+    font-size: 1rem;
 
     &--hidden {
       @include hiddenLabel;
@@ -137,7 +138,7 @@
     background-image: url("./src/assets/eye-slash.svg");
     background-size: cover;
     border: none;
-    background-color: $white;
+    background-color: transparent;
     z-index: 1;
 
     &--show {

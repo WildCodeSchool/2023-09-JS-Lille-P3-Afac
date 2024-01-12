@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./NavBar.scss";
 import logoImg from "../../assets/LogoVA.png";
+import LogInPopup from "../LogInPopup/LogInPopup";
 
 function NavBar({ transparent }) {
   return (
@@ -17,9 +18,7 @@ function NavBar({ transparent }) {
           </Link>
         </li>
         <li>
-          <Link to="/" className="navbarLink">
-            S'identifier
-          </Link>
+          <LogInPopup />
         </li>
       </ul>
     </nav>
