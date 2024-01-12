@@ -1,0 +1,20 @@
+@import "../../Variables.scss";
+
+.FavoriteArtworkCard {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+
+.favoriteArtworkPic {
+  width: 100%;
+  @media screen and (min-width: 800px) {
+    max-width: 70%;
+  }
+}
+
+.favoriteArtworkCardTitle {
+  font-family: $fontBold;
+  font-size: 1rem;
+}

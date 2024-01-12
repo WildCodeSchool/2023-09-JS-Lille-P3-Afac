@@ -1,0 +1,581 @@
+@import "../../../Variables.scss";
+
+.firstRoom {
+  background-image: url("../../../assets/firstRoom.png");
+  background-size: 100% 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  perspective: 300px;
+  overflow: hidden;
+  @media screen and (min-width: 700px) {
+    perspective: 400px;
+  }
+  @media screen and (min-width: 900px) {
+    perspective: 450px;
+  }
+  @media screen and (min-width: 1000px) {
+    perspective: 525px;
+  }
+  @media screen and (min-width: 1100px) {
+    perspective: 600px;
+  }
+  @media screen and (min-width: 1200px) {
+    perspective: 645px;
+  }
+  @media screen and (min-width: 1300px) {
+    perspective: 675px;
+  }
+  @media screen and (min-width: 1500px) {
+    perspective: 750px;
+  }
+  @media screen and (min-width: 1750px) {
+    perspective: 900px;
+  }
+  @media screen and (min-width: 2000px) {
+    perspective: 1000px;
+  }
+  @media screen and (orientation: portrait) {
+    display: none;
+  }
+}
+
+.painter {
+  font-family: $fontBold;
+}
+
+.walls {
+  background-image: url("../../../assets/firstWall.png");
+  background-size: 100% 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  perspective: 600px;
+  @media screen and (orientation: portrait) {
+    display: none;
+  }
+}
+
+// Left artwork, the first from the left
+
+.firstArtworkLeftSide {
+  position: absolute;
+  bottom: 42%;
+  width: 6.5%;
+  left: -1%;
+  transform: rotateX(0deg) rotateY(70deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+}
+
+.firstArtworkLeftSideInformations {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border: 0.5px solid black;
+  background-color: $white;
+  padding-inline: 0.1rem;
+  height: 2%;
+  width: 1%;
+  font-size: 0.04rem;
+  left: 8%;
+  bottom: 45%;
+  line-height: 0;
+  transform: rotateX(0deg) rotateY(70deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.08rem;
+  }
+}
+
+// Left artwork, the second from the left
+
+.secondArtworkLeftSide {
+  position: absolute;
+  bottom: 42%;
+  left: 18%;
+  width: 11%;
+  transform: rotateX(0deg) rotateY(70deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+}
+
+.secondArtworkLeftSideInformations {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border: 0.5px solid black;
+  background-color: $white;
+  padding-inline: 0.1rem;
+  height: 2%;
+  width: 1.5%;
+  font-size: 0.04rem;
+  left: 28.1%;
+  bottom: 45%;
+  line-height: 0;
+  transform: rotateX(0deg) rotateY(70deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.08rem;
+  }
+}
+
+// Back artwork, the third from the left
+
+.firstArtworkBackRoom {
+  position: absolute;
+  bottom: 40%;
+  left: 40%;
+  width: 12%;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+.firstArtworkBackRoomInformations {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0.5px solid black;
+  background-color: $white;
+  padding-inline: 0.1rem;
+  height: 1.5%;
+  width: 1%;
+  font-size: 0.05rem;
+  right: 46.3%;
+  bottom: 43%;
+  line-height: 0;
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+}
+
+// Back artwork, the fourth from the left
+
+.secondArtworkBackRoom {
+  position: absolute;
+  bottom: 42%;
+  right: 34%;
+  width: 9%;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+.secondArtworkBackRoomInformations {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0.5px solid black;
+  background-color: $white;
+  padding-inline: 0.1rem;
+  height: 1.5%;
+  width: 1%;
+  font-size: 0.05rem;
+  right: 32.2%;
+  bottom: 43%;
+  line-height: 0;
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+}
+
+// Right artwork, the fifth from the left
+
+.firstArtworkRightSide {
+  position: absolute;
+  bottom: 42%;
+  right: 19%;
+  width: 10%;
+  transform: rotateX(0deg) rotateY(90deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(3px 3px 2px rgb(0 0 0 / 0.4));
+}
+
+.firstArtworkRightSideInformations {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  border: 0.5px solid black;
+  background-color: $white;
+  padding-inline: 0.1rem;
+  height: 2.5%;
+  width: 1.5%;
+  font-size: 0.04rem;
+  right: 18.3%;
+  bottom: 42%;
+  line-height: 0;
+  transform: rotateX(0deg) rotateY(300deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(-1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.1rem;
+  }
+}
+
+// Right artwork, the sixth from the left
+
+.secondArtworkRightSide {
+  position: absolute;
+  bottom: 35%;
+  right: 4%;
+  width: 15%;
+  transform: rotateX(0deg) rotateY(90deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(6px 5px 2px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    bottom: 35%;
+    right: 4%;
+    width: 15%;
+  }
+}
+
+.secondArtworkRightSideInformations {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  border: 0.5px solid black;
+  background-color: $white;
+  padding-inline: 0.1rem;
+  height: 3%;
+  width: 1.5%;
+  font-size: 0.04rem;
+  right: 0.8%;
+  bottom: 40%;
+  line-height: 0;
+  transform: rotateX(0deg) rotateY(300deg);
+  transform-style: preserve-3d;
+  filter: drop-shadow(-1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.1rem;
+  }
+}
+
+// Animation for the artworks
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 0;
+  }
+
+  10% {
+    transform: rotate(1deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-1deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(1deg);
+  }
+
+  80% {
+    transform: rotate(-1deg);
+  }
+
+  90% {
+    transform: rotate(1deg);
+  }
+}
+
+// Animation to change room
+
+.moveOnTheSecondRoom {
+  all: unset;
+  position: absolute;
+  width: 75%;
+  left: 32%;
+  bottom: 24%;
+  @media screen and (min-width: 600px) {
+    bottom: 14%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 700px) {
+    bottom: 15%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 800px) {
+    bottom: 16%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 900px) {
+    bottom: 17%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 1000px) {
+    bottom: 20%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 1200px) {
+    bottom: 21%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 1400px) {
+    bottom: 22%;
+    font-size: 11rem;
+  }
+  @media screen and (min-width: 1800px) {
+    bottom: 23%;
+    font-size: 12rem;
+  }
+}
+
+.arrow {
+  width: 3%;
+  transform: rotate(270deg);
+  cursor: pointer;
+}
+
+.animate {
+  background-image: url("../../../assets/fullRoom.png");
+  width: 103%;
+  height: 100%;
+  left: -3%;
+  bottom: 0%;
+  animation: myAnim 4s ease 0s 1 alternate forwards;
+}
+
+@keyframes myAnim {
+  0% {
+    background-position: center;
+    background-size: 100%;
+  }
+
+  100% {
+    background-position: 30% center;
+    background-size: 300%;
+  }
+}
+
+// Back wall animation
+
+.wallZoomBack {
+  all: unset;
+  position: absolute;
+  right: 45%;
+  bottom: 20%;
+  font-size: 6rem;
+  cursor: pointer;
+  @media screen and (min-width: 600px) {
+    bottom: 21%;
+    font-size: 7rem;
+  }
+  @media screen and (min-width: 700px) {
+    bottom: 21.5%;
+    font-size: 8rem;
+  }
+  @media screen and (min-width: 800px) {
+    bottom: 21.7%;
+    font-size: 8rem;
+  }
+  @media screen and (min-width: 900px) {
+    bottom: 22%;
+    font-size: 8rem;
+  }
+  @media screen and (min-width: 1000px) {
+    bottom: 24%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 1200px) {
+    bottom: 24.5%;
+    font-size: 11rem;
+  }
+  @media screen and (min-width: 1300px) {
+    bottom: 25%;
+    font-size: 11rem;
+  }
+  @media screen and (min-width: 1400px) {
+    bottom: 25.5%;
+    font-size: 12rem;
+  }
+  @media screen and (min-width: 1500px) {
+    bottom: 26%;
+    font-size: 12rem;
+  }
+  @media screen and (min-width: 1600px) {
+    font-size: 13rem;
+  }
+  @media screen and (min-width: 1800px) {
+    font-size: 14rem;
+  }
+  @media screen and (min-width: 2000px) {
+    font-size: 15rem;
+  }
+}
+
+.zoom {
+  background-image: url("../../../assets/fullRoom.png");
+  width: 103%;
+  height: 100%;
+  left: -3%;
+  bottom: 0%;
+  z-index: 1;
+  animation: myZoom 4s ease 0s 1 alternate forwards;
+}
+@keyframes myZoom {
+  0% {
+    background-position: center;
+    background-size: 100%;
+  }
+
+  100% {
+    background-position: 54% 57%;
+    background-size: 330%;
+    @media screen and (min-width: 1100px) {
+      background-position: 54% 60%;
+      background-size: 330%;
+    }
+  }
+}
+
+// Right wall animation
+
+.wallZoomRight {
+  all: unset;
+  position: absolute;
+  right: 20%;
+  bottom: 10%;
+  font-size: 6rem;
+  cursor: pointer;
+  @media screen and (min-width: 600px) {
+    bottom: 10.5%;
+    font-size: 7rem;
+  }
+  @media screen and (min-width: 700px) {
+    bottom: 11%;
+    font-size: 8rem;
+  }
+  @media screen and (min-width: 800px) {
+    bottom: 11.5%;
+    font-size: 8rem;
+  }
+  @media screen and (min-width: 1000px) {
+    bottom: 12%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 1200px) {
+    bottom: 13%;
+    font-size: 11rem;
+  }
+  @media screen and (min-width: 1400px) {
+    bottom: 14%;
+    font-size: 12rem;
+  }
+  @media screen and (min-width: 1600px) {
+    bottom: 15%;
+    font-size: 13rem;
+  }
+  @media screen and (min-width: 1800px) {
+    bottom: 16%;
+    font-size: 14rem;
+  }
+  @media screen and (min-width: 2000px) {
+    bottom: 17%;
+    font-size: 15rem;
+  }
+  @media screen and (min-width: 2200px) {
+    bottom: 18%;
+    font-size: 16rem;
+  }
+}
+
+.zoomRight {
+  background-image: url("../../../assets/fullRoom.png");
+  width: 103%;
+  height: 100%;
+  left: -3%;
+  bottom: 0%;
+  z-index: 1;
+  animation: myZoomRight 4s ease 0s 1 alternate forwards;
+}
+@keyframes myZoomRight {
+  0% {
+    background-position: center;
+    background-size: 100%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+    background-size: 170%;
+  }
+}
+
+// Left wall animation
+
+.wallZoomLeft {
+  all: unset;
+  position: absolute;
+  left: 16%;
+  bottom: 3.5%;
+  font-size: 6rem;
+  cursor: pointer;
+  @media screen and (min-width: 600px) {
+    bottom: 4.5%;
+    font-size: 7rem;
+  }
+  @media screen and (min-width: 700px) {
+    bottom: 4%;
+    font-size: 8rem;
+  }
+  @media screen and (min-width: 800px) {
+    bottom: 4.5%;
+    font-size: 8rem;
+  }
+  @media screen and (min-width: 1000px) {
+    bottom: 6%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 1200px) {
+    bottom: 7%;
+    font-size: 10rem;
+  }
+  @media screen and (min-width: 1400px) {
+    bottom: 8%;
+    font-size: 11rem;
+  }
+  @media screen and (min-width: 1600px) {
+    bottom: 9%;
+    font-size: 12rem;
+  }
+  @media screen and (min-width: 1800px) {
+    font-size: 13rem;
+  }
+}
+
+.zoomLeft {
+  background-image: url("../../../assets/fullRoom.png");
+  width: 103%;
+  height: 100%;
+  left: -3%;
+  bottom: 0%;
+  z-index: 1;
+  animation: myZoomLeft 4s ease 0s 1 alternate forwards;
+}
+@keyframes myZoomLeft {
+  0% {
+    background-position: center;
+    background-size: 100%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+    background-size: 220%;
+  }
+}
+
+//it's to remove the buttons when you change rooms
+.hidden {
+  display: none;
+}

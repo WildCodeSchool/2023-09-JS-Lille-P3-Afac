@@ -1,0 +1,23 @@
+@import "../../Variables.scss";
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.artworkType {
+  width: 10rem;
+  height: 3.5rem;
+  color: $white;
+  background-color: $redColor;
+  font-family: $fontBold;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}

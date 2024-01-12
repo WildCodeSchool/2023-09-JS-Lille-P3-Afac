@@ -1,0 +1,56 @@
+$blueColor: #406c82;
+$redColor: #642b37;
+$greyColor: #343434;
+$purpleColor: #6a607a;
+$pinkColor: #a67d9c;
+$white: #fffffe;
+$black: #000000;
+$blackLowOpacity: rgb(0, 0, 0, 0.6);
+
+$fontBold: "atkinson_Bold";
+$fontBoldItalic: "atkinson_BoldItalic";
+$fontItalic: "atkinson_Italic";
+$font: "atkinson_Regular";
+
+$opacity-none: 0;
+$opacity-medium: 0.5;
+$opacity-high: 0.8;
+$opacity-full: 1;
+
+@font-face {
+  font-family: "atkinson_Bold";
+  src:
+    url("./src/font/atkinsonhyperlegible-bold-webfont.woff2") format("woff2"),
+    url("./src/font/atkinsonhyperlegible-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "atkinson_BoldItalic";
+  src:
+    url("./src/font/atkinsonhyperlegible-bolditalic-webfont.woff2")
+      format("woff2"),
+    url("./src/font/atkinsonhyperlegible-bolditalic-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "atkinson_Italic";
+  src:
+    url("./src/font/atkinsonhyperlegible-italic-webfont.woff2") format("woff2"),
+    url("./src/font/atkinsonhyperlegible-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "atkinson_Regular";
+  src:
+    url("./src/font/atkinsonhyperlegible-regular-webfont.woff2") format("woff2"),
+    url("./src/font/atkinsonhyperlegible-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
