@@ -6,9 +6,17 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  perspective: 600px;
+  perspective: 300px;
+  @media screen and (min-width: 700px) {
+    perspective: 400px;
+  }
+  @media screen and (min-width: 900px) {
+    perspective: 450px;
+  }
+  @media screen and (min-width: 1100px) {
+    perspective: 600px;
+  }
 }
-
 .moveOnTheFirstRoom {
   position: absolute;
   right: 45%;
@@ -24,9 +32,16 @@
   bottom: 28%;
   left: 1%;
   width: 13%;
-  transform: rotateX(6deg) rotateY(70deg);
+  transform: rotateX(6deg) rotateY(65deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1100px) {
+    bottom: 25%;
+  }
+  @media screen and (min-width: 1650px) {
+    width: 11%;
+    left: 3%;
+  }
 }
 
 .firstArtworkLeftSideSecondRoomInformations {
@@ -39,13 +54,28 @@
   padding-inline: 0.1rem;
   height: 2.5%;
   width: 1.5%;
-  font-size: 0.1rem;
+  font-size: 0.05rem;
   left: 15%;
-  bottom: 34%;
+  bottom: 35%;
   line-height: 0;
-  transform: rotateX(6deg) rotateY(70deg);
+  transform: rotateX(6deg) rotateY(60deg);
   transform-style: preserve-3d;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.08rem;
+  }
+  @media screen and (min-width: 1100px) {
+    bottom: 30%;
+  }
+  @media screen and (min-width: 1500px) {
+    left: 15.5%;
+  }
+  @media screen and (min-width: 1650px) {
+    left: 16%;
+  }
+  @media screen and (min-width: 1850px) {
+    left: 16.5%;
+  }
 }
 
 // Second artwork from the left
@@ -55,9 +85,16 @@
   bottom: 34%;
   left: 19.5%;
   width: 9%;
-  transform: rotateX(6deg) rotateY(70deg);
+  transform: rotateX(6deg) rotateY(60deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1100px) {
+    bottom: 30%;
+  }
+  @media screen and (min-width: 1650px) {
+    width: 7.5%;
+    left: 20.5%;
+  }
 }
 
 .secondArtworkLeftSideSecondRoomInformations {
@@ -70,13 +107,19 @@
   padding-inline: 0.1rem;
   height: 2.5%;
   width: 1.5%;
-  font-size: 0.1rem;
-  left: 28%;
+  font-size: 0.05rem;
+  left: 28.2%;
   bottom: 36%;
   line-height: 0;
-  transform: rotateX(6deg) rotateY(70deg);
+  transform: rotateX(6deg) rotateY(60deg);
   transform-style: preserve-3d;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.08rem;
+  }
+  @media screen and (min-width: 1100px) {
+    bottom: 32%;
+  }
 }
 
 // Third artwork from the left
@@ -87,6 +130,9 @@
   bottom: 30%;
   width: 10%;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1100px) {
+    bottom: 28%;
+  }
 }
 
 .firstArtworkBackRoomSecondRoomInformations {
@@ -99,11 +145,14 @@
   padding-inline: 0.1rem;
   height: 2.5%;
   width: 2.5%;
-  font-size: 0.1rem;
+  font-size: 0.05rem;
   left: 42.5%;
   bottom: 32%;
   line-height: 0;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.08rem;
+  }
 }
 
 // Fourth artwork from the left
@@ -114,6 +163,9 @@
   bottom: 30%;
   width: 20%;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1100px) {
+    bottom: 28%;
+  }
 }
 
 .secondArtworkBackRoomSecondRoomInformations {
@@ -126,23 +178,30 @@
   padding-inline: 0.1rem;
   height: 2.5%;
   width: 2.5%;
-  font-size: 0.1rem;
+  font-size: 0.05rem;
   right: 28.5%;
   bottom: 32%;
   line-height: 0;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.08rem;
+  }
 }
 
 // Fift artwork from the left
 
 .firstArtworkRightSideSecondRoom {
   position: absolute;
-  bottom: 34%;
+  bottom: 32%;
   width: 11%;
-  right: 15.5%;
-  transform: rotateX(4deg) rotateY(260deg);
+  right: 16.5%;
+  transform: rotateX(4deg) rotateY(270deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1650px) {
+    width: 10%;
+    right: 17%;
+  }
 }
 
 .firstArtworkRightSideSecondRoomInformations {
@@ -155,13 +214,32 @@
   padding-inline: 0.1rem;
   height: 2.5%;
   width: 1.5%;
-  font-size: 0.1rem;
-  right: 23%;
-  bottom: 36%;
+  font-size: 0.05rem;
+  right: 15.8%;
+  bottom: 34%;
   line-height: 0;
-  transform: rotateX(6deg) rotateY(260deg);
+  transform: rotateX(6deg) rotateY(270deg);
   transform-style: preserve-3d;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.08rem;
+  }
+  @media screen and (min-width: 1100px) {
+    right: 16.5%;
+  }
+  @media screen and (min-width: 1200px) {
+    right: 15.5%;
+    bottom: 32.5%;
+  }
+  @media screen and (min-width: 1550px) {
+    right: 15%;
+  }
+  @media screen and (min-width: 1650px) {
+    right: 15.25%;
+  }
+  @media screen and (min-width: 1750px) {
+    right: 14.5%;
+  }
 }
 
 // Sixt artwork from the left
@@ -169,11 +247,37 @@
 .secondArtworkRightSideSecondRoom {
   position: absolute;
   bottom: 28%;
-  width: 18%;
-  right: 0%;
-  transform: rotateX(4deg) rotateY(260deg);
+  width: 15%;
+  right: 3%;
+  transform: rotateX(4deg) rotateY(270deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    width: 13%;
+    right: 4%;
+    bottom: 30%;
+  }
+  @media screen and (min-width: 1100px) {
+    right: 5%;
+  }
+  @media screen and (min-width: 1200px) {
+    right: 4%;
+  }
+  @media screen and (min-width: 1450px) {
+    width: 11%;
+    right: 5%;
+  }
+  @media screen and (min-width: 1550px) {
+    right: 4.5%;
+    bottom: 29.5%;
+  }
+  @media screen and (min-width: 1650px) {
+    width: 9%;
+    right: 6%;
+  }
+  @media screen and (min-width: 1750px) {
+    right: 5%;
+  }
 }
 
 .secondArtworkRightSideSecondRoomInformations {
@@ -186,11 +290,153 @@
   padding-inline: 0.1rem;
   height: 2.5%;
   width: 1.5%;
-  font-size: 0.1rem;
-  right: 14.5%;
-  bottom: 34%;
+  font-size: 0.05rem;
+  right: 0%;
+  bottom: 31%;
   line-height: 0;
-  transform: rotateX(6deg) rotateY(260deg);
+  transform: rotateX(6deg) rotateY(280deg);
   transform-style: preserve-3d;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
+  @media screen and (min-width: 1000px) {
+    font-size: 0.08rem;
+  }
+  @media screen and (min-width: 1100px) {
+    right: 3%;
+  }
+  @media screen and (min-width: 1200px) {
+    right: 1%;
+  }
+  @media screen and (min-width: 1350px) {
+    right: 0.5%;
+  }
+  @media screen and (min-width: 1450px) {
+    right: 1.5%;
+    bottom: 29.5%;
+  }
+  @media screen and (min-width: 1550px) {
+    right: 0.5%;
+    bottom: 29.5%;
+  }
+  @media screen and (min-width: 1650px) {
+    right: 2%;
+  }
+  @media screen and (min-width: 1750px) {
+    right: 0.5%;
+  }
+  @media screen and (min-width: 1750px) {
+    width: 1%;
+  }
+}
+
+.secondRoomWallZoomFront {
+  all: unset;
+  position: absolute;
+  right: 45%;
+  bottom: 13%;
+  font-size: 7rem;
+  cursor: pointer;
+  @media screen and (min-height: 400px) {
+    bottom: 15%;
+  }
+  @media screen and (min-height: 600px) {
+    bottom: 17%;
+  }
+  @media screen and (min-height: 800px) {
+    bottom: 18%;
+  }
+}
+.zoomFront {
+  background-image: url("../../../assets/fullRoom2.png");
+  width: 106%;
+  height: 100%;
+  left: -6%;
+  bottom: -0.001%;
+  z-index: 1;
+  animation: myZoomSecondRoom 4s ease 0s 1 alternate forwards;
+}
+@keyframes myZoomSecondRoom {
+  0% {
+    background-position: center;
+    background-size: 130%;
+  }
+
+  100% {
+    background-position: 51% 60%;
+    background-size: 230%;
+  }
+}
+
+.secondRoomWallZoomRight {
+  all: unset;
+  position: absolute;
+  right: 15%;
+  bottom: 10%;
+  font-size: 7rem;
+  cursor: pointer;
+  @media screen and (min-height: 400px) {
+    bottom: 12%;
+  }
+  @media screen and (min-height: 600px) {
+    bottom: 13%;
+  }
+  @media screen and (min-height: 800px) {
+    bottom: 14%;
+  }
+}
+.zoomOnRight {
+  background-image: url("../../../assets/fullRoom2.png");
+  width: 106%;
+  height: 100%;
+  left: -6%;
+  bottom: 0%;
+  z-index: 1;
+  animation: myZoomSecondRight 4s ease 0s 1 alternate forwards;
+}
+@keyframes myZoomSecondRight {
+  0% {
+    background-position: center;
+    background-size: 130%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+    background-size: 170%;
+  }
+}
+.secondRoomWallZoomLeft {
+  all: unset;
+  position: absolute;
+  left: 16%;
+  bottom: 6%;
+  font-size: 7rem;
+  cursor: pointer;
+  @media screen and (min-height: 400px) {
+    bottom: 8%;
+  }
+  @media screen and (min-height: 600px) {
+    bottom: 9%;
+  }
+  @media screen and (min-height: 800px) {
+    bottom: 10%;
+  }
+}
+.zoomOnLeft {
+  background-image: url("../../../assets/fullRoom2.png");
+  width: 106%;
+  height: 100%;
+  left: -6%;
+  bottom: 0%;
+  z-index: 1;
+  animation: myZoomSecondLeft 4s ease 0s 1 alternate forwards;
+}
+@keyframes myZoomSecondLeft {
+  0% {
+    background-position: center;
+    background-size: 130%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+    background-size: 220%;
+  }
 }

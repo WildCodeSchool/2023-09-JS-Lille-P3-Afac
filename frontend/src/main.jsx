@@ -4,10 +4,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { GlobalContextProvider } from "./components/Context/GlobalContextProvider";
 import App from "./App";
 import VirtualMuseum from "./components/VirtualMuseum/FirstRoom/FirstRoom";
-import SecondRoom from "./components/VirtualMuseum/SecondRoom/SecondRoom";
 import FirstWall from "./components/VirtualMuseum/FirstRoom/BackWall";
 import SecondWall from "./components/VirtualMuseum/FirstRoom/RightWall";
 import ThirdWall from "./components/VirtualMuseum/FirstRoom/LeftWall";
+import SecondRoom from "./components/VirtualMuseum/SecondRoom/SecondRoom";
+import FrontWall from "./components/VirtualMuseum/SecondRoom/FrontWall";
+import OnLeft from "./components/VirtualMuseum/SecondRoom/OnLeft";
+import OnRight from "./components/VirtualMuseum/SecondRoom/OnRight";
 import Gallery from "./components/Gallery/Gallery";
 import NavBar from "./components/NavBar/NavBar";
 import Artists from "./components/Artists/Artists";
@@ -72,6 +75,22 @@ const router = createBrowserRouter([
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
+  },
+  {
+    path: "/VirtualMuseumSecondRoom",
+    element: <SecondRoom />,
+  },
+  {
+    path: "/VirtualMuseumFrontWall",
+    element: <FrontWall />,
+  },
+  {
+    path: "/VirtualMuseumOnLeft",
+    element: <OnLeft />,
+  },
+  {
+    path: "/VirtualMuseumOnRight",
+    element: <OnRight />,
   },
   {
     path: "/Gallery",

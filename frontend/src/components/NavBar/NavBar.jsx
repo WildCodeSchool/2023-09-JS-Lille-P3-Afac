@@ -16,7 +16,7 @@ function NavBar({ transparent }) {
           <LogInPopup />
         </li>
         <li>
-          <Link to="/" className="navbarLink">
+          <Link to="/About" className="navbarLink">
             A Propos
           </Link>
         </li>

@@ -7,7 +7,7 @@ import AnimationButton from "../AnimationButton";
 import { useGlobalContext } from "../../Context/GlobalContextProvider";
 
 function FirstRoom() {
-  const { ArtworksFirstRoom, buttonInformations } = useGlobalContext();
+  const { ArtworksFirstRoom, firstRoomButtonInformations } = useGlobalContext();
   const [animation, setAnimate] = useState(false);
 
   const navigate = useNavigate();
@@ -50,7 +50,7 @@ function FirstRoom() {
           className="arrow"
         />
       </button>
-      {buttonInformations.map((e) => (
+      {firstRoomButtonInformations.map((e) => (
         <AnimationButton
           url={e.url}
           className={e.className}
