@@ -29,9 +29,8 @@ function SecondRoom() {
       <Link to="/VirtualMuseumFirstRoom">
         <img
           src={arrow}
-          alt="flèche pour passer dans la première salle du musée"
+          alt="flèche pour passer dans la première salle du musée virtuel"
           className="moveOnTheFirstRoom"
-          aria-label="flèche pour aller dans la première salle du musée virtuel"
         />
       </Link>
       {secondRoomButtonInformations.map((e) => (
