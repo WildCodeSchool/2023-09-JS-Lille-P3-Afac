@@ -344,7 +344,7 @@ function GlobalContextProvider({ children }) {
   const category = [
     {
       id: 1,
-      name: "Tout",
+      name: "Tous",
     },
     {
       id: 2,
