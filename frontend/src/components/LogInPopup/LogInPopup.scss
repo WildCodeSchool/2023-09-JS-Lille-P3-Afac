@@ -54,6 +54,7 @@ input {
   font-family: $font;
   margin: 0.6rem 0 1.25rem;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 .button {
@@ -70,6 +71,7 @@ input {
 
 .button.LogIn:hover {
   background-color: $blueColor;
+  color: $white;
 }
 
 .button:hover {
@@ -91,6 +93,7 @@ input {
 
 .closingButton:hover {
   background-color: $blueColor;
+  color: $white;
 }
 
 .fieldset {
@@ -102,16 +105,13 @@ input {
 
 .label {
   font-family: $font;
-  width: 6vw;
   text-align: right;
+  flex: 1;
 }
 
 .input {
   width: 100%;
-  flex: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  flex: 2;
   border-radius: 4px;
   padding: 0 0.6rem;
   font-family: $font;

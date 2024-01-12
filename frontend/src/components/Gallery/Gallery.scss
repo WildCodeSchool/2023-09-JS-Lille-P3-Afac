@@ -5,14 +5,24 @@
   justify-content: space-around;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    gap: 3rem;
+  }
 }
 
 .artworkType {
   width: 10rem;
+  margin: 0 0.5rem;
   height: 3.5rem;
   color: $white;
   background-color: $redColor;
   font-family: $fontBold;
+  text-align: center;
+  cursor: pointer;
+  @media screen and (min-width: 768px) {
+    font-size: 1.2rem;
+  }
 }
 
 .cardContainer {

@@ -40,9 +40,9 @@ const router = createBrowserRouter([
     path: "/VirtualMuseumSecondRoom",
     element: (
       <>
+        <LandscapeMessage messageHidden="message__hidden" />
         <SecondRoom />
         <ReturnMainMenuButton />
-        <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
   },
@@ -77,20 +77,34 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/VirtualMuseumSecondRoom",
-    element: <SecondRoom />,
-  },
-  {
     path: "/VirtualMuseumFrontWall",
-    element: <FrontWall />,
+    element: (
+      <>
+        <FrontWall />
+        <ReturnMainMenuButton />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumOnLeft",
-    element: <OnLeft />,
+    element: (
+      <>
+        <OnLeft />
+        <ReturnMainMenuButton />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
   },
   {
     path: "/VirtualMuseumOnRight",
-    element: <OnRight />,
+    element: (
+      <>
+        <OnRight />
+        <ReturnMainMenuButton />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
   },
   {
     path: "/Gallery",

@@ -323,7 +323,7 @@ function GlobalContextProvider({ children }) {
       id: 6,
       title: "Payet",
       src: "./src/assets/Payet.png",
-      technique: "Aquerelle",
+      technique: "Aquarelle",
       date: "2023",
       format: "1282 x 852",
       alt: "Aquarelle 'Payet' par Frida Kahloops",
@@ -344,10 +344,14 @@ function GlobalContextProvider({ children }) {
   const category = [
     {
       id: 1,
-      name: "Dessin",
+      name: "Tous",
     },
     {
       id: 2,
+      name: "Dessin",
+    },
+    {
+      id: 3,
       name: "Aquarelle",
     },
   ];

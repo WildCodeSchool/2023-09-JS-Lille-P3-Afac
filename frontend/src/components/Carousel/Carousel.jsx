@@ -49,7 +49,7 @@ function Carousel() {
               Une âme d'artiste ?
             </h2>
             <HomePageMenuLink
-              to="/"
+              to="/PostArtwork"
               type="button"
               className="carousel-slide-visit_button carousel-third-slide-visit_button"
               label="Publier"
