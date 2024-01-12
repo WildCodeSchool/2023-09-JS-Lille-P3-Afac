@@ -5,7 +5,7 @@ function FilterButton(category) {
   const { artworks } = useGlobalContext();
 
   const handleClick = () => {
-    if (name !== "Tout") {
+    if (name !== "Tous") {
       const selection = artworks.filter((e) => e.technique === name);
       setSelectedArtworks(selection);
     } else {
