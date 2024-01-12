@@ -12,6 +12,7 @@ import Gallery from "./components/Gallery/Gallery";
 import NavBar from "./components/NavBar/NavBar";
 import Artists from "./components/Artists/Artists";
 import Profil from "./components/Profil/Profil";
+import LogInPopup from "./components/LogInPopup/LogInPopup";
 import SignUp from "./components/SignUp/SignUp";
 import PostArtwork from "./components/PostArtwork/PostArtwork";
 import ReturnMainMenuButton from "./components/ReturnMainMenuButton/ReturnMainMenuButton";
@@ -89,6 +90,10 @@ const router = createBrowserRouter([
         <Artists />
       </>
     ),
+  },
+  {
+    path: "/LogInPopup",
+    element: <LogInPopup />,
   },
   {
     path: "/Profil",
