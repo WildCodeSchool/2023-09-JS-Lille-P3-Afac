@@ -1,12 +1,13 @@
-create database VA_DB;
-use VA_DB;
+-- create database VA_DB;
+-- use VA_DB;
 
 create table user (
   id int primary key auto_increment not null,
   lastname varchar(50) not null,
   firstname varchar(50) not null,
   email varchar(255) not null,
-  password_hash varchar(32) not null
+  src varchar(50),
+  password_hash varchar(100) not null
 );
 create table artist (
   id int primary key auto_increment not null,
