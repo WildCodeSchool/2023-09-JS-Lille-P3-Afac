@@ -69,7 +69,7 @@ create table favorite (
   foreign key (artwork_id)
   references artwork(id)
 );
-create table fact (
+create table anecdote (
   id int primary key auto_increment not null,
   fact text not null,
   artwork_id int not null,

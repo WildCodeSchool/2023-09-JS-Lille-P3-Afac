@@ -1,14 +1,6 @@
-/* ************************************************************************* */
-// Register Data Managers for Tables
-/* ************************************************************************* */
+const ArtistManager = require("./models/ArtistManager");
 
-// Import the manager modules responsible for handling data operations on the tables
-const ItemManager = require("./models/ItemManager");
-
-const managers = [
-  ItemManager,
-  // Add other managers here
-];
+const managers = [ArtistManager];
 
 // Create an empty object to hold data managers for different tables
 const tables = {};
