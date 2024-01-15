@@ -7,7 +7,7 @@ class UserManager extends AbstractManager {
 
   async read(id) {
     const [rows] = await this.database.query(
-      `select * from ${this.table} where id = ?`,
+      `select id, lastname, firstname, email, src from ${this.table} where id = ?`,
       [id]
     );
 
