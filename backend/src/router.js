@@ -12,7 +12,7 @@ const validateAnecdote = require("./middlewares/validateAnecdote");
 
 router.get("/user/:id", userControllers.getUserById);
 
-router.post("/fact", validateAnecdote, anecdoteControllers.add);
+router.post("/anecdote", validateAnecdote, anecdoteControllers.add);
 
 /* ************************************************************************* */
 

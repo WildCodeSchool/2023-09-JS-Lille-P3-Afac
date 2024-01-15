@@ -2,7 +2,7 @@ const Joi = require("joi");
 
 const factSchema = Joi.object({
   fact: Joi.string().required(),
-  artist_id: Joi.number().required(),
+  artworkId: Joi.number().required(),
 });
 
 const validateAnecdote = (req, res, next) => {
