@@ -66,7 +66,7 @@ const seed = async () => {
       for (let j = 0; j < rand; j += 1) {
         queries.push(
           database.query(
-            `INSERT INTO fact (fact, artwork_id)
+            `INSERT INTO anecdote (fact, artwork_id)
           VALUES(?, ?)`,
             [faker.lorem.paragraph(), i]
           )
