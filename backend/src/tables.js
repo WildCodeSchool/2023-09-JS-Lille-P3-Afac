@@ -3,9 +3,11 @@
 /* ************************************************************************* */
 
 // Import the manager modules responsible for handling data operations on the tables
+const UserManager = require("./models/UserManager");
 const AnecdoteManager = require("./models/AnecdoteManager");
 
 const managers = [
+  UserManager,
   AnecdoteManager,
   // Add other managers here
 ];

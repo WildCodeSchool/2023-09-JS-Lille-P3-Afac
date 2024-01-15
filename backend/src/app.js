@@ -29,9 +29,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: [
-      process.env.FRONTEND_URL, // keep this one, after checking the value in `backend/.env`
-    ],
+    origin: [process.env.FRONTEND_URL],
   })
 );
 
