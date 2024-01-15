@@ -6,19 +6,11 @@ const router = express.Router();
 // Define Your API Routes Here
 /* ************************************************************************* */
 
-// Import itemControllers module for handling item-related operations
-const itemControllers = require("./controllers/itemControllers");
-const factControllers = require("./controllers/factControllers");
-
-// Route to get a list of items
-router.get("/items", itemControllers.browse);
-
-// Route to get a specific item by ID
-router.get("/items/:id", itemControllers.read);
+const anecdoteControllers = require("./controllers/anecdoteControllers");
+const validateAnecdote = require("./middlewares/validateAnecdote");
 
 // Route to add a new item
-router.post("/items", itemControllers.add);
-router.post("/fact", factControllers.add);
+router.post("/fact", validateAnecdote, anecdoteControllers.add);
 
 /* ************************************************************************* */
 

@@ -1,19 +1,19 @@
 const AbstractManager = require("./AbstractManager");
 
-class FactManager extends AbstractManager {
+class AnecdoteManager extends AbstractManager {
   constructor() {
     // Call the constructor of the parent class (AbstractManager)
     // and pass the table name "item" as configuration
-    super({ table: "fact" });
+    super({ table: "anecdote" });
   }
 
-  async create(fact) {
+  async create(anecdote) {
     const [result] = await this.database.query(
-      `INSERT INTO fact (fact, artwork_id) VALUES(?, ?)`,
-      [fact.fact, fact.artwork_id]
+      `INSERT INTO anecdote (fact, artwork_id) VALUES(?, ?)`,
+      [anecdote.fact, anecdote.artwork_id]
     );
     return result.insertId;
   }
 }
 
-module.exports = FactManager;
+module.exports = AnecdoteManager;

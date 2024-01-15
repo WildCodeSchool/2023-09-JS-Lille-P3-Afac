@@ -3,12 +3,10 @@
 /* ************************************************************************* */
 
 // Import the manager modules responsible for handling data operations on the tables
-const ItemManager = require("./models/ItemManager");
-const FactManager = require("./models/FactManager");
+const AnecdoteManager = require("./models/AnecdoteManager");
 
 const managers = [
-  ItemManager,
-  FactManager,
+  AnecdoteManager,
   // Add other managers here
 ];
 
