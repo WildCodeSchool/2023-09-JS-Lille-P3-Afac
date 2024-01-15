@@ -7,9 +7,11 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Import itemControllers module for handling item-related operations
-const userControllers = require("./controllers/UserControllers");
+const userControllers = require("./controllers/userControllers");
+const artworkControllers = require("./controllers/artworkControllers");
 
 router.get("/user/:id", userControllers.getUserById);
+router.get("/artwork/:id/anecdote", artworkControllers.getAnecdoteByArtworkId);
 
 /* ************************************************************************* */
 
