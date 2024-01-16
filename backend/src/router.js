@@ -8,10 +8,10 @@ const router = express.Router();
 
 // Import itemControllers module for handling item-related operations
 const userControllers = require("./controllers/UserControllers");
-const artworkControllers = require("./controllers/artworkControllers");
+const anecdoteControllers = require("./controllers/anecdoteControllers");
 
 router.get("/user/:id", userControllers.getUserById);
-router.get("/artwork/:id/anecdote", artworkControllers.getAnecdoteByArtworkId);
+router.get("/artwork/:id/anecdote", anecdoteControllers.getAnecdoteByArtworkId);
 
 /* ************************************************************************* */
 
