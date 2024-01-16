@@ -1,6 +1,6 @@
 const tables = require("../tables");
 
-const add = async (req, res, next) => {
+const addAnecdote = async (req, res, next) => {
   const anecdote = req.body;
 
   try {
@@ -13,5 +13,5 @@ const add = async (req, res, next) => {
 };
 
 module.exports = {
-  add,
+  addAnecdote,
 };

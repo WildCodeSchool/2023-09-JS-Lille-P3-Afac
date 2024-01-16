@@ -73,7 +73,7 @@ create table anecdote (
   id int primary key auto_increment not null,
   fact text not null,
   artwork_id int not null,
-  constraint fk_fact_artwork
+  constraint fk_anecdote_artwork
   foreign key (artwork_id)
   references artwork(id)
 );
