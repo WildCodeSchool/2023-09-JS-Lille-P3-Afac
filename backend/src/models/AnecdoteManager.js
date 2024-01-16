@@ -14,4 +14,15 @@ class AnecdoteManager extends AbstractManager {
   }
 }
 
+  async readAnecdote(id) {
+    const [rows] = await this.database.query(
+      `select * from anecdote where artwork_id = ?`,
+      [id]
+    );
+
+    return rows;
+  }
+}
+
 module.exports = AnecdoteManager;
+
