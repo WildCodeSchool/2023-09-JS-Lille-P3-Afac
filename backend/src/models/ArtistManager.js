@@ -6,7 +6,9 @@ class ArtistManager extends AbstractManager {
   }
 
   async readAll() {
-    const [rows] = await this.database.query(`select * from ${this.table}`);
+    const [rows] = await this.database.query(
+      `SELECT artist.id, biography, lastname, firstname, src FROM ${this.table} INNER JOIN user ON user.id = artist.user_id`
+    );
     return rows;
   }
 }
