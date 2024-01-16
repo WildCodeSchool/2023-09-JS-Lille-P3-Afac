@@ -1,6 +1,20 @@
+/* ************************************************************************* */
+// Register Data Managers for Tables
+/* ************************************************************************* */
+
+// Import the manager modules responsible for handling data operations on the tables
+const UserManager = require("./models/UserManager");
+const AnecdoteManager = require("./models/AnecdoteManager");
+const ArtworkManager = require("./models/ArtworkManager");
 const ArtistManager = require("./models/ArtistManager");
 
-const managers = [ArtistManager];
+const managers = [
+  UserManager,
+  ArtworkManager,
+  AnecdoteManager,
+  ArtistManager,
+  // Add other managers here
+];
 
 // Create an empty object to hold data managers for different tables
 const tables = {};
