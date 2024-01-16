@@ -1,20 +1,18 @@
 const express = require("express");
-
 const router = express.Router();
 
-/* ************************************************************************* */
-// Define Your API Routes Here
-/* ************************************************************************* */
+const userControllers = require("./controllers/UserControllers");
+const anecdoteControllers = require("./controllers/anecdoteControllers");
+const artworkControllers = require("./controllers/artworkControllers");
+const artistControllers = require("./controllers/artistControllers");
 
-// Import itemControllers module for handling item-related operations
-const ArtworkControllers = require("./controllers/ArtworkControllers");
+router.get("/user/:id", userControllers.getUserById);
 
-// Route to get a list of items
-
-// Route to get a specific item by ID
+router.get("/artwork", artworkControllers.getAllArtwork);
 router.get("/artwork/:id", ArtworkControllers.getArtworkById);
+router.get("/artwork/:id/anecdote", anecdoteControllers.getAnecdoteByArtworkId);
 
-// Route to add a new item
+router.get("/artist", artistControllers.getArtists);
 
 /* ************************************************************************* */
 

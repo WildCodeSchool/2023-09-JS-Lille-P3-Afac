@@ -2,19 +2,17 @@ const AbstractManager = require("./AbstractManager");
 
 class ArtworkManager extends AbstractManager {
   constructor() {
-    super({ table: "artwork" });
+    super({ table: "anecdote" });
   }
 
-  async read(id) {
+  async readAnecdote(id) {
     const [rows] = await this.database.query(
-      `select * from ${this.table} where id = ?`,
+      `select * from anecdote where artwork_id = ?`,
       [id]
     );
-    return rows[0];
-  }
-    async readAll() {
-    const [rows] = await this.database.query(`select * from ${this.table}`);
+
     return rows;
+  }
 }
 
 module.exports = ArtworkManager;
