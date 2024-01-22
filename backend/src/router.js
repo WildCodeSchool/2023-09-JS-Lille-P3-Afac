@@ -12,6 +12,7 @@ const artistControllers = require("./controllers/artistControllers");
 const userControllers = require("./controllers/userControllers");
 const adminControllers = require("./controllers/adminControllers");
 
+
 const validateAnecdote = require("./middlewares/validateAnecdote");
 const validateAdmin = require("./middlewares/validateAdmin");
 
