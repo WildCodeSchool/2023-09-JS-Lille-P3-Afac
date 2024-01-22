@@ -12,7 +12,6 @@ class AnecdoteManager extends AbstractManager {
     );
     return result.insertId;
   }
-}
 
   async readAnecdote(id) {
     const [rows] = await this.database.query(
@@ -25,4 +24,3 @@ class AnecdoteManager extends AbstractManager {
 }
 
 module.exports = AnecdoteManager;
-
