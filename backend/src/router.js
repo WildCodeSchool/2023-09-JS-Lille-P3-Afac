@@ -13,6 +13,7 @@ const artistControllers = require("./controllers/artistControllers");
 const validateAnecdote = require("./middlewares/validateAnecdote");
 
 router.get("/user/:id", userControllers.getUserById);
+router.get("/user", userControllers.getUsers);
 
 router.get("/artwork", artworkControllers.getAllArtwork);
 router.get("/artwork/:id", artworkControllers.getArtworkById);
