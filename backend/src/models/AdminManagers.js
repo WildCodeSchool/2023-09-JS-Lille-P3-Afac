@@ -10,7 +10,7 @@ class AdminManagers extends AbstractManager {
       `INSERT INTO administrator user_id VALUES (?)`,
       [newAdmin.user_id]
     );
-    return rows.admin;
+    return rows;
   }
 }
 
