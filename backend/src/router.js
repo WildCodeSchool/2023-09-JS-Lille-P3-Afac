@@ -19,6 +19,11 @@ router.get("/artwork/:id", artworkControllers.getArtworkById);
 
 router.get("/artwork/:id/anecdote", anecdoteControllers.getAnecdoteByArtworkId);
 router.post("/anecdote", validateAnecdote, anecdoteControllers.addAnecdote);
+router.put(
+  "/anecdote/:id",
+  validateAnecdote,
+  anecdoteControllers.updateAnecdote
+);
 
 router.get("/artist", artistControllers.getArtists);
 /* ************************************************************************* */
