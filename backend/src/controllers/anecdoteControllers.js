@@ -5,12 +5,12 @@ const addAnecdote = async (req, res, next) => {
 
   try {
     const insertId = await tables.anecdote.create(anecdote);
-     res.status(201).json({ insertId })
-    } catch (err) {
+    res.status(201).json({ insertId });
+  } catch (err) {
     next(err);
-    }
-  };
-  
+  }
+};
+
 const getAnecdoteByArtworkId = async (req, res, next) => {
   try {
     const anecdote = await tables.anecdote.readAnecdote(req.params.id);
@@ -26,5 +26,5 @@ const getAnecdoteByArtworkId = async (req, res, next) => {
 
 module.exports = {
   addAnecdote,
-  getAnecdoteByArtworkId
+  getAnecdoteByArtworkId,
 };
