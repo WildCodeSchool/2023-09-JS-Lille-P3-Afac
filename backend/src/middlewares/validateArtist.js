@@ -6,7 +6,7 @@ const artistSchema = Joi.object({
 });
 
 const validateArtist = (req, res, next) => {
-  const { biography } = req.body.biography;
+  const { biography } = req.body;
   const userId = req.body.user_id;
 
   const { error } = artistSchema.validate(

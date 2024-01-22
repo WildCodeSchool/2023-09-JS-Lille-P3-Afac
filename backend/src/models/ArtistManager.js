@@ -17,7 +17,7 @@ class ArtistManager extends AbstractManager {
       `INSERT INTO artist (biography, user_id) VALUES (?, ?)`,
       [newArtist.biography, newArtist.user_id]
     );
-    return rows.artist;
+    return rows;
   }
 }
 
