@@ -1,4 +1,19 @@
+/* eslint-disable no-undef */
 const tables = require("../tables");
+
+const updateArtwork = async (req, res, next) => {
+  const artwork = req.body;
+  try {
+    const result = await tables.artwork.update(req.params.id, artwork);
+    if (result.affectedRows === 0) {
+      res.sendStatus(404);
+    } else {
+      res.sendStatus(201);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
 
 const getAllArtwork = async (req, res, next) => {
   try {
@@ -22,4 +37,4 @@ const getArtworkById = async (req, res, next) => {
   }
 };
 
-module.exports = { getAllArtwork, getArtworkById };
+module.exports = { updateArtwork, getAllArtwork, getArtworkById };
