@@ -11,6 +11,14 @@ class ArtistManager extends AbstractManager {
     );
     return rows;
   }
+
+  async addArtist(newArtist) {
+    const [rows] = await this.database.query(
+      `INSERT INTO artist (biography, user_id) VALUES (?, ?)`,
+      [newArtist.biography, newArtist.user_id]
+    );
+    return rows.artist;
+  }
 }
 
 module.exports = ArtistManager;
