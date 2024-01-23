@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 function Artwork(Artworks) {
   const {
     img,
@@ -5,7 +6,8 @@ function Artwork(Artworks) {
     classNameThumbnail,
     painter,
     date,
-    information,
+    technique,
+    format,
     title,
     description,
   } = Artworks;
@@ -16,7 +18,7 @@ function Artwork(Artworks) {
       <article className={classNameThumbnail}>
         <p className="painter">{painter}</p>
         <p className="date">{date}</p>
-        <p className="information">{information}</p>
+        <p className="information">{`${technique} ${format}`}</p>
         <p className="title">{title}</p>
         <p className="description">{description}</p>
       </article>

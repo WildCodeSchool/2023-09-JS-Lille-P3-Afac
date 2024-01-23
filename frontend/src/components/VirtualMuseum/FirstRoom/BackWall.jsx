@@ -1,53 +1,36 @@
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "../../Context/GlobalContextProvider";
 import arrow from "../../../assets/arrow.png";
 import Artwork from "../Artwork";
 import "./BackWall.scss";
 
 function BackWall() {
-  const firstArtwork = {
-    img: "./src/assets/shelterWithFrame.png",
-    classNameArtwork: "leftArtworkBackWall",
-    classNameThumbnail: "leftArtworkBackWallInformations",
-    painter: "Salvador Dall-E",
-    date: "2022-???",
-    information: "Aquarelle (800cm x 600cm)",
-    title: "Abris-côtier",
-    description: "Paysage de la côte réunionnaise pendant l'été 2021",
-  };
+  const { artworks, firstRoomWallClasses, firstRoomWallThumbnailClasses } =
+    useGlobalContext();
+  const rightWallArtworks = artworks.slice(0, 2);
+  const rightWallClasses = firstRoomWallClasses.slice(0, 2);
+  const rightWallThumbnail = firstRoomWallThumbnailClasses.slice(0, 2);
 
-  const secondArtwork = {
-    img: "./src/assets/PeakWithFrame.png",
-    classNameArtwork: "rightArtworkBackWall",
-    classNameThumbnail: "rightArtworkBackWallInformations",
-    painter: "Claude Monnaie",
-    date: "2022-???",
-    information: "Dessin (600cm x 400cm)",
-    title: "Piton de la fournaise",
-    description: "Paysage du piton de la fournaise",
-  };
+  rightWallArtworks.forEach((e, index) => {
+    e.classNameArtwork = rightWallClasses[index];
+    e.classNameThumbnail = rightWallThumbnail[index];
+  });
 
   return (
     <main className="walls">
-      <Artwork
-        img={firstArtwork.img}
-        classNameArtwork={firstArtwork.classNameArtwork}
-        classNameThumbnail={firstArtwork.classNameThumbnail}
-        painter={firstArtwork.painter}
-        date={firstArtwork.date}
-        information={firstArtwork.information}
-        title={firstArtwork.title}
-        description={firstArtwork.description}
-      />
-      <Artwork
-        img={secondArtwork.img}
-        classNameArtwork={secondArtwork.classNameArtwork}
-        classNameThumbnail={secondArtwork.classNameThumbnail}
-        painter={secondArtwork.painter}
-        date={secondArtwork.date}
-        information={secondArtwork.information}
-        title={secondArtwork.title}
-        description={secondArtwork.description}
-      />
+      {rightWallArtworks.map((e) => (
+        <Artwork
+          img={e.source}
+          classNameArtwork={e.classNameArtwork}
+          classNameThumbnail={e.classNameThumbnail}
+          painter={e.user_id_ar}
+          date={e.artwork_year}
+          technique={e.technique}
+          format={e.format}
+          title={e.title}
+          description={e.alt}
+        />
+      ))}
       <Link to="/VirtualMuseumFirstRoom">
         <img
           src={arrow}
