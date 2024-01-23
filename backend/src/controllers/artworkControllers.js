@@ -9,6 +9,13 @@ const updateArtwork = async (req, res, next) => {
     } else {
       res.sendStatus(201);
     }
+
+const addArtwork = async (req, res, next) => {
+  const artwork = req.body;
+
+  try {
+    const insertId = await tables.artwork.createArtwork(artwork);
+    res.status(201).json({ insertId });
   } catch (err) {
     next(err);
   }
@@ -36,4 +43,4 @@ const getArtworkById = async (req, res, next) => {
   }
 };
 
-module.exports = { updateArtwork, getAllArtwork, getArtworkById };
+module.exports = { addArtwork, getAllArtwork, getArtworkById, updateArtwork };
