@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const tables = require("../tables");
 
 const updateArtwork = async (req, res, next) => {
