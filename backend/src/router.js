@@ -11,8 +11,11 @@ const artworkControllers = require("./controllers/artworkControllers");
 const artistControllers = require("./controllers/artistControllers");
 
 const validateAnecdote = require("./middlewares/validateAnecdote");
+const validateUser = require("./middlewares/validateUser");
+const hashPassword = require("./middlewares/hashPasswordUser");
 
 router.get("/user/:id", userControllers.getUserById);
+router.post("/user", validateUser, hashPassword, userControllers.addUser);
 
 router.get("/artwork", artworkControllers.getAllArtwork);
 router.get("/artwork/:id", artworkControllers.getArtworkById);
