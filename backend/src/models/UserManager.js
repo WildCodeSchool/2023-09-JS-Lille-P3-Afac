@@ -24,7 +24,7 @@ class UserManager extends AbstractManager {
           user.firstname,
           user.email,
           user.src,
-          user.hashedPassword,
+          user.password_hash,
         ]
       );
       const userId = result.insertId;

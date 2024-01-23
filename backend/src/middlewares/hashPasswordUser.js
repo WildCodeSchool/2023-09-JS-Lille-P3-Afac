@@ -3,12 +3,12 @@ const argon2 = require("argon2");
 const hashPassword = async (req, res, next) => {
   try {
     // eslint-disable-next-line camelcase
-    const { password_hash } = req.body;
+    const { password } = req.body;
 
-    const hashedPassword = await argon2.hash(password_hash);
+    const hashedPassword = await argon2.hash(password);
 
-    req.body.hashedPassword = hashedPassword;
-    delete req.body.password_hash;
+    req.body.password_hash = hashedPassword;
+    delete req.body.password;
 
     next();
   } catch (err) {
