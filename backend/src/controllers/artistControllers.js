@@ -15,6 +15,12 @@ const postArtist = async (req, res, next) => {
     const artist = tables.artist.addArtist(newArtist);
     if (artist) {
       res.status(201).json(artist);
+
+const getArtistById = async (req, res, next) => {
+  try {
+    const artist = await tables.artist.readArtist(req.params.id);
+    if (artist) {
+      res.status(200).json(artist);
     } else {
       res.sendStatus(404);
     }
@@ -26,4 +32,5 @@ const postArtist = async (req, res, next) => {
 module.exports = {
   getArtists,
   postArtist,
+  getArtistById,
 };
