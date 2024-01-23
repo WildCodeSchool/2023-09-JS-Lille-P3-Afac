@@ -13,6 +13,16 @@ const getUserById = async (req, res, next) => {
   }
 };
 
+const getUsers = async (req, res, next) => {
+  try {
+    const users = await tables.user.readAll();
+    res.status(200).json(users);
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   getUserById,
+  getUsers,
 };
