@@ -1,5 +1,16 @@
 const tables = require("../tables");
 
+const addArtwork = async (req, res, next) => {
+  const artwork = req.body;
+
+  try {
+    const insertId = await tables.artwork.createArtwork(artwork);
+    res.status(201).json({ insertId });
+  } catch (err) {
+    next(err);
+  }
+};
+
 const getAllArtwork = async (req, res, next) => {
   try {
     const artworks = await tables.artwork.readAll();
@@ -22,4 +33,4 @@ const getArtworkById = async (req, res, next) => {
   }
 };
 
-module.exports = { getAllArtwork, getArtworkById };
+module.exports = { addArtwork, getAllArtwork, getArtworkById };
