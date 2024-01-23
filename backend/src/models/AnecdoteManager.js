@@ -24,8 +24,8 @@ class AnecdoteManager extends AbstractManager {
 
   async updateAnecdote(anecdote, id) {
     const [rows] = await this.database.query(
-      `UPDATE anecdote SET fact = ?, artwork_id = ? WHERE id = ?`,
-      [anecdote.fact, anecdote.artwork_id, id]
+      `UPDATE anecdote SET fact = ? WHERE id = ?`,
+      [anecdote.fact, id]
     );
     return rows;
   }
