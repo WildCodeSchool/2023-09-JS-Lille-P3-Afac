@@ -6,14 +6,20 @@ import "./Profil.scss";
 function Profil() {
   const { userProfil, favoriteArtwork } = useGlobalContext();
   return (
-    <main className="profilContainer">
-      <h2 className="profilTitle">Mon Profil</h2>
-      <ProfilCard
-        name={userProfil.name}
-        lastname={userProfil.lastname}
-        email={userProfil.email}
-        password={userProfil.password}
-      />
+    <main className="profilPage">
+      <section className="profil Container">
+        <h2 className="profilTitle">Mon profil</h2>
+        <ProfilCard
+          name={userProfil.name}
+          lastname={userProfil.lastname}
+          email={userProfil.email}
+          password={userProfil.password}
+        />
+      </section>
+
+      <button type="button" className="postArtworkButton">
+        Soumettre votre oeuvre
+      </button>
 
       <section className="favoriteArtworkContainer">
         <h3 className="favoriteTitle">Mes oeuvres favorites</h3>

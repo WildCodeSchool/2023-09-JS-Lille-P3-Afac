@@ -11,6 +11,9 @@ function ProfilCard(userProfil) {
         <p className="profilLastname">Nom: {lastname}</p>
         <p className="profilEmail">E-mail: {email}</p>
         <p className="profilPassword"> Password: {password}</p>
+        <button type="button" className="updateProfil">
+          Modifier le profil
+        </button>
       </section>
     </article>
   );
