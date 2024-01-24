@@ -22,7 +22,19 @@ const getUsers = async (req, res, next) => {
   }
 };
 
+const addUser = async (req, res, next) => {
+  const user = req.body;
+
+  try {
+    const insertId = await tables.user.createUser(user);
+    res.status(201).json({ insertId });
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   getUserById,
   getUsers,
+  addUser,
 };

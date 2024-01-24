@@ -22,6 +22,32 @@ class UserManager extends AbstractManager {
 
     return rows;
   }
+
+  async createUser(user) {
+    try {
+      await this.database.query("START TRANSACTION");
+      const [result] = await this.database.query(
+        `INSERT INTO ${this.table}(lastname, firstname, email, src, password_hash) VALUES (?, ?, ?, ?, ?)`,
+        [
+          user.lastname,
+          user.firstname,
+          user.email,
+          user.src,
+          user.password_hash,
+        ]
+      );
+      const userId = result.insertId;
+
+      await this.database.query("INSERT INTO logged_user(user_id) VALUES(?)", [
+        userId,
+      ]);
+      await this.database.query("COMMIT");
+      return userId;
+    } catch (error) {
+      await this.database.query("ROLLBACK");
+      return error;
+    }
+  }
 }
 
 module.exports = UserManager;
