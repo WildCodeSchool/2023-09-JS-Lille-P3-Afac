@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import arrow from "../../../assets/arrow.png";
 import "./SecondRoom.scss";
 import Artwork from "../Artwork";
@@ -7,23 +6,32 @@ import AnimationButton from "../AnimationButton";
 import { useGlobalContext } from "../../Context/GlobalContextProvider";
 
 function SecondRoom() {
-  const { ArtworksSecondRoom, secondRoomButtonInformations } =
-    useGlobalContext();
-  const [animation] = useState(false);
+  const {
+    artworks,
+    secondRoomButtonInformations,
+    secondRoomClasses,
+    secondRoomThumnailClasses,
+  } = useGlobalContext();
+  const artworksSecondRoom = artworks.slice(6, 12);
+  artworksSecondRoom.forEach((e, index) => {
+    e.classNameArtwork = secondRoomClasses[index];
+    e.classNameThumbnail = secondRoomThumnailClasses[index];
+  });
 
   return (
     <main className="secondRoom">
-      {ArtworksSecondRoom.map((e) => (
+      {artworksSecondRoom.map((e) => (
         <Artwork
           key={e.id}
-          img={e.img}
+          img={e.source}
           classNameArtwork={e.classNameArtwork}
           classNameThumbnail={e.classNameThumbnail}
-          painter={e.painter}
-          date={e.date}
-          information={e.information}
+          painter={e.user_id_ar}
+          date={e.artwork_year}
+          technique={e.technique}
+          format={e.format}
           title={e.title}
-          description={e.description}
+          description={e.alt}
         />
       ))}
       <Link to="/VirtualMuseumFirstRoom">
@@ -38,7 +46,6 @@ function SecondRoom() {
           url={e.url}
           className={e.className}
           animationClassName={e.animationClassName}
-          animation={animation}
         />
       ))}
     </main>
