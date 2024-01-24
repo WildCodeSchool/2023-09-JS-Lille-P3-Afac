@@ -15,11 +15,15 @@ const adminControllers = require("./controllers/adminControllers");
 const validateAnecdote = require("./middlewares/validateAnecdote");
 const validateUpdateAnecdote = require("./middlewares/validateUpdateAnecdote");
 const validateArtwork = require("./middlewares/validateArtwork");
+
+const validateUser = require("./middlewares/validateUser");
+const hashPassword = require("./middlewares/hashPasswordUser");
 const validateArtist = require("./middlewares/validateArtist");
 
 router.get("/user/:id", userControllers.getUserById);
 router.put("/user/:id", userControllers.updateUser);
 router.get("/user", userControllers.getUsers);
+router.post("/user", validateUser, hashPassword, userControllers.addUser);
 
 router.get("/artwork", artworkControllers.getAllArtwork);
 router.get("/artwork/:id", artworkControllers.getArtworkById);
