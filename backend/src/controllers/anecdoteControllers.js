@@ -24,7 +24,24 @@ const getAnecdoteByArtworkId = async (req, res, next) => {
   }
 };
 
+const updateAnecdote = async (req, res, next) => {
+  const anecdote = req.body;
+  const id = parseInt(req.params.id, 10);
+
+  try {
+    const updatedAnecdote = await tables.anecdote.updateAnecdote(anecdote, id);
+    if (updatedAnecdote.affectedRows === 0) {
+      res.sendStatus(404);
+    } else {
+      res.sendStatus(204);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   addAnecdote,
   getAnecdoteByArtworkId,
+  updateAnecdote,
 };
