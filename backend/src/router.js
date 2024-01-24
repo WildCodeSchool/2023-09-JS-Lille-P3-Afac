@@ -21,7 +21,6 @@ const hashPassword = require("./middlewares/hashPasswordUser");
 const validateArtist = require("./middlewares/validateArtist");
 
 router.get("/user/:id", userControllers.getUserById);
-router.put("/user/:id", userControllers.updateUser);
 router.get("/user", userControllers.getUsers);
 router.post("/user", validateUser, hashPassword, userControllers.addUser);
 

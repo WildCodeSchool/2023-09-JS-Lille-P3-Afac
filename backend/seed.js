@@ -22,14 +22,14 @@ const seed = async () => {
     queries.push(
       await database.query(
         `INSERT INTO user (lastname, firstname, email, src, password_hash)
-        VALUES("Dall-E", "Salvador", "salvador.dalle@email.com", "./src/assets/Dall-e.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
-              ("Picassietttes", "Pablo", "pablo.picassiettes@email.com", "./src/assets/Picassiettes.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
-              ("Khaloops", "Frida", "frida.kahloops@email.com", "./src/assets/kahloops.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
-              ("Monnaie", "Claude", "claude.monnaie@email.com", "./src/assets/monnaie.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
-              ("Reblanc", "Auguste", "auguste.reblanc@email.com", "./src/assets/reblanc.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
-              ("Chacaille", "Marc", "marc.chacaille@email.com", "./src/assets/chacaille.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
-              ("Delabière", "Eugène", "eugene.delabiere@email.com", "./src/assets/Delabiere.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
-              ("Klimteastwood", "Gustave", "gustave.klimteastwood@email.com", "./src/assets/Klimteastwood.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q")`
+        VALUES("Dall-E", "Salvador", "salvador.dalle@email.com", "/src/assets/Dall-e.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
+              ("Picassietttes", "Pablo", "pablo.picassiettes@email.com", "/src/assets/Picassiettes.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
+              ("Khaloops", "Frida", "frida.kahloops@email.com", "/src/assets/kahloops.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
+              ("Monnaie", "Claude", "claude.monnaie@email.com", "/src/assets/monnaie.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
+              ("Reblanc", "Auguste", "auguste.reblanc@email.com", "/src/assets/reblanc.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
+              ("Chacaille", "Marc", "marc.chacaille@email.com", "/src/assets/chacaille.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
+              ("Delabière", "Eugène", "eugene.delabiere@email.com", "/src/assets/Delabiere.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q"),
+              ("Klimteastwood", "Gustave", "gustave.klimteastwood@email.com", "/src/assets/Klimteastwood.png", "$argon2id$v=19$m=16,t=2,p=1$Y3RXSDY1Y210T1c0YjM5dg$IEvColWiVYtiyGDckiDY8Q")`
       )
     );
 
