@@ -7,67 +7,76 @@ const homeText =
   "Bienvenue dans notre musée virtuel. Vous retrouverez ici toutes les oeuvres de nos artistes réunionnais. Le principe est simple, vous pouvez visiter nos salles et naviguer en cliquant sur les petites pastilles au sol. Bonne visite !";
 
 function GlobalContextProvider({ children }) {
-  const ArtworksFirstRoom = [
-    {
-      img: "./src/assets/shelterWithFrame.png",
-      classNameArtwork: "firstArtworkBackRoom",
-      classNameThumbnail: "firstArtworkBackRoomInformations",
-      painter: "Salvador Dall-E",
-      date: "2022-???",
-      information: "Aquarelle (800cm x 600cm)",
-      title: "Abris-côtier",
-      description: "Paysage de la côte réunionnaise pendant l'été 2021",
-    },
-    {
-      img: "./src/assets/PeakWithFrame.png",
-      classNameArtwork: "secondArtworkBackRoom",
-      classNameThumbnail: "secondArtworkBackRoomInformations",
-      painter: "Claude Monnaie",
-      date: "2022-???",
-      information: "Dessin (600cm x 400cm)",
-      title: "Piton de la fournaise",
-      description: "Paysage du piton de la fournaise",
-    },
-    {
-      img: "./src/assets/rougailWithFrame.png",
-      classNameArtwork: "secondArtworkRightSide",
-      classNameThumbnail: "secondArtworkRightSideInformations",
-      painter: "Auguste Reblanc",
-      date: "1876-2021",
-      information: "Aquarelle (1000cm x 800cm)",
-      title: "Le rougail saucisse local",
-      description: "Le plat traditionnel réunionnais par excellence",
-    },
-    {
-      img: "./src/assets/partyWithFrame.png",
-      classNameArtwork: "firstArtworkRightSide",
-      classNameThumbnail: "firstArtworkRightSideInformations",
-      painter: "Pablo Picassiette",
-      date: "1898-1987",
-      information: "Aquarelle (600cm x 500cm)",
-      title: "Soirée traditionnelle réunionnaise",
-      description: "Une soirée animée et tradionnelle de l'ile de la Réunion",
-    },
-    {
-      img: "./src/assets/villageWithFrame.png",
-      classNameArtwork: "secondArtworkLeftSide",
-      classNameThumbnail: "secondArtworkLeftSideInformations",
-      painter: "Pablo Picassiette",
-      date: "1898-1987",
-      information: "Dessin (900cm x 500cm)",
-      title: "Village de la Réunion",
-      description: "Une journée classique dans un village de la Réunion",
-    },
-    {
-      img: "./src/assets/womanWithFrame.png",
-      classNameArtwork: "firstArtworkLeftSide",
-      classNameThumbnail: "firstArtworkLeftSideInformations",
-      painter: "Frida Kahloops",
-      date: "1976-2002",
-      information: "Aquarelle (1200cm x 700cm)",
-      title: "Femme réunionnaise",
-      description: "Une femme sur la plage de l'ile de la Réunion",
-    },
+  const firstRoomClasses = [
+    "firstArtworkBackRoom",
+    "secondArtworkBackRoom",
+    "secondArtworkRightSide",
+    "firstArtworkRightSide",
+    "secondArtworkLeftSide",
+    "firstArtworkLeftSide",
+  ];
+
+  const firstRoomThumnailClasses = [
+    "firstArtworkBackRoomInformations",
+    "secondArtworkBackRoomInformations",
+    "secondArtworkRightSideInformations",
+    "firstArtworkRightSideInformations",
+    "firstArtworkLeftSideInformations",
+    "secondArtworkLeftSideInformations",
+  ];
+
+  const firstRoomWallClasses = [
+    "leftArtworkBackWall",
+    "rightArtworkBackWall",
+    "secondArtworkRightWall",
+    "firstArtworkRightWall",
+    "secondArtworkLeftWall",
+    "firstArtworkLeftWall",
+  ];
+
+  const firstRoomWallThumbnailClasses = [
+    "leftArtworkBackWallInformations",
+    "rightArtworkBackWallInformations",
+    "secondArtworkRightWallInformations",
+    "firstArtworkRightWallInformations",
+    "firstArtworkLeftWallInformations",
+    "secondArtworkLeftWallInformations",
+  ];
+
+  const secondRoomClasses = [
+    "firstArtworkBackRoomSecondRoom",
+    "secondArtworkBackRoomSecondRoom",
+    "firstArtworkLeftSideSecondRoom",
+    "secondArtworkLeftSideSecondRoom",
+    "firstArtworkRightSideSecondRoom",
+    "secondArtworkRightSideSecondRoom",
+  ];
+
+  const secondRoomThumnailClasses = [
+    "firstArtworkBackRoomSecondRoomInformations",
+    "secondArtworkBackRoomSecondRoomInformations",
+    "firstArtworkLeftSideSecondRoomInformations",
+    "secondArtworkLeftSideSecondRoomInformations",
+    "firstArtworkRightSideSecondRoomInformations",
+    "secondArtworkRightSideSecondRoomInformations",
+  ];
+
+  const secondRoomWallClasses = [
+    "firstArtworkFrontRoomSecondRoom",
+    "secondArtworkFrontRoomSecondRoom",
+    "firstArtworkRightSideSecondRoom2",
+    "secondArtworkRightSideSecondRoom3",
+    "firstArtworkLeftSideSecondRoom2",
+    "secondArtworkLeftSideSecondRoom1",
+  ];
+
+  const secondRoomWallThumbnailClasses = [
+    "firstArtworkFrontRoomSecondRoomInformations",
+    "secondArtworkFrontRoomSecondRoomInformations",
+    "firstArtworkRightSideSecondInformations2",
+    "secondArtworkRightSideSecondInformations3",
+    "firstArtworkLeftSideSecondInformations",
+    "secondArtworkLeftSideSecondInformations",
   ];
 
   const ArtworksSecondRoom = [
@@ -218,17 +227,24 @@ function GlobalContextProvider({ children }) {
   const favoriteArtwork = [
     {
       name: "Le Piton",
-      img: "./src/assets/Piton.png",
+      img: "/src/assets/Piton.png",
     },
     {
       name: "Abris-côtier",
-      img: "./src/assets/Abri-côtier.png",
+      img: "/src/assets/Abri-côtier.png",
     },
   ];
 
   const contextValue = useMemo(() => {
     return {
-      ArtworksFirstRoom,
+      firstRoomClasses,
+      firstRoomThumnailClasses,
+      firstRoomWallClasses,
+      firstRoomWallThumbnailClasses,
+      secondRoomClasses,
+      secondRoomThumnailClasses,
+      secondRoomWallClasses,
+      secondRoomWallThumbnailClasses,
       ArtworksSecondRoom,
       firstRoomButtonInformations,
       secondRoomButtonInformations,
@@ -244,7 +260,8 @@ function GlobalContextProvider({ children }) {
       setUserProfil,
     };
   }, [
-    ArtworksFirstRoom,
+    firstRoomClasses,
+    firstRoomThumnailClasses,
     ArtworksSecondRoom,
     firstRoomButtonInformations,
     secondRoomButtonInformations,

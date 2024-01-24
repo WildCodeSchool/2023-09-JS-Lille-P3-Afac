@@ -21,6 +21,14 @@ class AnecdoteManager extends AbstractManager {
 
     return rows;
   }
+
+  async updateAnecdote(anecdote, id) {
+    const [rows] = await this.database.query(
+      `UPDATE anecdote SET fact = ? WHERE id = ?`,
+      [anecdote.fact, id]
+    );
+    return rows;
+  }
 }
 
 module.exports = AnecdoteManager;

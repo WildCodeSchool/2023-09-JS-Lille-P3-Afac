@@ -13,7 +13,9 @@ const userControllers = require("./controllers/userControllers");
 const adminControllers = require("./controllers/adminControllers");
 
 const validateAnecdote = require("./middlewares/validateAnecdote");
+const validateUpdateAnecdote = require("./middlewares/validateUpdateAnecdote");
 const validateArtwork = require("./middlewares/validateArtwork");
+const validateArtist = require("./middlewares/validateArtist");
 
 router.get("/user/:id", userControllers.getUserById);
 router.get("/user", userControllers.getUsers);
@@ -24,9 +26,15 @@ router.post("/artwork", validateArtwork, artworkControllers.addArtwork);
 
 router.get("/artwork/:id/anecdote", anecdoteControllers.getAnecdoteByArtworkId);
 router.post("/anecdote", validateAnecdote, anecdoteControllers.addAnecdote);
+router.put(
+  "/anecdote/:id",
+  validateUpdateAnecdote,
+  anecdoteControllers.updateAnecdote
+);
 
 router.get("/artist", artistControllers.getArtists);
 router.get("/artist/:id", artistControllers.getArtistById);
+router.post("/artist", validateArtist, artistControllers.postArtist);
 
 router.post("/admin", adminControllers.postAdmin);
 

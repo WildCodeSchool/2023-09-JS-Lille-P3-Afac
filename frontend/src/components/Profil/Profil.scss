@@ -1,13 +1,17 @@
 @import "../../Variables.scss";
 
-.profilContainer {
+.profilPage {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.profilContainer {
+  display: flex;
+  justify-content: center;
+}
 
 .profilTitle {
-  all: unset;
+  text-align: center;
   font-size: 2rem;
   font-family: $fontBold;
 }
@@ -22,9 +26,29 @@
 .favoriteTitle {
   width: 100%;
   text-align: center;
+  font-family: $fontBold;
+  font-size: 1.5rem;
 }
 
 .favoriteArtwork {
   display: flex;
   width: 30%;
+}
+.postArtworkButton {
+  display: inline-flex;
+  align-items: center;
+  margin: 3rem;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0 1rem;
+  font-family: $fontBold;
+  font-size: 1.2rem;
+  height: 4vh;
+  box-shadow: 0 2px 10px black;
+  width: 300px;
+}
+
+.postArtworkButton:hover {
+  background-color: $blueColor;
+  color: $white;
 }
