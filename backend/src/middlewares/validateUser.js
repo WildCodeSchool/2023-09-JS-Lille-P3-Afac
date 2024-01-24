@@ -9,11 +9,9 @@ const userSchema = Joi.object({
 });
 
 const validateUser = (req, res, next) => {
-  // eslint-disable-next-line camelcase
   const { lastname, firstname, email, src, password } = req.body;
 
   const { error } = userSchema.validate(
-    // eslint-disable-next-line camelcase
     { lastname, firstname, email, src, password },
     { abortEarly: false }
   );
