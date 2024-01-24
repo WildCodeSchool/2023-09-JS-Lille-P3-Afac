@@ -16,7 +16,6 @@ const validateAnecdote = require("./middlewares/validateAnecdote");
 const validateArtwork = require("./middlewares/validateArtwork");
 
 router.get("/user/:id", userControllers.getUserById);
-router.put("/user/:id", userControllers.updateUser);
 router.get("/user", userControllers.getUsers);
 
 router.get("/artwork", artworkControllers.getAllArtwork);
