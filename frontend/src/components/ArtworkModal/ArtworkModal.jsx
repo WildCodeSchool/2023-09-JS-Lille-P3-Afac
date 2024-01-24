@@ -61,11 +61,6 @@ function ArtworkModal({ id, page }) {
                 </Dialog.Title>
                 <Dialog.Description className="modal__content__info__details">{`${artwork.artwork_year} - ${artwork.technique} - ${artwork.format}`}</Dialog.Description>
               </figcaption>
-              {/* {artwork.facts.map((e) => (
-                <p key={e.id} className="modal__content__info__fact">
-                  {e.fact}
-                </p>
-              ))} */}
               <cite className="modal__content__info__artist">
                 {artist.firstname}
                 {artist.lastname}
