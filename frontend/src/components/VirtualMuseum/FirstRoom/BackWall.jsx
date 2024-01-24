@@ -7,18 +7,18 @@ import "./BackWall.scss";
 function BackWall() {
   const { artworks, firstRoomWallClasses, firstRoomWallThumbnailClasses } =
     useGlobalContext();
-  const rightWallArtworks = artworks.slice(0, 2);
-  const rightWallClasses = firstRoomWallClasses.slice(0, 2);
-  const rightWallThumbnail = firstRoomWallThumbnailClasses.slice(0, 2);
+  const backWallArtworks = artworks.slice(0, 2);
+  const backWallClasses = firstRoomWallClasses.slice(0, 2);
+  const backWallThumbnail = firstRoomWallThumbnailClasses.slice(0, 2);
 
-  rightWallArtworks.forEach((e, index) => {
-    e.classNameArtwork = rightWallClasses[index];
-    e.classNameThumbnail = rightWallThumbnail[index];
+  backWallArtworks.forEach((e, index) => {
+    e.classNameArtwork = backWallClasses[index];
+    e.classNameThumbnail = backWallThumbnail[index];
   });
 
   return (
     <main className="walls">
-      {rightWallArtworks.map((e) => (
+      {backWallArtworks.map((e) => (
         <Artwork
           img={e.source}
           classNameArtwork={e.classNameArtwork}

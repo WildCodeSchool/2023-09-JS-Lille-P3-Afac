@@ -43,6 +43,42 @@ function GlobalContextProvider({ children }) {
     "secondArtworkLeftWallInformations",
   ];
 
+  const secondRoomClasses = [
+    "firstArtworkBackRoomSecondRoom",
+    "secondArtworkBackRoomSecondRoom",
+    "firstArtworkLeftSideSecondRoom",
+    "secondArtworkLeftSideSecondRoom",
+    "firstArtworkRightSideSecondRoom",
+    "secondArtworkRightSideSecondRoom",
+  ];
+
+  const secondRoomThumnailClasses = [
+    "firstArtworkBackRoomSecondRoomInformations",
+    "secondArtworkBackRoomSecondRoomInformations",
+    "firstArtworkLeftSideSecondRoomInformations",
+    "secondArtworkLeftSideSecondRoomInformations",
+    "firstArtworkRightSideSecondRoomInformations",
+    "secondArtworkRightSideSecondRoomInformations",
+  ];
+
+  const secondRoomWallClasses = [
+    "firstArtworkFrontRoomSecondRoom",
+    "secondArtworkFrontRoomSecondRoom",
+    "firstArtworkRightSideSecondRoom2",
+    "secondArtworkRightSideSecondRoom3",
+    "firstArtworkLeftSideSecondRoom2",
+    "secondArtworkLeftSideSecondRoom1",
+  ];
+
+  const secondRoomWallThumbnailClasses = [
+    "firstArtworkFrontRoomSecondRoomInformations",
+    "secondArtworkFrontRoomSecondRoomInformations",
+    "firstArtworkRightSideSecondInformations2",
+    "secondArtworkRightSideSecondInformations3",
+    "firstArtworkLeftSideSecondInformations",
+    "secondArtworkLeftSideSecondInformations",
+  ];
+
   const ArtworksSecondRoom = [
     {
       img: "./src/assets/Payet.png",
@@ -263,11 +299,71 @@ function GlobalContextProvider({ children }) {
     },
     {
       id: 7,
+      source: "./src/assets/Payet.png",
+      artwork_year: "2022-???",
+      technique: "Aquarelle",
+      format: "(800cm x 500cm)",
+      title: "Le réunionnais ultime",
+      alt: "Le plus grand réunionnais de l'histoire",
+      user_id_ar: "Salvador Dall-E",
+    },
+    {
+      id: 8,
+      source: "./src/assets/fusionColorWithFrame.png",
+      user_id_ar: "Auguste Reblanc",
+      artwork_year: "1876-2021",
+      technique: "Aquarelle",
+      format: "(1000cm x 800cm)",
+      title: "L'ile de la Réunion",
+      alt: "L'ile de la Réunion avec de fortes nuances roses et bleues",
+    },
+    {
+      id: 9,
+      source: "./src/assets/playaWithFrame.png",
+      user_id_ar: "Frida Kahloops",
+      artwork_year: "1976-2002",
+      technique: "Aquarelle",
+      format: "(1000cm x 700cm)",
+      title: "Plage réunionnaise",
+      alt: "Plage de l'ile de la Réunion",
+    },
+    {
+      id: 10,
+      source: "./src/assets/blueWithFrame.png",
+      user_id_ar: "Auguste Reblanc",
+      artwork_year: "1876-2021",
+      technique: "Aquarelle",
+      format: "(1000cm x 800cm)",
+      title: "L'ile de la Réunion",
+      alt: "L'ile de la Réunion avec de fortes nuances bleues",
+    },
+    {
+      id: 11,
+      source: "./src/assets/pinkVillage.png",
+      user_id_ar: "Auguste Reblanc",
+      artwork_year: "1876-2021",
+      technique: "Aquarelle",
+      format: "(1000cm x 800cm)",
+      title: "L'ile de la Réunion",
+      alt: "L'ile de la Réunion avec de fortes nuances roses",
+    },
+    {
+      id: 12,
+      source: "./src/assets/roseVillageWithFrame.png",
+      user_id_ar: "Auguste Reblanc",
+      artwork_year: "1876-2021",
+      technique: "Aquarelle",
+      format: "(1000cm x 800cm)",
+      title: "L'ile de la Réunion",
+      alt: "L'ile de la Réunion avec de fortes nuances roses",
+    },
+    {
+      id: 13,
       title: "Rougail-Saucisses",
       technique: "Aquarelle",
       artwork_year: "2023",
       format: "1024 x 1024",
-      src: "./src/assets/RougailSaucisse.jpg",
+      source: "./src/assets/RougailSaucisse.jpg",
       alt: "Aquarelle 'Rougail-Saucisses' par Salvador Dall-E",
       facts: [
         {
@@ -286,12 +382,12 @@ function GlobalContextProvider({ children }) {
       user_id_ar: 1,
     },
     {
-      id: 8,
+      id: 14,
       title: "Reunion",
       technique: "Aquarelle",
       artwork_year: "2020",
       format: "1024 x 1024",
-      src: "./src/assets/Reunion.jpg",
+      source: "./src/assets/Reunion.jpg",
       alt: "Aquarelle 'Reunion' par Pablo Picassiettes",
       facts: [
         {
@@ -306,9 +402,9 @@ function GlobalContextProvider({ children }) {
       user_id_ar: 2,
     },
     {
-      id: 9,
+      id: 15,
       title: "Pink Village",
-      src: "./src/assets/pinkVillage.png",
+      source: "./src/assets/pinkVillage.png",
       technique: "Dessin",
       artwork_year: "2017",
       format: "1790 x 1276",
@@ -317,9 +413,9 @@ function GlobalContextProvider({ children }) {
       artistId: 3,
     },
     {
-      id: 10,
+      id: 16,
       title: "Abri-côtier",
-      src: "./src/assets/Abri-côtier.png",
+      source: "./src/assets/Abri-côtier.png",
       technique: "Aquarelle",
       artwork_year: "2008",
       format: "1792 x 1220",
@@ -333,9 +429,9 @@ function GlobalContextProvider({ children }) {
       user_id_ar: 6,
     },
     {
-      id: 11,
+      id: 17,
       title: "Le Piton",
-      src: "./src/assets/Piton.png",
+      source: "./src/assets/Piton.png",
       technique: "Dessin",
       artwork_year: "2004",
       format: "1282 x 852",
@@ -353,9 +449,9 @@ function GlobalContextProvider({ children }) {
       user_id_ar: 5,
     },
     {
-      id: 12,
+      id: 18,
       title: "Payet",
-      src: "./src/assets/Payet.png",
+      source: "./src/assets/Payet.png",
       technique: "Aquarelle",
       artwork_year: "2023",
       format: "1282 x 852",
@@ -413,6 +509,10 @@ function GlobalContextProvider({ children }) {
       firstRoomThumnailClasses,
       firstRoomWallClasses,
       firstRoomWallThumbnailClasses,
+      secondRoomClasses,
+      secondRoomThumnailClasses,
+      secondRoomWallClasses,
+      secondRoomWallThumbnailClasses,
       ArtworksSecondRoom,
       firstRoomButtonInformations,
       secondRoomButtonInformations,

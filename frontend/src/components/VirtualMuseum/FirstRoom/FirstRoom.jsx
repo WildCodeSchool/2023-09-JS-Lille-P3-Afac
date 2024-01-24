@@ -41,7 +41,7 @@ function FirstRoom() {
           img={e.source}
           classNameArtwork={e.classNameArtwork}
           classNameThumbnail={e.classNameThumbnail}
-          user_id_ar={e.user_id_ar}
+          painter={e.user_id_ar}
           date={e.artwork_year}
           technique={e.technique}
           format={e.format}

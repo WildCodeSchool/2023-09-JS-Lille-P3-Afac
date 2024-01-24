@@ -7,18 +7,18 @@ import "./LeftWall.scss";
 function LeftWall() {
   const { artworks, firstRoomWallClasses, firstRoomWallThumbnailClasses } =
     useGlobalContext();
-  const rightWallArtworks = artworks.slice(4, 6);
-  const rightWallClasses = firstRoomWallClasses.slice(4, 6);
-  const rightWallThumbnail = firstRoomWallThumbnailClasses.slice(4, 6);
+  const leftWallArtworks = artworks.slice(4, 6);
+  const leftWallClasses = firstRoomWallClasses.slice(4, 6);
+  const leftWallThumbnail = firstRoomWallThumbnailClasses.slice(4, 6);
 
-  rightWallArtworks.forEach((e, index) => {
-    e.classNameArtwork = rightWallClasses[index];
-    e.classNameThumbnail = rightWallThumbnail[index];
+  leftWallArtworks.forEach((e, index) => {
+    e.classNameArtwork = leftWallClasses[index];
+    e.classNameThumbnail = leftWallThumbnail[index];
   });
 
   return (
     <main className="walls">
-      {rightWallArtworks.map((e) => (
+      {leftWallArtworks.map((e) => (
         <Artwork
           img={e.source}
           classNameArtwork={e.classNameArtwork}
