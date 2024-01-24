@@ -23,6 +23,7 @@ router.get("/user", userControllers.getUsers);
 
 router.get("/artwork", artworkControllers.getAllArtwork);
 router.get("/artwork/:id", artworkControllers.getArtworkById);
+router.put("/artwork/:id", artworkControllers.updateArtwork);
 router.post("/artwork", validateArtwork, artworkControllers.addArtwork);
 
 router.get("/artwork/:id/anecdote", anecdoteControllers.getAnecdoteByArtworkId);

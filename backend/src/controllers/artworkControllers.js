@@ -1,5 +1,19 @@
 const tables = require("../tables");
 
+const updateArtwork = async (req, res, next) => {
+  const artwork = req.body;
+  try {
+    const result = await tables.artwork.update(req.params.id, artwork);
+    if (result.affectedRows === 0) {
+      res.sendStatus(404);
+    } else {
+      res.sendStatus(201);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 const addArtwork = async (req, res, next) => {
   const artwork = req.body;
 
@@ -33,4 +47,9 @@ const getArtworkById = async (req, res, next) => {
   }
 };
 
-module.exports = { addArtwork, getAllArtwork, getArtworkById };
+module.exports = {
+  addArtwork,
+  getAllArtwork,
+  getArtworkById,
+  updateArtwork,
+};
