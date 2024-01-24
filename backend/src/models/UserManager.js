@@ -38,6 +38,14 @@ class UserManager extends AbstractManager {
       await this.database.query("ROLLBACK");
       return error;
     }
+
+  async readAll() {
+    const [rows] = await this.database.query(
+      `SELECT id, lastname, firstname, email, src 
+      FROM ${this.table}`
+    );
+
+    return rows;
   }
 }
 
