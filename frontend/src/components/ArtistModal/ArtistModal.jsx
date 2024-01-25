@@ -11,13 +11,15 @@ function ArtistModal({ id, page }) {
   const arts = artworks.filter((e) => e.artistId === id);
   const triggers = {
     artist: (
-      <button type="button" aria-label={artist.name} className="trigger">
+      <button type="button" aria-label={artist.lastname} className="trigger">
         <img
           src={artist.src}
-          alt={`portrait de ${artist.name}`}
+          alt={`portrait de ${artist.firstname} ${artist.lastname}`}
           className="artistPic"
         />
-        <span className="artistName">{artist.name}</span>
+        <span className="artistName">
+          {artist.firstname} {artist.lastname}
+        </span>
       </button>
     ),
   };
@@ -39,7 +41,9 @@ function ArtistModal({ id, page }) {
             <img src={artist.src} alt="" className="modal__content__img" />
             <figcaption>
               <Dialog.Title className="modal__content__title">
-                <cite>{artist.name}</cite>
+                <cite>
+                  {artist.firstname} {artist.lastname}
+                </cite>
               </Dialog.Title>
               <Dialog.Description className="modal__content__biography">
                 {artist.biography}

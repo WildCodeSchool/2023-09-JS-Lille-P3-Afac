@@ -13,12 +13,17 @@ const userControllers = require("./controllers/userControllers");
 const adminControllers = require("./controllers/adminControllers");
 
 const validateAnecdote = require("./middlewares/validateAnecdote");
+const validateUpdateAnecdote = require("./middlewares/validateUpdateAnecdote");
 const validateArtwork = require("./middlewares/validateArtwork");
+
+const validateUser = require("./middlewares/validateUser");
+const hashPassword = require("./middlewares/hashPasswordUser");
+const validateArtist = require("./middlewares/validateArtist");
 const validatePassword = require("./middlewares/validatePassword");
 
 router.get("/user/:id", userControllers.getUserById);
-// router.put("/user/:id", userControllers.updateUser);
 router.get("/user", userControllers.getUsers);
+router.post("/user", validateUser, hashPassword, userControllers.addUser);
 router.post(
   "/user/login",
   userControllers.getByMail,
@@ -28,13 +33,20 @@ router.post(
 
 router.get("/artwork", artworkControllers.getAllArtwork);
 router.get("/artwork/:id", artworkControllers.getArtworkById);
+router.put("/artwork/:id", artworkControllers.updateArtwork);
 router.post("/artwork", validateArtwork, artworkControllers.addArtwork);
 
 router.get("/artwork/:id/anecdote", anecdoteControllers.getAnecdoteByArtworkId);
 router.post("/anecdote", validateAnecdote, anecdoteControllers.addAnecdote);
+router.put(
+  "/anecdote/:id",
+  validateUpdateAnecdote,
+  anecdoteControllers.updateAnecdote
+);
 
 router.get("/artist", artistControllers.getArtists);
 router.get("/artist/:id", artistControllers.getArtistById);
+router.post("/artist", validateArtist, artistControllers.postArtist);
 
 router.post("/admin", adminControllers.postAdmin);
 

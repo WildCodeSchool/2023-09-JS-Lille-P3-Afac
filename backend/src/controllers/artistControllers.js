@@ -22,7 +22,20 @@ const getArtistById = async (req, res, next) => {
   }
 };
 
+const postArtist = async (req, res, next) => {
+  const newArtist = req.body;
+  try {
+    const artist = tables.artist.addArtist(newArtist);
+    if (artist) {
+      res.status(201).json(artist);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   getArtists,
   getArtistById,
+  postArtist,
 };

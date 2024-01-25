@@ -1,53 +1,36 @@
 import { Link } from "react-router-dom";
 import arrow from "../../../assets/arrow.png";
+import { useGlobalContext } from "../../Context/GlobalContextProvider";
 import Artwork from "../Artwork";
 import "./FrontWall.scss";
 
 function FontWall() {
-  const firstArtwork = {
-    img: "./src/assets/Payet.png",
-    classNameArtwork: "firstArtworkFontRoomSecondRoom",
-    classNameThumbnail: "firstArtworkFontRoomSecondRoomInformations",
-    painter: "Salvador Dall-E",
-    date: "2022-???",
-    information: "Aquarelle (800cm x 500cm)",
-    title: "Le réunionnais ultime",
-    description: "Le plus grand réunionnais de l'histoire",
-  };
+  const { artworks, secondRoomWallClasses, secondRoomWallThumbnailClasses } =
+    useGlobalContext();
+  const frontWallArtworks = artworks.slice(6, 8);
+  const frontWallClasses = secondRoomWallClasses.slice(0, 2);
+  const frontWallThumbnail = secondRoomWallThumbnailClasses.slice(0, 2);
 
-  const secondArtwork = {
-    img: "./src/assets/fusionColorWithFrame.png",
-    classNameArtwork: "secondArtworkFontRoomSecondRoom",
-    classNameThumbnail: "secondArtworkFontRoomSecondRoomInformations",
-    painter: "Auguste Reblanc",
-    date: "1876-2021",
-    information: "Aquarelle (1000cm x 800cm)",
-    title: "L'ile de la Réunion",
-    description: "L'ile de la Réunion avec de fortes nuances roses et bleues",
-  };
+  frontWallArtworks.forEach((e, index) => {
+    e.classNameArtwork = frontWallClasses[index];
+    e.classNameThumbnail = frontWallThumbnail[index];
+  });
 
   return (
     <main className="walls">
-      <Artwork
-        img={firstArtwork.img}
-        classNameArtwork={firstArtwork.classNameArtwork}
-        classNameThumbnail={firstArtwork.classNameThumbnail}
-        painter={firstArtwork.painter}
-        date={firstArtwork.date}
-        information={firstArtwork.information}
-        title={firstArtwork.title}
-        description={firstArtwork.description}
-      />
-      <Artwork
-        img={secondArtwork.img}
-        classNameArtwork={secondArtwork.classNameArtwork}
-        classNameThumbnail={secondArtwork.classNameThumbnail}
-        painter={secondArtwork.painter}
-        date={secondArtwork.date}
-        information={secondArtwork.information}
-        title={secondArtwork.title}
-        description={secondArtwork.description}
-      />
+      {frontWallArtworks.map((e) => (
+        <Artwork
+          img={e.source}
+          classNameArtwork={e.classNameArtwork}
+          classNameThumbnail={e.classNameThumbnail}
+          painter={e.user_id_ar}
+          date={e.artwork_year}
+          technique={e.technique}
+          format={e.format}
+          title={e.title}
+          description={e.alt}
+        />
+      ))}
       <Link to="/VirtualMuseumSecondRoom">
         <img
           src={arrow}

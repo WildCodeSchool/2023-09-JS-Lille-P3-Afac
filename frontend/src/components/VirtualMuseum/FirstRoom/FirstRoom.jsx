@@ -7,8 +7,18 @@ import AnimationButton from "../AnimationButton";
 import { useGlobalContext } from "../../Context/GlobalContextProvider";
 
 function FirstRoom() {
-  const { ArtworksFirstRoom, firstRoomButtonInformations } = useGlobalContext();
+  const {
+    artworks,
+    firstRoomButtonInformations,
+    firstRoomClasses,
+    firstRoomThumnailClasses,
+  } = useGlobalContext();
   const [animation, setAnimate] = useState(false);
+  const artworksFirstRoom = artworks.slice(0, 6);
+  artworksFirstRoom.forEach((e, index) => {
+    e.classNameArtwork = firstRoomClasses[index];
+    e.classNameThumbnail = firstRoomThumnailClasses[index];
+  });
 
   const navigate = useNavigate();
   const handleClick = () => {
@@ -25,17 +35,18 @@ function FirstRoom() {
 
   return (
     <main className="firstRoom">
-      {ArtworksFirstRoom.map((e) => (
+      {artworksFirstRoom.map((e) => (
         <Artwork
           key={e.id}
-          img={e.img}
+          img={e.source}
           classNameArtwork={e.classNameArtwork}
           classNameThumbnail={e.classNameThumbnail}
-          painter={e.painter}
-          date={e.date}
-          information={e.information}
+          painter={e.user_id_ar}
+          date={e.artwork_year}
+          technique={e.technique}
+          format={e.format}
           title={e.title}
-          description={e.description}
+          alt={e.description}
         />
       ))}
       <button

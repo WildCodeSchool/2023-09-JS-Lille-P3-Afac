@@ -5,11 +5,13 @@ import ArtistCard from "./Artistcard";
 function Artists() {
   const { artists } = useGlobalContext();
   return (
-    <main className="artistsContainer">
-      {artists.map((e) => (
-        <ArtistCard key={e.id} id={e.id} />
-      ))}
-    </main>
+    artists && (
+      <main className="artistsContainer">
+        {artists.map((e) => (
+          <ArtistCard key={e.id} id={e.id} />
+        ))}
+      </main>
+    )
   );
 }
 export default Artists;
