@@ -14,10 +14,17 @@ const adminControllers = require("./controllers/adminControllers");
 
 const validateAnecdote = require("./middlewares/validateAnecdote");
 const validateArtwork = require("./middlewares/validateArtwork");
+const validatePassword = require("./middlewares/validatePassword");
 
 router.get("/user/:id", userControllers.getUserById);
-router.put("/user/:id", userControllers.updateUser);
+// router.put("/user/:id", userControllers.updateUser);
 router.get("/user", userControllers.getUsers);
+router.post(
+  "/user/login",
+  userControllers.getByMail,
+  validatePassword,
+  userControllers.userLogin
+);
 
 router.get("/artwork", artworkControllers.getAllArtwork);
 router.get("/artwork/:id", artworkControllers.getArtworkById);
