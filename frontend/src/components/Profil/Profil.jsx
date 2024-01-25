@@ -19,7 +19,7 @@ function Profil() {
   return (
     userProfil && (
       <main className="profilPage">
-        <section className="profilContainer">
+        <section>
           <h2 className="profilTitle">Mon Profil</h2>
           <ProfilCard
             name={userProfil.firstname}

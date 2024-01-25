@@ -25,21 +25,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    // loader: async () => {
-    //   try {
-    //     const response = await fetch(
-    //       `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
-    //     );
-    //     if (!response.ok) {
-    //       throw new Error("Failed to fetch data");
-    //     }
-    //     const data = await response.json();
-    //     return data;
-    //   } catch (error) {
-    //     console.error(error);
-    //     return null;
-    //   }
-    // },
   },
   {
     path: "/VirtualMuseumFirstRoom",

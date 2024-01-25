@@ -13,7 +13,7 @@ function NavBar({ transparent }) {
       </Link>
       <ul className="navbarLink">
         <li>
-          <Link to="/profil/1" className="navbarLink">
+          <Link to="/" className="navbarLink">
             Accueil
           </Link>
         </li>
