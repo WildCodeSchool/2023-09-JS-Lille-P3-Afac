@@ -25,6 +25,21 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    // loader: async () => {
+    //   try {
+    //     const response = await fetch(
+    //       `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+    //     );
+    //     if (!response.ok) {
+    //       throw new Error("Failed to fetch data");
+    //     }
+    //     const data = await response.json();
+    //     return data;
+    //   } catch (error) {
+    //     console.error(error);
+    //     return null;
+    //   }
+    // },
   },
   {
     path: "/VirtualMuseumFirstRoom",
@@ -35,6 +50,20 @@ const router = createBrowserRouter([
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/VirtualMuseumSecondRoom",
@@ -45,6 +74,20 @@ const router = createBrowserRouter([
         <ReturnMainMenuButton />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/VirtualMuseumFirstWall",
@@ -55,6 +98,20 @@ const router = createBrowserRouter([
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/VirtualMuseumSecondWall",
@@ -65,6 +122,20 @@ const router = createBrowserRouter([
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/VirtualMuseumThirdWall",
@@ -75,6 +146,20 @@ const router = createBrowserRouter([
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/VirtualMuseumFrontWall",
@@ -85,6 +170,20 @@ const router = createBrowserRouter([
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/VirtualMuseumOnLeft",
@@ -95,6 +194,20 @@ const router = createBrowserRouter([
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/VirtualMuseumOnRight",
@@ -105,6 +218,20 @@ const router = createBrowserRouter([
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/Gallery",

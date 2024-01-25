@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import arrow from "../../../assets/arrow.png";
 import { useGlobalContext } from "../../Context/GlobalContextProvider";
 import Artwork from "../Artwork";
 import "./FrontWall.scss";
 
 function FontWall() {
-  const { artworks, secondRoomWallClasses, secondRoomWallThumbnailClasses } =
+  const { secondRoomWallClasses, secondRoomWallThumbnailClasses } =
     useGlobalContext();
+  const { artists, artworks } = useLoaderData();
   const frontWallArtworks = artworks.slice(6, 8);
   const frontWallClasses = secondRoomWallClasses.slice(0, 2);
   const frontWallThumbnail = secondRoomWallThumbnailClasses.slice(0, 2);
@@ -20,6 +21,7 @@ function FontWall() {
     <main className="walls">
       {frontWallArtworks.map((e) => (
         <Artwork
+          key={e.id}
           img={e.source}
           classNameArtwork={e.classNameArtwork}
           classNameThumbnail={e.classNameThumbnail}
@@ -29,6 +31,7 @@ function FontWall() {
           format={e.format}
           title={e.title}
           description={e.alt}
+          artists={artists}
         />
       ))}
       <Link to="/VirtualMuseumSecondRoom">

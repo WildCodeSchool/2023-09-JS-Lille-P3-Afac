@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLoaderData } from "react-router-dom";
 import { useState, useEffect } from "react";
 import arrow from "../../../assets/arrow.png";
 import "./FirstRoom.scss";
@@ -8,23 +8,16 @@ import { useGlobalContext } from "../../Context/GlobalContextProvider";
 
 function FirstRoom() {
   const {
-    artworks,
     firstRoomButtonInformations,
     firstRoomClasses,
     firstRoomThumnailClasses,
   } = useGlobalContext();
-  const [animation, setAnimate] = useState(false);
-  const artworksFirstRoom = artworks.slice(0, 6);
-  artworksFirstRoom.forEach((e, index) => {
-    e.classNameArtwork = firstRoomClasses[index];
-    e.classNameThumbnail = firstRoomThumnailClasses[index];
-  });
-
+  const { artworks, artists } = useLoaderData();
   const navigate = useNavigate();
+  const [animation, setAnimate] = useState(false);
   const handleClick = () => {
     setAnimate(true);
   };
-
   useEffect(() => {
     if (animation) {
       setTimeout(() => {
@@ -32,6 +25,12 @@ function FirstRoom() {
       }, 4000);
     }
   }, [animation]);
+
+  const artworksFirstRoom = artworks.slice(0, 6);
+  artworksFirstRoom.forEach((e, index) => {
+    e.classNameArtwork = firstRoomClasses[index];
+    e.classNameThumbnail = firstRoomThumnailClasses[index];
+  });
 
   return (
     <main className="firstRoom">
@@ -47,6 +46,7 @@ function FirstRoom() {
           format={e.format}
           title={e.title}
           alt={e.description}
+          artists={artists}
         />
       ))}
       <button
@@ -63,6 +63,7 @@ function FirstRoom() {
       </button>
       {firstRoomButtonInformations.map((e) => (
         <AnimationButton
+          key={e.id}
           url={e.url}
           className={e.className}
           animationClassName={e.animationClassName}

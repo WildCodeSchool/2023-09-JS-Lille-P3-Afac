@@ -144,16 +144,19 @@ function GlobalContextProvider({ children }) {
 
   const firstRoomButtonInformations = [
     {
+      id: 1,
       url: "/VirtualMuseumFirstWall",
       className: "wallZoomBack",
       animationClassName: "zoom",
     },
     {
+      id: 2,
       url: "/VirtualMuseumSecondWall",
       className: "wallZoomRight",
       animationClassName: "zoomRight",
     },
     {
+      id: 3,
       url: "/VirtualMuseumThirdWall",
       className: "wallZoomLeft",
       animationClassName: "zoomLeft",
@@ -161,41 +164,24 @@ function GlobalContextProvider({ children }) {
   ];
   const secondRoomButtonInformations = [
     {
+      id: 1,
       url: "/VirtualMuseumFrontWall",
       className: "secondRoomWallZoomFront",
       animationClassName: "zoomFront",
     },
     {
+      id: 2,
       url: "/VirtualMuseumOnRight",
       className: "secondRoomWallZoomRight",
       animationClassName: "zoomOnRight",
     },
     {
+      id: 3,
       url: "/VirtualMuseumOnLeft",
       className: "secondRoomWallZoomLeft",
       animationClassName: "zoomOnLeft",
     },
   ];
-
-  const [artists, setArtists] = useState(null);
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/artist`)
-      .then((response) => response.json())
-      .then((data) => {
-        setArtists(data);
-      })
-      .catch((err) => console.error(err));
-  }, []);
-
-  const [artworks, setArtworks] = useState(null);
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/artwork`)
-      .then((response) => response.json())
-      .then((data) => {
-        setArtworks(data);
-      })
-      .catch((err) => console.error(err));
-  }, []);
 
   const category = [
     {
@@ -248,9 +234,6 @@ function GlobalContextProvider({ children }) {
       ArtworksSecondRoom,
       firstRoomButtonInformations,
       secondRoomButtonInformations,
-      artists,
-      setArtists,
-      artworks,
       category,
       favoriteArtwork,
       homeText,
@@ -265,9 +248,6 @@ function GlobalContextProvider({ children }) {
     ArtworksSecondRoom,
     firstRoomButtonInformations,
     secondRoomButtonInformations,
-    artists,
-    setArtists,
-    artworks,
     category,
     favoriteArtwork,
     homeText,
