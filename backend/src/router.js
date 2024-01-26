@@ -35,6 +35,7 @@ router.get("/artwork", artworkControllers.getAllArtwork);
 router.get("/artwork/:id", artworkControllers.getArtworkById);
 router.put("/artwork/:id", artworkControllers.updateArtwork);
 router.post("/artwork", validateArtwork, artworkControllers.addArtwork);
+router.delete("/artwork/:id", artworkControllers.deleteArtwork);
 
 router.get("/artwork/:id/anecdote", anecdoteControllers.getAnecdoteByArtworkId);
 router.post("/anecdote", validateAnecdote, anecdoteControllers.addAnecdote);

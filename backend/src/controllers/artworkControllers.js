@@ -47,9 +47,23 @@ const getArtworkById = async (req, res, next) => {
   }
 };
 
+const deleteArtwork = async (req, res, next) => {
+  try {
+    const deletedArtwork = await tables.artwork.delete(req.params.id);
+    if (deletedArtwork.affectedRows === 0) {
+      res.status(404);
+    } else {
+      res.sendStatus(204);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   addArtwork,
   getAllArtwork,
   getArtworkById,
   updateArtwork,
+  deleteArtwork,
 };
