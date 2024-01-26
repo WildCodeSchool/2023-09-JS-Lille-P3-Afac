@@ -7,7 +7,7 @@ import "./LeftWall.scss";
 function LeftWall() {
   const { firstRoomWallClasses, firstRoomWallThumbnailClasses } =
     useGlobalContext();
-  const { artists, artworks } = useLoaderData();
+  const { artworks } = useLoaderData();
   const leftWallArtworks = artworks.slice(4, 6);
   const leftWallClasses = firstRoomWallClasses.slice(4, 6);
   const leftWallThumbnail = firstRoomWallThumbnailClasses.slice(4, 6);
@@ -31,7 +31,7 @@ function LeftWall() {
           format={e.format}
           title={e.title}
           description={e.alt}
-          artists={artists}
+          id={e.id}
         />
       ))}
       <Link to="/VirtualMuseumFirstRoom">

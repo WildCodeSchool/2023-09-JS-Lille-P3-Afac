@@ -7,7 +7,7 @@ import "./OnRight.scss";
 function OnRight() {
   const { secondRoomWallClasses, secondRoomWallThumbnailClasses } =
     useGlobalContext();
-  const { artists, artworks } = useLoaderData();
+  const { artworks } = useLoaderData();
   const rightWallArtworks = artworks.slice(10, 12);
   const rightWallClasses = secondRoomWallClasses.slice(4, 6);
   const rightWallThumbnail = secondRoomWallThumbnailClasses.slice(4, 6);
@@ -31,7 +31,7 @@ function OnRight() {
           format={e.format}
           title={e.title}
           description={e.alt}
-          artists={artists}
+          id={e.id}
         />
       ))}
       <Link to="/VirtualMuseumSecondRoom">
