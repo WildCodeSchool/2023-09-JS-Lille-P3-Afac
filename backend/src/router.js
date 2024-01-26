@@ -19,10 +19,17 @@ const validateArtwork = require("./middlewares/validateArtwork");
 const validateUser = require("./middlewares/validateUser");
 const hashPassword = require("./middlewares/hashPasswordUser");
 const validateArtist = require("./middlewares/validateArtist");
+const validatePassword = require("./middlewares/validatePassword");
 
 router.get("/user/:id", userControllers.getUserById);
 router.get("/user", userControllers.getUsers);
 router.post("/user", validateUser, hashPassword, userControllers.addUser);
+router.post(
+  "/user/login",
+  userControllers.getByMail,
+  validatePassword,
+  userControllers.userLogin
+);
 
 router.get("/artwork", artworkControllers.getAllArtwork);
 router.get("/artwork/:id", artworkControllers.getArtworkById);
