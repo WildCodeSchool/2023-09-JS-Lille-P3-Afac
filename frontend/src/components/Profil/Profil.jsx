@@ -18,14 +18,19 @@ function Profil() {
   }, [id]);
   return (
     userProfil && (
-      <main className="profilContainer">
-        <h2 className="profilTitle">Mon Profil</h2>
-        <ProfilCard
-          name={userProfil.firstname}
-          lastname={userProfil.lastname}
-          email={userProfil.email}
-          src={userProfil.src}
-        />
+      <main className="profilPage">
+        <section>
+          <h2 className="profilTitle">Mon Profil</h2>
+          <ProfilCard
+            name={userProfil.firstname}
+            lastname={userProfil.lastname}
+            email={userProfil.email}
+            src={userProfil.src}
+          />
+        </section>
+        <button type="button" className="postArtworkButton">
+          Soumettre votre oeuvre
+        </button>
 
         <section className="favoriteArtworkContainer">
           <h3 className="favoriteTitle">Mes oeuvres favorites</h3>

@@ -1,5 +1,3 @@
-import { useGlobalContext } from "../Context/GlobalContextProvider";
-
 /* eslint-disable camelcase */
 function Artwork(Artworks) {
   const {
@@ -12,9 +10,9 @@ function Artwork(Artworks) {
     format,
     title,
     description,
+    artists,
   } = Artworks;
 
-  const { artists } = useGlobalContext();
   const artist = artists.find((e) => e.id === painter);
 
   return (
