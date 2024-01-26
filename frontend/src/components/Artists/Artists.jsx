@@ -1,9 +1,9 @@
-import { useGlobalContext } from "../Context/GlobalContextProvider";
+import { useLoaderData } from "react-router-dom";
 import "./Artists.scss";
 import ArtistCard from "./Artistcard";
 
 function Artists() {
-  const { artists } = useGlobalContext();
+  const { artists } = useLoaderData();
   return (
     artists && (
       <main className="artistsContainer">

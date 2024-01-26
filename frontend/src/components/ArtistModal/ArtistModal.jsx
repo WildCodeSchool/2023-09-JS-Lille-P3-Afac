@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
+import { useLoaderData } from "react-router-dom";
 import * as Dialog from "@radix-ui/react-dialog";
 import ArtworkModal from "../ArtworkModal/ArtworkModal";
-import { useGlobalContext } from "../Context/GlobalContextProvider";
 import "../ArtworkModal/artworkModal.scss";
 import "./artistModal.scss";
 
 function ArtistModal({ id, page }) {
-  const { artworks, artists } = useGlobalContext();
+  const { artworks, artists } = useLoaderData();
   const artist = artists.find((e) => e.id === id);
-  const arts = artworks.filter((e) => e.artistId === id);
+  const arts = artworks.filter((e) => e.user_id_ar === id);
   const triggers = {
     artist: (
       <button type="button" aria-label={artist.lastname} className="trigger">

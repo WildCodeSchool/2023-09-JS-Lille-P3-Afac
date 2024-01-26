@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
+import { useLoaderData } from "react-router-dom";
 import * as Dialog from "@radix-ui/react-dialog";
 import "./artworkModal.scss";
-import { useLoaderData } from "react-router-dom";
 import LikeFunction from "../LikeFunction/LikeFunction";
 
 function ArtworkModal({ id, page, className }) {
@@ -63,8 +63,7 @@ function ArtworkModal({ id, page, className }) {
                 <Dialog.Description className="modal__content__info__details">{`${artwork.artwork_year} - ${artwork.technique} - ${artwork.format}`}</Dialog.Description>
               </figcaption>
               <cite className="modal__content__info__artist">
-                {artist.firstname}
-                {artist.lastname}
+                {`${artist.firstname} ${artist.lastname}`}
               </cite>
             </figure>
           </Dialog.Content>
