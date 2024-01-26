@@ -29,6 +29,7 @@ function OnRight() {
           format={e.format}
           title={e.title}
           description={e.alt}
+          id={e.id}
         />
       ))}
       <Link to="/VirtualMuseumSecondRoom">

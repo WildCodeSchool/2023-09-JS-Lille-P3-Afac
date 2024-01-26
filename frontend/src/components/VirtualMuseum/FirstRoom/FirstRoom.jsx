@@ -38,7 +38,6 @@ function FirstRoom() {
       {artworksFirstRoom.map((e) => (
         <Artwork
           key={e.id}
-          img={e.source}
           classNameArtwork={e.classNameArtwork}
           classNameThumbnail={e.classNameThumbnail}
           painter={e.user_id_ar}
@@ -47,6 +46,7 @@ function FirstRoom() {
           format={e.format}
           title={e.title}
           alt={e.description}
+          id={e.id}
         />
       ))}
       <button

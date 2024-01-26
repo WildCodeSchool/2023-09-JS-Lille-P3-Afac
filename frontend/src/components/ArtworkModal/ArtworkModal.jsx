@@ -4,7 +4,7 @@ import { useGlobalContext } from "../Context/GlobalContextProvider";
 import "./artworkModal.scss";
 import LikeFunction from "../LikeFunction/LikeFunction";
 
-function ArtworkModal({ id, page }) {
+function ArtworkModal({ id, page, className }) {
   const { artworks, artists } = useGlobalContext();
   const artwork = artworks.find((e) => e.id === id);
   const artist = artists.find((e) => e.id === artwork.user_id_ar);
@@ -32,6 +32,7 @@ function ArtworkModal({ id, page }) {
         />
       </button>
     ),
+    museumArtwork: <img src={artwork.source} alt="" className={className} />,
   };
 
   return (
@@ -76,6 +77,10 @@ function ArtworkModal({ id, page }) {
 ArtworkModal.propTypes = {
   id: PropTypes.number.isRequired,
   page: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
+ArtworkModal.defaultProps = {
+  className: "",
+};
 export default ArtworkModal;

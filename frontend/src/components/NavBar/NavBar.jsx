@@ -25,7 +25,9 @@ function NavBar({ transparent }) {
   );
 }
 NavBar.propTypes = {
-  transparent: PropTypes.string.isRequired,
+  transparent: PropTypes.string,
 };
-
+NavBar.defaultProps = {
+  transparent: "",
+};
 export default NavBar;
