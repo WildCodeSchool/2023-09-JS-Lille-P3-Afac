@@ -1,8 +1,34 @@
 import * as Dialog from "@radix-ui/react-dialog";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./LogInPopup.scss";
+import { useState } from "react";
 
 function LogInPopup() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleConnection = async () => {
+    const data = { email, password };
+    const response = await fetch(
+      `${import.meta.env.VITE_BACKEND_URL}/api/user/login`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    );
+    if (response.status === 200) {
+      navigate("/");
+    }
+  };
+
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
@@ -24,10 +50,12 @@ function LogInPopup() {
               e-mail
             </label>
             <input
+              value={email}
+              onChange={handleEmailChange}
               type="email"
               className="input"
               id="UserName"
-              placeholder="e-mail"
+              placeholder="Entrez votre email"
             />
           </fieldset>
           <fieldset className="fieldset">
@@ -35,10 +63,12 @@ function LogInPopup() {
               Mot de passe
             </label>
             <input
+              value={password}
+              onChange={handlePasswordChange}
               type="password"
               className="input"
               id="Password"
-              placeholder="Password"
+              placeholder="Entrez votre mot de passe"
             />
           </fieldset>
           <section className="popUpClosingButtons">
@@ -51,7 +81,11 @@ function LogInPopup() {
               </Link>
             </Dialog.Close>
             <Dialog.Close asChild>
-              <button type="button" className="button LogIn PopUP">
+              <button
+                type="button"
+                className="button LogIn PopUP"
+                onClick={handleConnection}
+              >
                 Connexion
               </button>
             </Dialog.Close>

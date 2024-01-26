@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useGlobalContext } from "../../Context/GlobalContextProvider";
 import arrow from "../../../assets/arrow.png";
@@ -6,8 +6,10 @@ import Artwork from "../Artwork";
 import "./BackWall.scss";
 
 function BackWall() {
-  const { artworks, firstRoomWallClasses, firstRoomWallThumbnailClasses } =
+  const { firstRoomWallClasses, firstRoomWallThumbnailClasses } =
     useGlobalContext();
+  const { artworks } = useLoaderData();
+
   const backWallArtworks = artworks.slice(0, 2);
   const backWallClasses = firstRoomWallClasses.slice(0, 2);
   const backWallThumbnail = firstRoomWallThumbnailClasses.slice(0, 2);
@@ -26,6 +28,7 @@ function BackWall() {
       <main className="walls">
         {backWallArtworks.map((e) => (
           <Artwork
+            key={e.id}
             img={e.source}
             classNameArtwork={e.classNameArtwork}
             classNameThumbnail={e.classNameThumbnail}

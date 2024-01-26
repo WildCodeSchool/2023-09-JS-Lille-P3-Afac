@@ -1,5 +1,5 @@
+import { useLoaderData } from "react-router-dom";
 import ArtworkModal from "../ArtworkModal/ArtworkModal";
-import { useGlobalContext } from "../Context/GlobalContextProvider";
 
 /* eslint-disable camelcase */
 function Artwork(Artworks) {
@@ -14,8 +14,7 @@ function Artwork(Artworks) {
     description,
     id,
   } = Artworks;
-
-  const { artists } = useGlobalContext();
+  const { artists } = useLoaderData();
   const artist = artists.find((e) => e.id === painter);
 
   return (

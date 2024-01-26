@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { useGlobalContext } from "../../Context/GlobalContextProvider";
 import arrow from "../../../assets/arrow.png";
 import Artwork from "../Artwork";
 import "./OnLeft.scss";
 
 function OnLeft() {
-  const { artworks, secondRoomWallClasses, secondRoomWallThumbnailClasses } =
+  const { secondRoomWallClasses, secondRoomWallThumbnailClasses } =
     useGlobalContext();
+  const { artworks } = useLoaderData();
   const leftWallArtworks = artworks.slice(8, 10);
   const leftWallClasses = secondRoomWallClasses.slice(2, 4);
   const leftWallThumbnail = secondRoomWallThumbnailClasses.slice(2, 4);
@@ -20,6 +21,7 @@ function OnLeft() {
     <main className="walls">
       {leftWallArtworks.map((e) => (
         <Artwork
+          key={e.id}
           img={e.source}
           classNameArtwork={e.classNameArtwork}
           classNameThumbnail={e.classNameThumbnail}

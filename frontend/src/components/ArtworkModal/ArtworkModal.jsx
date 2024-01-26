@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 import * as Dialog from "@radix-ui/react-dialog";
-import { useGlobalContext } from "../Context/GlobalContextProvider";
 import "./artworkModal.scss";
+import { useLoaderData } from "react-router-dom";
 import LikeFunction from "../LikeFunction/LikeFunction";
 
 function ArtworkModal({ id, page, className }) {
-  const { artworks, artists } = useGlobalContext();
+  const { artworks, artists } = useLoaderData();
   const artwork = artworks.find((e) => e.id === id);
   const artist = artists.find((e) => e.id === artwork.user_id_ar);
   const triggers = {
