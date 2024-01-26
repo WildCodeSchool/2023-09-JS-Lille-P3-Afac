@@ -1,8 +1,8 @@
-import { useGlobalContext } from "../Context/GlobalContextProvider";
+import { useLoaderData } from "react-router-dom";
 
 function FilterButton(category) {
   const { name, setSelectedArtworks } = category;
-  const { artworks } = useGlobalContext();
+  const { artworks } = useLoaderData();
 
   const handleClick = () => {
     if (name !== "Tous") {
