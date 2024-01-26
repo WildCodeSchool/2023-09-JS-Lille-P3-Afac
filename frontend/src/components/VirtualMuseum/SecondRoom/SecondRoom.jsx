@@ -11,7 +11,7 @@ function SecondRoom() {
     secondRoomClasses,
     secondRoomThumnailClasses,
   } = useGlobalContext();
-  const { artists, artworks } = useLoaderData();
+  const { artworks } = useLoaderData();
   const artworksSecondRoom = artworks.slice(6, 12);
   artworksSecondRoom.forEach((e, index) => {
     e.classNameArtwork = secondRoomClasses[index];
@@ -32,7 +32,7 @@ function SecondRoom() {
           format={e.format}
           title={e.title}
           description={e.alt}
-          artists={artists}
+          id={e.id}
         />
       ))}
       <Link to="/VirtualMuseumFirstRoom">

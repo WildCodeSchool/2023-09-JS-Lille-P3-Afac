@@ -7,7 +7,7 @@ import "./FrontWall.scss";
 function FontWall() {
   const { secondRoomWallClasses, secondRoomWallThumbnailClasses } =
     useGlobalContext();
-  const { artists, artworks } = useLoaderData();
+  const { artworks } = useLoaderData();
   const frontWallArtworks = artworks.slice(6, 8);
   const frontWallClasses = secondRoomWallClasses.slice(0, 2);
   const frontWallThumbnail = secondRoomWallThumbnailClasses.slice(0, 2);
@@ -31,7 +31,7 @@ function FontWall() {
           format={e.format}
           title={e.title}
           description={e.alt}
-          artists={artists}
+          id={e.id}
         />
       ))}
       <Link to="/VirtualMuseumSecondRoom">

@@ -12,7 +12,7 @@ function FirstRoom() {
     firstRoomClasses,
     firstRoomThumnailClasses,
   } = useGlobalContext();
-  const { artworks, artists } = useLoaderData();
+  const { artworks } = useLoaderData();
   const navigate = useNavigate();
   const [animation, setAnimate] = useState(false);
   const handleClick = () => {
@@ -37,7 +37,6 @@ function FirstRoom() {
       {artworksFirstRoom.map((e) => (
         <Artwork
           key={e.id}
-          img={e.source}
           classNameArtwork={e.classNameArtwork}
           classNameThumbnail={e.classNameThumbnail}
           painter={e.user_id_ar}
@@ -46,7 +45,7 @@ function FirstRoom() {
           format={e.format}
           title={e.title}
           alt={e.description}
-          artists={artists}
+          id={e.id}
         />
       ))}
       <button
