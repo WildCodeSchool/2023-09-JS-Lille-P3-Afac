@@ -52,6 +52,14 @@ class ArtworkManager extends AbstractManager {
     );
     return rows;
   }
+
+  async delete(id) {
+    const [rows] = await this.database.query(
+      `delete from ${this.table} where id = ?`,
+      [id]
+    );
+    return rows[0];
+  }
 }
 
 module.exports = ArtworkManager;
