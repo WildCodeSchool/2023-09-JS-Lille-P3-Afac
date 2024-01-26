@@ -59,11 +59,20 @@ class UserManager extends AbstractManager {
   }
 
   async delete(id) {
-    const [rows] = await this.database.query(
-      `DELETE FROM ${this.table} WHERE id = ?`,
-      [id]
-    );
-    return rows[0];
+    try {
+      await this.database.query("START TRANSACTION");
+      const [rows] = await this.database.query(
+        "DELETE FROM logged_user WHERE user_id = ?",
+        [id]
+      );
+      await this.database.query("DELETE FROM artist WHERE user_id = ?", [id]);
+      await this.database.query(`DELETE FROM ${this.table} WHERE id = ?`, [id]);
+      await this.database.query("COMMIT");
+      return rows[0];
+    } catch (err) {
+      await this.database.query("ROLLBACK");
+      return err;
+    }
   }
 }
 
