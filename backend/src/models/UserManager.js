@@ -36,6 +36,7 @@ class UserManager extends AbstractManager {
           user.password_hash,
         ]
       );
+
       const userId = result.insertId;
 
       await this.database.query("INSERT INTO logged_user(user_id) VALUES(?)", [
@@ -55,6 +56,14 @@ class UserManager extends AbstractManager {
       [email]
     );
     return data[0];
+  }
+
+  async delete(id) {
+    const [rows] = await this.database.query(
+      `DELETE FROM ${this.table} WHERE id = ?`,
+      [id]
+    );
+    return rows[0];
   }
 }
 
