@@ -269,7 +269,7 @@ const router = createBrowserRouter([
     element: <LogInPopup />,
   },
   {
-    path: `/Profil/:id`,
+    path: `/Profil`,
     element: (
       <>
         <NavBar />

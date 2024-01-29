@@ -1,21 +1,10 @@
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../Context/GlobalContextProvider";
 import ProfilCard from "./ProfilCard";
 import FavoriteArtwork from "./FavoriteArtwork";
 import "./Profil.scss";
 
 function Profil() {
-  const { favoriteArtwork, setUserProfil, userProfil } = useGlobalContext();
-  const { id } = useParams();
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/${id}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setUserProfil(data);
-      })
-      .catch((err) => console.error(err));
-  }, [id]);
+  const { favoriteArtwork, userProfil } = useGlobalContext();
   return (
     userProfil && (
       <main className="profilPage">

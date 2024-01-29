@@ -11,6 +11,24 @@
   font-family: $fontBold;
 }
 
+.signOutButton {
+  background-image: url("./src/assets/sign-out.svg");
+  height: 2rem;
+  width: 2rem;
+}
+
+.hiddenNavLabel {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .navbar {
   @include navbar;
   background-color: $blueColor;
@@ -49,15 +67,27 @@
   text-decoration: none;
   font-size: 1rem;
   cursor: pointer;
-
+  align-items: center;
+  gap: 1.2rem;
   @media screen and (min-width: 800px) {
     font-size: 1.2rem;
-  }
-  @media screen and (min-width: 1450px) {
-    padding: 1.5rem;
+    gap: 1.8rem;
   }
   @media screen and (min-width: 1440px) {
     display: flex;
-    padding: 1.5rem;
+    gap: 2rem;
+  }
+}
+
+.navbarLink:last-child {
+  @media screen and (min-width: 800px) {
+    font-size: 1.2rem;
+    margin-right: 1.2rem;
+  }
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    gap: 2rem;
+    margin-right: 2rem;
+    font-size: 1.6rem;
   }
 }
