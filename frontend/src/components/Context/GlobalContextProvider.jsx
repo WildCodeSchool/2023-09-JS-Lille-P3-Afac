@@ -208,13 +208,7 @@ function GlobalContextProvider({ children }) {
       .catch((err) => console.error(err));
   }, []);
 
-  const [userProfil, setUserProfil] = useState({
-    id: 1,
-    firstname: "Salvador",
-    lastname: "Dall-E",
-    email: "salvador.dalle@email.com",
-    src: "/src/assets/Dall-e.png",
-  });
+  const [userProfil, setUserProfil] = useState(null);
 
   const [favorites, setFavorites] = useState(null);
 

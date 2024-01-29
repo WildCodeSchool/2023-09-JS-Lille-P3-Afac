@@ -49,6 +49,7 @@ router.put(
 
 router.get("/favorite/:id", favoriteControllers.getFavoritesByUserId);
 router.post("/favorite/", favoriteControllers.addFavorite);
+router.delete("/favorite/:id", favoriteControllers.deleteFavorite);
 
 router.get("/artist", artistControllers.getArtists);
 router.get("/artist/:id", artistControllers.getArtistById);

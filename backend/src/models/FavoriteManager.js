@@ -7,7 +7,7 @@ class FavoriteManager extends AbstractManager {
 
   async read(id) {
     const [favorites] = await this.database.query(
-      `SELECT id, artwork_id FROM favorite
+      `SELECT * FROM ${this.table}
         WHERE user_id_lu = ?`,
       [id]
     );
@@ -23,6 +23,14 @@ class FavoriteManager extends AbstractManager {
     );
 
     return result.insertId;
+  }
+
+  async delete(id) {
+    const [result] = await this.database.query(
+      `DELETE FROM ${this.table} WHERE id = ?`,
+      [id]
+    );
+    return result;
   }
 }
 

@@ -9,6 +9,20 @@ const getFavoritesByUserId = async (req, res, next) => {
   }
 };
 
+const deleteFavorite = async (req, res, next) => {
+  try {
+    const deletedFavorite = await tables.favorite.delete(req.params.id);
+
+    if (deletedFavorite.affectedRows === 0) {
+      res.sendStatus(404);
+    } else {
+      res.sendStatus(204);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 const addFavorite = async (req, res, next) => {
   const { artworkId, userId } = req.body;
   try {
@@ -19,4 +33,4 @@ const addFavorite = async (req, res, next) => {
   }
 };
 
-module.exports = { getFavoritesByUserId, addFavorite };
+module.exports = { getFavoritesByUserId, addFavorite, deleteFavorite };
