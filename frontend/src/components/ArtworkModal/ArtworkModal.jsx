@@ -56,7 +56,7 @@ function ArtworkModal({ id, page, className }) {
             />
             <figure className="modal__content__info">
               <figcaption className="modalLikeButton">
-                <LikeFunction className="artworkCardLikeButton" />
+                <LikeFunction className="artworkCardLikeButton" id={id} />
                 <Dialog.Title className="modal__content__info__title">
                   {artwork.title}
                 </Dialog.Title>

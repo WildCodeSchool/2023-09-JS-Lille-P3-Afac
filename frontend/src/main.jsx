@@ -1,7 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { GlobalContextProvider } from "./components/Context/GlobalContextProvider";
+import {
+  GlobalContextProvider,
+  useGlobalContext,
+} from "./components/Context/GlobalContextProvider";
 import App from "./App";
 import VirtualMuseum from "./components/VirtualMuseum/FirstRoom/FirstRoom";
 import FirstWall from "./components/VirtualMuseum/FirstRoom/BackWall";
@@ -20,6 +23,8 @@ import SignUp from "./components/SignUp/SignUp";
 import PostArtwork from "./components/PostArtwork/PostArtwork";
 import ReturnMainMenuButton from "./components/ReturnMainMenuButton/ReturnMainMenuButton";
 import LandscapeMessage from "./components/VirtualMuseum/LanscapeMessage/LandscapeMessage";
+
+const { getFavorites } = useGlobalContext();
 
 const router = createBrowserRouter([
   {
@@ -235,9 +240,11 @@ const router = createBrowserRouter([
       );
       const artworks = await artworksResponse.json();
       const artists = await artistsResponse.json();
+      const favorites = await getFavorites();
       return {
         artists,
         artworks,
+        favorites,
       };
     },
   },

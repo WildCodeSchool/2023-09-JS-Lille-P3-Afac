@@ -221,6 +221,17 @@ function GlobalContextProvider({ children }) {
     },
   ];
 
+  const getFavorites = async () => {
+    if (userProfil) {
+      const favoritesResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/favorite/${userProfil.id}`
+      );
+      const favorites = favoritesResponse.json();
+      return favorites;
+    }
+    return null;
+  };
+
   const contextValue = useMemo(() => {
     return {
       firstRoomClasses,
@@ -241,6 +252,7 @@ function GlobalContextProvider({ children }) {
       setUsers,
       userProfil,
       setUserProfil,
+      getFavorites,
     };
   }, [
     firstRoomClasses,
@@ -255,6 +267,7 @@ function GlobalContextProvider({ children }) {
     setUsers,
     userProfil,
     setUserProfil,
+    getFavorites,
   ]);
 
   return (
