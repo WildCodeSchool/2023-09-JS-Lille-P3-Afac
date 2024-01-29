@@ -30,6 +30,7 @@ router.post(
   validatePassword,
   userControllers.userLogin
 );
+router.delete("/user/:id", userControllers.deleteUser);
 
 router.get("/artwork", artworkControllers.getAllArtwork);
 router.get("/artwork/:id", artworkControllers.getArtworkById);
