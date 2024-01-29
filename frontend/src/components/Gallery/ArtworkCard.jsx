@@ -6,7 +6,7 @@ import LikeFunction from "../LikeFunction/LikeFunction";
 function ArtworkCard({ id }) {
   return (
     <figure className="card">
-      <LikeFunction className="buttonLike" />
+      <LikeFunction className="buttonLike" id={id} />
       <ArtworkModal id={id} page="gallery" />
     </figure>
   );

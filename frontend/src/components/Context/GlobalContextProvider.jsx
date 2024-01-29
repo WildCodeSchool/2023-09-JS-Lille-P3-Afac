@@ -208,28 +208,22 @@ function GlobalContextProvider({ children }) {
       .catch((err) => console.error(err));
   }, []);
 
-  const [userProfil, setUserProfil] = useState(null);
+  const [userProfil, setUserProfil] = useState({
+    id: 1,
+    firstname: "Salvador",
+    lastname: "Dall-E",
+    email: "salvador.dalle@email.com",
+    src: "/src/assets/Dall-e.png",
+  });
 
-  const favoriteArtwork = [
-    {
-      name: "Le Piton",
-      img: "/src/assets/Piton.png",
-    },
-    {
-      name: "Abris-côtier",
-      img: "/src/assets/Abri-côtier.png",
-    },
-  ];
+  const [favorites, setFavorites] = useState(null);
 
   const getFavorites = async () => {
-    if (userProfil) {
-      const favoritesResponse = await fetch(
-        `${import.meta.env.VITE_BACKEND_URL}/api/favorite/${userProfil.id}`
-      );
-      const favorites = favoritesResponse.json();
-      return favorites;
-    }
-    return null;
+    const favoritesResponse = await fetch(
+      `${import.meta.env.VITE_BACKEND_URL}/api/favorite/${userProfil.id}`
+    );
+    const userFavorites = await favoritesResponse.json();
+    setFavorites(userFavorites);
   };
 
   const contextValue = useMemo(() => {
@@ -246,12 +240,13 @@ function GlobalContextProvider({ children }) {
       firstRoomButtonInformations,
       secondRoomButtonInformations,
       category,
-      favoriteArtwork,
       homeText,
       users,
       setUsers,
       userProfil,
       setUserProfil,
+      favorites,
+      setFavorites,
       getFavorites,
     };
   }, [
@@ -261,12 +256,13 @@ function GlobalContextProvider({ children }) {
     firstRoomButtonInformations,
     secondRoomButtonInformations,
     category,
-    favoriteArtwork,
     homeText,
     users,
     setUsers,
     userProfil,
     setUserProfil,
+    favorites,
+    setFavorites,
     getFavorites,
   ]);
 
@@ -276,10 +272,12 @@ function GlobalContextProvider({ children }) {
     </GlobalContext.Provider>
   );
 }
+
 function useGlobalContext() {
   const context = useContext(GlobalContext);
   return context;
 }
+
 export { GlobalContextProvider, useGlobalContext };
 
 GlobalContextProvider.propTypes = {

@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
-import { useLoaderData } from "react-router-dom";
 import PropTypes from "prop-types";
 import like from "../../assets/like.png";
 import unlike from "../../assets/unlike.png";
 import "./LikeFunction.scss";
+import { useGlobalContext } from "../Context/GlobalContextProvider";
 
 function LikeFunction({ className, id }) {
-  const { favorites } = useLoaderData();
+  const { favorites } = useGlobalContext();
   const [liked, setLiked] = useState(false);
 
   useEffect(() => {
     if (favorites && favorites.find((e) => e.artwork_id === id)) {
       setLiked(true);
     }
-  }, []);
+  }, [favorites]);
 
   const handleClick = () => {
     setLiked(!liked);

@@ -6,12 +6,18 @@ import ArtworkCard from "./ArtworkCard";
 import FilterButton from "./FilterButton";
 
 function Gallery() {
-  const { category } = useGlobalContext();
+  const { category, getFavorites } = useGlobalContext();
   const { artworks } = useLoaderData();
   const [selectedArtworks, setSelectedArtworks] = useState(null);
+
   useEffect(() => {
     setSelectedArtworks(artworks);
   }, [artworks]);
+
+  useEffect(() => {
+    getFavorites();
+  }, []);
+
   return (
     selectedArtworks && (
       <main className="galleryContainer">

@@ -1,10 +1,21 @@
+import { useEffect, useState } from "react";
 import { useGlobalContext } from "../Context/GlobalContextProvider";
 import ProfilCard from "./ProfilCard";
-import FavoriteArtwork from "./FavoriteArtwork";
 import "./Profil.scss";
+import ArtworkModal from "../ArtworkModal/ArtworkModal";
 
 function Profil() {
-  const { favoriteArtwork, userProfil } = useGlobalContext();
+  const { userProfil, getFavorites, favorites } = useGlobalContext();
+  const [favoriteArtwork, setFavoriteArtworks] = useState(null);
+
+  useEffect(() => {
+    getFavorites();
+  }, []);
+
+  useEffect(() => {
+    setFavoriteArtworks(favorites);
+  }, [favorites]);
+
   return (
     userProfil && (
       <main className="profilPage">
@@ -23,13 +34,10 @@ function Profil() {
 
         <section className="favoriteArtworkContainer">
           <h3 className="favoriteTitle">Mes oeuvres favorites</h3>
-          {favoriteArtwork.map((e) => (
-            <FavoriteArtwork
-              name={e.name}
-              img={e.img}
-              className="favoriteArtwork"
-            />
-          ))}
+          {favoriteArtwork &&
+            favoriteArtwork.map((e) => (
+              <ArtworkModal id={e.artwork_id} page="artistModal" />
+            ))}
         </section>
       </main>
     )
