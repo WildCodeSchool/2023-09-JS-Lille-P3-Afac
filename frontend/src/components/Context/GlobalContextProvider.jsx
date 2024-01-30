@@ -210,16 +210,15 @@ function GlobalContextProvider({ children }) {
 
   const [userProfil, setUserProfil] = useState(null);
 
-  const favoriteArtwork = [
-    {
-      name: "Le Piton",
-      img: "/src/assets/Piton.png",
-    },
-    {
-      name: "Abris-côtier",
-      img: "/src/assets/Abri-côtier.png",
-    },
-  ];
+  const [favorites, setFavorites] = useState(null);
+
+  const getFavorites = async () => {
+    const favoritesResponse = await fetch(
+      `${import.meta.env.VITE_BACKEND_URL}/api/favorite/${userProfil.id}`
+    );
+    const userFavorites = await favoritesResponse.json();
+    setFavorites(userFavorites);
+  };
 
   const contextValue = useMemo(() => {
     return {
@@ -235,12 +234,14 @@ function GlobalContextProvider({ children }) {
       firstRoomButtonInformations,
       secondRoomButtonInformations,
       category,
-      favoriteArtwork,
       homeText,
       users,
       setUsers,
       userProfil,
       setUserProfil,
+      favorites,
+      setFavorites,
+      getFavorites,
     };
   }, [
     firstRoomClasses,
@@ -249,12 +250,14 @@ function GlobalContextProvider({ children }) {
     firstRoomButtonInformations,
     secondRoomButtonInformations,
     category,
-    favoriteArtwork,
     homeText,
     users,
     setUsers,
     userProfil,
     setUserProfil,
+    favorites,
+    setFavorites,
+    getFavorites,
   ]);
 
   return (
@@ -263,10 +266,12 @@ function GlobalContextProvider({ children }) {
     </GlobalContext.Provider>
   );
 }
+
 function useGlobalContext() {
   const context = useContext(GlobalContext);
   return context;
 }
+
 export { GlobalContextProvider, useGlobalContext };
 
 GlobalContextProvider.propTypes = {

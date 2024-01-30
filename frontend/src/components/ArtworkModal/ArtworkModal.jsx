@@ -3,9 +3,11 @@ import { useLoaderData } from "react-router-dom";
 import * as Dialog from "@radix-ui/react-dialog";
 import "./artworkModal.scss";
 import LikeFunction from "../LikeFunction/LikeFunction";
+import { useGlobalContext } from "../Context/GlobalContextProvider";
 
 function ArtworkModal({ id, page, className }) {
   const { artworks, artists } = useLoaderData();
+  const { userProfil } = useGlobalContext();
   const artwork = artworks.find((e) => e.id === id);
   const artist = artists.find((e) => e.id === artwork.user_id_ar);
   const triggers = {
@@ -62,7 +64,11 @@ function ArtworkModal({ id, page, className }) {
             />
             <figure className="modal__content__info">
               <figcaption className="modalLikeButton">
-                <LikeFunction className="artworkCardLikeButton" />
+                {userProfil && (
+                  <Dialog.Close asChild>
+                    <LikeFunction className="artworkCardLikeButton" id={id} />
+                  </Dialog.Close>
+                )}
                 <Dialog.Title className="modal__content__info__title">
                   {artwork.title}
                 </Dialog.Title>

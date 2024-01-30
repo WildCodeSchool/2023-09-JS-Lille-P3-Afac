@@ -276,6 +276,20 @@ const router = createBrowserRouter([
         <Profil />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/Sign-Up",

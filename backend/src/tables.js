@@ -7,12 +7,14 @@ const UserManager = require("./models/UserManager");
 const AnecdoteManager = require("./models/AnecdoteManager");
 const ArtworkManager = require("./models/ArtworkManager");
 const ArtistManager = require("./models/ArtistManager");
+const FavoriteManager = require("./models/FavoriteManager");
 
 const managers = [
   UserManager,
   ArtworkManager,
   AnecdoteManager,
   ArtistManager,
+  FavoriteManager,
   // Add other managers here
 ];
 
