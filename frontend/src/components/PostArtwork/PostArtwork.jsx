@@ -59,8 +59,8 @@ function PostArtwork() {
     },
   });
   const [validatedForm, setValidatedForm] = useState(false);
-  const onSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async () => {
+    // e.preventDefault();
 
     if (image) {
       const values = getValues();
@@ -72,7 +72,7 @@ function PostArtwork() {
 
       values.alt = "halte là";
       values.user_id_ar = 3;
-      values.technique = "dessin";
+      values.technique = "Dessin";
       formImage.append("title", values.title);
       formImage.append("technique", values.technique);
       formImage.append("artwork_year", values.artwork_year);

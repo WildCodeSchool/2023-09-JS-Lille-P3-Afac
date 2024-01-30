@@ -12,7 +12,7 @@ function ArtworkModal({ id, page, className }) {
     gallery: (
       <button type="button" aria-label={artwork.alt} className="trigger">
         <img
-          src={artwork.source}
+          src={`${import.meta.env.VITE_BACKEND_URL}/${artwork.source}`}
           alt={`portrait de ${artwork.alt}`}
           className="artworkPic"
         />
@@ -26,13 +26,19 @@ function ArtworkModal({ id, page, className }) {
         className="modal__artworks__list__button"
       >
         <img
-          src={artwork.source}
+          src={`${import.meta.env.VITE_BACKEND_URL}/${artwork.source}`}
           alt={artwork.alt}
           className="modal__artworks__list__button__img"
         />
       </button>
     ),
-    museumArtwork: <img src={artwork.source} alt="" className={className} />,
+    museumArtwork: (
+      <img
+        src={`${import.meta.env.VITE_BACKEND_URL}/${artwork.source}`}
+        alt=""
+        className={className}
+      />
+    ),
   };
 
   return (
@@ -50,7 +56,7 @@ function ArtworkModal({ id, page, className }) {
               />
             </Dialog.Close>
             <img
-              src={artwork.source}
+              src={`${import.meta.env.VITE_BACKEND_URL}/${artwork.source}`}
               alt={artwork.alt}
               className="modal__content__img"
             />
