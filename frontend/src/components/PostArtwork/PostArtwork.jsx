@@ -30,19 +30,6 @@ function PostArtwork() {
     }
   }
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   if (image) {
-  //     console.info(image);
-  //     const formData = new FormData();
-  //     const imageFetch = image;
-  //     formData.append("image", imageFetch);
-  //     await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/upload`, {
-  //       method: "POST",
-  //       body: formData,
-  //     });
-  //   }
-  // };
   const {
     handleSubmit,
     register,
@@ -60,8 +47,6 @@ function PostArtwork() {
   });
   const [validatedForm, setValidatedForm] = useState(false);
   const onSubmit = async () => {
-    // e.preventDefault();
-
     if (image) {
       const values = getValues();
       const formImage = new FormData();
