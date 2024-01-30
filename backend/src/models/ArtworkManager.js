@@ -7,7 +7,7 @@ class ArtworkManager extends AbstractManager {
 
   async createArtwork(artwork) {
     const [result] = await this.database.query(
-      `INSERT INTO artwork (title, technique, artwork_year, format, source, alt) 
+      `INSERT INTO artwork (title, technique, artwork_year, format, source, alt, user_id_ar) 
       VALUES(?, ?, ?, ?, ?, ?, ?)`,
       [
         artwork.title,
