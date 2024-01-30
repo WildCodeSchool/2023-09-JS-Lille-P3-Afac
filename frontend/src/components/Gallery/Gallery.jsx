@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
+import { useLoaderData } from "react-router-dom";
 import { useGlobalContext } from "../Context/GlobalContextProvider";
 import "./Gallery.scss";
 import ArtworkCard from "./ArtworkCard";
 import FilterButton from "./FilterButton";
 
 function Gallery() {
-  const { artworks, category } = useGlobalContext();
+  const { category } = useGlobalContext();
+  const { artworks } = useLoaderData();
   const [selectedArtworks, setSelectedArtworks] = useState(null);
   useEffect(() => {
     setSelectedArtworks(artworks);

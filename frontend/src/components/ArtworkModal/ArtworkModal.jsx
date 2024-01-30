@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
+import { useLoaderData } from "react-router-dom";
 import * as Dialog from "@radix-ui/react-dialog";
-import { useGlobalContext } from "../Context/GlobalContextProvider";
 import "./artworkModal.scss";
 import LikeFunction from "../LikeFunction/LikeFunction";
 
-function ArtworkModal({ id, page }) {
-  const { artworks, artists } = useGlobalContext();
+function ArtworkModal({ id, page, className }) {
+  const { artworks, artists } = useLoaderData();
   const artwork = artworks.find((e) => e.id === id);
   const artist = artists.find((e) => e.id === artwork.user_id_ar);
   const triggers = {
@@ -32,6 +32,7 @@ function ArtworkModal({ id, page }) {
         />
       </button>
     ),
+    museumArtwork: <img src={artwork.source} alt="" className={className} />,
   };
 
   return (
@@ -62,8 +63,7 @@ function ArtworkModal({ id, page }) {
                 <Dialog.Description className="modal__content__info__details">{`${artwork.artwork_year} - ${artwork.technique} - ${artwork.format}`}</Dialog.Description>
               </figcaption>
               <cite className="modal__content__info__artist">
-                {artist.firstname}
-                {artist.lastname}
+                {`${artist.firstname} ${artist.lastname}`}
               </cite>
             </figure>
           </Dialog.Content>
@@ -76,6 +76,10 @@ function ArtworkModal({ id, page }) {
 ArtworkModal.propTypes = {
   id: PropTypes.number.isRequired,
   page: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
+ArtworkModal.defaultProps = {
+  className: "",
+};
 export default ArtworkModal;

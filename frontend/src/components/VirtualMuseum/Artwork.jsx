@@ -1,7 +1,9 @@
+import { useLoaderData } from "react-router-dom";
+import ArtworkModal from "../ArtworkModal/ArtworkModal";
+
 /* eslint-disable camelcase */
 function Artwork(Artworks) {
   const {
-    img,
     classNameArtwork,
     classNameThumbnail,
     painter,
@@ -10,14 +12,14 @@ function Artwork(Artworks) {
     format,
     title,
     description,
-    artists,
+    id,
   } = Artworks;
-
+  const { artists } = useLoaderData();
   const artist = artists.find((e) => e.id === painter);
 
   return (
     <>
-      <img src={img} alt="" className={classNameArtwork} />
+      <ArtworkModal page="museumArtwork" id={id} className={classNameArtwork} />
       <article className={classNameThumbnail}>
         <p className="painter">{`${artist.firstname} ${artist.lastname}`}</p>
         <p className="date">{date}</p>

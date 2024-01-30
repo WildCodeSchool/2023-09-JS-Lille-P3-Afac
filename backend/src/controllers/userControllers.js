@@ -33,6 +33,19 @@ const addUser = async (req, res, next) => {
   }
 };
 
+const deleteUser = async (req, res, next) => {
+  try {
+    const deletedUser = await tables.user.delete(req.params.id);
+    if (deletedUser.affectedRows === 0) {
+      res.status(404);
+    } else {
+      res.sendStatus(204);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 const getByMail = async (req, res, next) => {
   const { email } = req.body;
   try {
@@ -84,4 +97,5 @@ module.exports = {
   getByMail,
   userLogin,
   verifyEmail,
+  deleteUser,
 };
