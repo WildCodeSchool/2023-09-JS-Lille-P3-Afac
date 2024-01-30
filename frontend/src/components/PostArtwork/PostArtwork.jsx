@@ -9,18 +9,16 @@ import "./PostArtwork.scss";
 YupPassword(yup);
 const validationSchema = yup
   .object({
-    artworkName: yup.string().required("Nom de l'oeuvre requis").max(100),
-    description: yup
-      .string()
-      .required("Description de l'oeuvre requise")
-      .max(250),
+    title: yup.string().required("Nom de l'oeuvre requis").max(100),
+    alt: yup.string().required("Description de l'oeuvre requise").max(250),
     format: yup.string().required("Format requis").max(255),
-    date: yup.string().required("Date requise").max(80),
+    artwork_year: yup.string().required("Date requise").max(80),
   })
   .required();
 
 function PostArtwork() {
   const [imageUrl, setImageUrl] = useState(null);
+  const [image, setImage] = useState(null);
 
   function onImageChange(e) {
     const file = e.target.files[0];
@@ -28,6 +26,7 @@ function PostArtwork() {
     if (file) {
       const objectUrl = URL.createObjectURL(file);
       setImageUrl(objectUrl);
+      setImage(file);
     }
   }
 
@@ -36,20 +35,42 @@ function PostArtwork() {
     register,
     formState: { errors },
     reset,
+    getValues,
   } = useForm({
     resolver: yupResolver(validationSchema),
     defaultValues: {
-      artworkName: "",
-      description: "",
+      title: "",
+      alt: "",
       format: "",
-      date: "",
+      artwork_year: "",
     },
   });
   const [validatedForm, setValidatedForm] = useState(false);
-  const onSubmit = () => {
-    setValidatedForm(true);
-    setImageUrl(null);
-    reset();
+  const onSubmit = async () => {
+    if (image) {
+      const values = getValues();
+      const formImage = new FormData();
+      formImage.append("photo", image);
+      setValidatedForm(true);
+      setImageUrl(null);
+      reset();
+
+      values.alt = "halte là";
+      values.user_id_ar = 3;
+      values.technique = "Dessin";
+      formImage.append("title", values.title);
+      formImage.append("technique", values.technique);
+      formImage.append("artwork_year", values.artwork_year);
+      formImage.append("format", values.format);
+      formImage.append("alt", values.alt);
+      formImage.append("user_id_ar", values.user_id_ar);
+
+      await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/artwork`, {
+        method: "POST",
+        body: formImage,
+        cache: "default",
+      });
+    }
   };
 
   return (
@@ -75,16 +96,16 @@ function PostArtwork() {
         <FormInput
           register={register}
           type="text"
-          name="artworkName"
+          name="title"
           placeholder="Nom de l'oeuvre"
-          errorMessage={errors.artworkName ? errors.artworkName.message : ""}
+          errorMessage={errors.title ? errors.title.message : ""}
         />
         <FormInput
           register={register}
           type="text"
-          name="description"
+          name="alt"
           placeholder="Description de l'oeuvre"
-          errorMessage={errors.description ? errors.description.message : ""}
+          errorMessage={errors.alt ? errors.alt.message : ""}
         />
         <FormInput
           register={register}
@@ -95,10 +116,10 @@ function PostArtwork() {
         />
         <FormInput
           register={register}
-          type="date"
-          name="date"
-          placeholder="Date de l'oeuvre"
-          errorMessage={errors.date ? errors.date.message : ""}
+          type="text"
+          name="artwork_year"
+          placeholder="Année de l'oeuvre"
+          errorMessage={errors.artwork_year ? errors.artwork_year.message : ""}
         />
         <FormInput
           register={register}
@@ -108,11 +129,12 @@ function PostArtwork() {
           errorMessage={
             errors.passwordConfirm ? errors.passwordConfirm.message : ""
           }
-        />
+        />{" "}
         <button
           type="submit"
           className="form__submit"
           aria-label="Je poste mon oeuvre"
+          onSubmit={onSubmit}
         >
           Je poste mon oeuvre
         </button>

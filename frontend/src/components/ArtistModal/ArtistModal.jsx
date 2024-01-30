@@ -13,7 +13,7 @@ function ArtistModal({ id, page }) {
     artist: (
       <button type="button" aria-label={artist.lastname} className="trigger">
         <img
-          src={artist.src}
+          src={`${import.meta.env.VITE_BACKEND_URL}/${artist.src}`}
           alt={`portrait de ${artist.firstname} ${artist.lastname}`}
           className="artistPic"
         />
@@ -38,7 +38,11 @@ function ArtistModal({ id, page }) {
             />
           </Dialog.Close>
           <figure className="modal__content">
-            <img src={artist.src} alt="" className="modal__content__img" />
+            <img
+              src={`${import.meta.env.VITE_BACKEND_URL}/${artist.src}`}
+              alt=""
+              className="modal__content__img"
+            />
             <figcaption>
               <Dialog.Title className="modal__content__title">
                 <cite>

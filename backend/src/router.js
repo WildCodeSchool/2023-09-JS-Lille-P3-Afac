@@ -20,6 +20,7 @@ const validateUser = require("./middlewares/validateUser");
 const hashPassword = require("./middlewares/hashPasswordUser");
 const validateArtist = require("./middlewares/validateArtist");
 const validatePassword = require("./middlewares/validatePassword");
+const uploadImage = require("./middlewares/uploadImage");
 
 router.get("/user/:id", userControllers.getUserById);
 router.get("/user", userControllers.getUsers);
@@ -35,7 +36,12 @@ router.delete("/user/:id", userControllers.deleteUser);
 router.get("/artwork", artworkControllers.getAllArtwork);
 router.get("/artwork/:id", artworkControllers.getArtworkById);
 router.put("/artwork/:id", artworkControllers.updateArtwork);
-router.post("/artwork", validateArtwork, artworkControllers.addArtwork);
+router.post(
+  "/artwork",
+  uploadImage,
+  validateArtwork,
+  artworkControllers.addArtwork
+);
 router.delete("/artwork/:id", artworkControllers.deleteArtwork);
 
 router.get("/artwork/:id/anecdote", anecdoteControllers.getAnecdoteByArtworkId);
