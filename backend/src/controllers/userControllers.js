@@ -76,11 +76,26 @@ const userLogin = async (req, res) => {
   });
 };
 
+const verifyEmail = async (req, res, next) => {
+  const { email } = req.body;
+  try {
+    const user = await tables.user.findByMail(email);
+    if (user) {
+      res.status(409).send("Email already exists");
+    } else {
+      next();
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
 module.exports = {
   getUserById,
   getUsers,
   addUser,
   getByMail,
   userLogin,
+  verifyEmail,
   deleteUser,
 };

@@ -9,23 +9,29 @@ import "./signUp.scss";
 
 YupPassword(yup);
 const passwordRequirements =
-  "Le mot de passe doit contenir au moins 8 caractères dont une lettre minuscule, une majuscule, un chiffre et 1 caractère spécial";
+  "Le mot de passe doit contenir au moins 8 caractères dont une lettre minuscule, une majuscule, un chiffre et un caractère spécial";
 const validationSchema = yup
   .object({
     firstname: yup
       .string()
-      .required("Prenom requis")
+      .required("Prénom requis")
       .max(50)
-      .matches(/^[a-zA-Z]+$/, "Ce champ ne doit contenir que des lettres"),
+      .matches(
+        /^([a-zA-Z]|[à-ü]|[À-Ü])+$/,
+        "Ce champ ne doit contenir que des lettres"
+      ),
     lastname: yup
       .string()
       .required("Nom requis")
       .max(50)
-      .matches(/^[a-zA-Z]+$/, "Ce champ ne doit contenir que des lettres"),
+      .matches(
+        /^([a-zA-Z]|[à-ü]|[À-Ü])+$/,
+        "Ce champ ne doit contenir que des lettres"
+      ),
     email: yup
       .string()
       .required("E-mail requis")
-      .email("Format d'e-mail invalide")
+      .email("Format d'email invalide")
       .max(255),
     password: yup
       .string()
@@ -51,6 +57,7 @@ function SignUp() {
     register,
     formState: { errors },
     reset,
+    getValues,
   } = useForm({
     resolver: yupResolver(validationSchema),
     defaultValues: {
@@ -64,9 +71,28 @@ function SignUp() {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [passwordConfirmVisible, setPasswordConfirmVisible] = useState(false);
   const [validatedForm, setValidatedForm] = useState(false);
-  const onSubmit = () => {
-    setValidatedForm(true);
-    reset();
+  const onSubmit = async () => {
+    const values = getValues();
+    const data = {
+      lastname: values.lastname,
+      firstname: values.firstname,
+      email: values.email,
+      src: "/src/assets/Profil.png",
+      password: values.password,
+    };
+
+    const response = await fetch(
+      `${import.meta.env.VITE_BACKEND_URL}/api/user`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      }
+    );
+    if (response.status === 201) {
+      reset();
+      setValidatedForm(true);
+    }
   };
 
   return (
@@ -77,7 +103,7 @@ function SignUp() {
           register={register}
           type="text"
           name="firstname"
-          placeholder="Prenom"
+          placeholder="Prénom"
           errorMessage={errors.firstname ? errors.firstname.message : ""}
         />
         <FormInput
@@ -91,7 +117,7 @@ function SignUp() {
           register={register}
           type="email"
           name="email"
-          placeholder="E-mail"
+          placeholder="Email"
           errorMessage={errors.email ? errors.email.message : ""}
         />
         <FormInput
@@ -108,7 +134,7 @@ function SignUp() {
           register={register}
           type="password"
           name="passwordConfirm"
-          placeholder="Confirmer mot de passe"
+          placeholder="Confirmer votre mot de passe"
           passwordVisible={passwordConfirmVisible}
           setPasswordVisible={setPasswordConfirmVisible}
           togglePassword="togglePasswordConfirm"

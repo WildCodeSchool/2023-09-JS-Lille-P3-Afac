@@ -24,7 +24,13 @@ const uploadImage = require("./middlewares/uploadImage");
 
 router.get("/user/:id", userControllers.getUserById);
 router.get("/user", userControllers.getUsers);
-router.post("/user", validateUser, hashPassword, userControllers.addUser);
+router.post(
+  "/user",
+  userControllers.verifyEmail,
+  validateUser,
+  hashPassword,
+  userControllers.addUser
+);
 router.post(
   "/user/login",
   userControllers.getByMail,
