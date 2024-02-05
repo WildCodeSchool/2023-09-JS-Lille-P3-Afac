@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Navigate } from "react-router-dom";
 import * as yup from "yup";
 import YupPassword from "yup-password";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -18,6 +19,7 @@ const validationSchema = yup
   .required();
 
 function PostArtwork() {
+  const { userProfil } = useGlobalContext();
   const [imageUrl, setImageUrl] = useState(null);
   const [image, setImage] = useState(null);
   const [technique, setTechnique] = useState(null);
@@ -89,6 +91,10 @@ function PostArtwork() {
       });
     }
   };
+
+  if (!userProfil) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <main className="container">
