@@ -301,7 +301,7 @@
 .moveOnTheSecondRoom {
   all: unset;
   position: absolute;
-  width: 75%;
+  width: 1rem;
   left: 32%;
   bottom: 24%;
   @media screen and (min-width: 600px) {
@@ -339,7 +339,7 @@
 }
 
 .arrow {
-  width: 3%;
+  width: 1rem;
   transform: rotate(270deg);
   cursor: pointer;
 }
@@ -371,9 +371,10 @@
   all: unset;
   position: absolute;
   right: 45%;
-  bottom: 20%;
+  bottom: 25%;
   font-size: 6rem;
   cursor: pointer;
+  width: 0rem;
   @media screen and (min-width: 600px) {
     bottom: 21%;
     font-size: 7rem;
@@ -451,10 +452,11 @@
 .wallZoomRight {
   all: unset;
   position: absolute;
-  right: 20%;
-  bottom: 10%;
+  right: 23%;
+  bottom: 14%;
   font-size: 6rem;
   cursor: pointer;
+  width: 0rem;
   @media screen and (min-width: 600px) {
     bottom: 10.5%;
     font-size: 7rem;
@@ -524,9 +526,10 @@
   all: unset;
   position: absolute;
   left: 16%;
-  bottom: 3.5%;
+  bottom: 8%;
   font-size: 6rem;
   cursor: pointer;
+  width: 0rem;
   @media screen and (min-width: 600px) {
     bottom: 4.5%;
     font-size: 7rem;

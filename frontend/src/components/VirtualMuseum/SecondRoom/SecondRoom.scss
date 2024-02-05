@@ -21,7 +21,7 @@
   position: absolute;
   right: 45%;
   bottom: 2%;
-  width: 3%;
+  width: 1.5%;
   transform: rotate(180deg);
   cursor: pointer;
 }
@@ -338,10 +338,11 @@
 .secondRoomWallZoomFront {
   all: unset;
   position: absolute;
-  right: 45%;
-  bottom: 13%;
-  font-size: 7rem;
+  right: 50%;
+  bottom: 13.5%;
+  font-size: 6rem;
   cursor: pointer;
+  width: 0rem;
   @media screen and (min-height: 400px) {
     bottom: 15%;
   }
@@ -376,10 +377,11 @@
 .secondRoomWallZoomRight {
   all: unset;
   position: absolute;
-  right: 15%;
-  bottom: 10%;
-  font-size: 7rem;
+  right: 17%;
+  bottom: 9%;
+  font-size: 6rem;
   cursor: pointer;
+  width: 0rem;
   @media screen and (min-height: 400px) {
     bottom: 12%;
   }
@@ -413,10 +415,11 @@
 .secondRoomWallZoomLeft {
   all: unset;
   position: absolute;
-  left: 16%;
-  bottom: 6%;
-  font-size: 7rem;
+  left: 21%;
+  bottom: 9%;
+  font-size: 6rem;
   cursor: pointer;
+  width: 0rem;
   @media screen and (min-height: 400px) {
     bottom: 8%;
   }
