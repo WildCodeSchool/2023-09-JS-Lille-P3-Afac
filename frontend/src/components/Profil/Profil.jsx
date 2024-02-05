@@ -38,10 +38,14 @@ function Profil() {
 
       <section className="favoriteArtworkContainer">
         <h3 className="favoriteTitle">Mes oeuvres favorites</h3>
-        {favoriteArtwork &&
-          favoriteArtwork.map((e) => (
-            <ArtworkModal id={e.artwork_id} page="artistModal" />
-          ))}
+        <ul className="favoriteList">
+          {favoriteArtwork &&
+            favoriteArtwork.map((e) => (
+              <li className="favoriteItem">
+                <ArtworkModal id={e.artwork_id} page="artistModal" />
+              </li>
+            ))}
+        </ul>
       </section>
     </main>
   );
