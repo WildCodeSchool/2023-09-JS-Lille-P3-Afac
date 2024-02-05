@@ -62,7 +62,7 @@
     }
 
     &--margin {
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
     }
   }
 
@@ -162,4 +162,35 @@
       margin-bottom: 1rem;
     }
   }
+}
+.selectTechniqueContainer {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: -100rem;
+}
+.selectTechnique {
+  height: 2rem;
+  width: 82%;
+  border: 1px solid $blackLowOpacity;
+  box-shadow: 0 1px 2px $blackLowOpacity;
+  transition: all 0.1s;
+  font-size: 1rem;
+  color: grey;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+
+  @media screen and (min-width: 768px) {
+    width: 75.5%;
+    margin: O auto;
+    padding: 0.2rem;
+  }
+  &:focus-visible {
+    border-color: black;
+    border-radius: 0;
+    outline: solid;
+  }
+}
+.techniqueChoice {
+  font-size: 0.5rem;
 }

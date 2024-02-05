@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import YupPassword from "yup-password";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useGlobalContext } from "../Context/GlobalContextProvider";
 import FormInput from "../SignUp/FormInput";
 import "./PostArtwork.scss";
 
@@ -12,13 +13,19 @@ const validationSchema = yup
     title: yup.string().required("Nom de l'oeuvre requis").max(100),
     alt: yup.string().required("Description de l'oeuvre requise").max(250),
     format: yup.string().required("Format requis").max(255),
-    artwork_year: yup.string().required("Date requise").max(80),
+    artwork_year: yup.number().required("Date requise"),
   })
   .required();
 
 function PostArtwork() {
   const [imageUrl, setImageUrl] = useState(null);
   const [image, setImage] = useState(null);
+  const [technique, setTechnique] = useState(null);
+  const { userProfil } = useGlobalContext();
+
+  function onTechniqueChange(e) {
+    setTechnique(e.target.value);
+  }
 
   function onImageChange(e) {
     const file = e.target.files[0];
@@ -55,15 +62,12 @@ function PostArtwork() {
       setImageUrl(null);
       reset();
 
-      values.alt = "halte là";
-      values.user_id_ar = 3;
-      values.technique = "Dessin";
+      formImage.append("technique", technique);
       formImage.append("title", values.title);
-      formImage.append("technique", values.technique);
       formImage.append("artwork_year", values.artwork_year);
       formImage.append("format", values.format);
       formImage.append("alt", values.alt);
-      formImage.append("user_id_ar", values.user_id_ar);
+      formImage.append("user_id_ar", userProfil.id);
 
       await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/artwork`, {
         method: "POST",
@@ -107,6 +111,25 @@ function PostArtwork() {
           placeholder="Description de l'oeuvre"
           errorMessage={errors.alt ? errors.alt.message : ""}
         />
+        <label htmlFor="Technique" className="selectTechniqueContainer">
+          Choix de la technique
+        </label>
+        <select
+          id=""
+          name="technique"
+          className="selectTechnique"
+          onChange={onTechniqueChange}
+        >
+          <option className="techniqueChoice" value="Choix de la technique">
+            Choix de la technique
+          </option>
+          <option className="techniqueChoice" value="Dessin">
+            Dessin
+          </option>
+          <option className="techniqueChoice" value="Aquarelle">
+            Aquarelle
+          </option>
+        </select>
         <FormInput
           register={register}
           type="text"
@@ -116,7 +139,7 @@ function PostArtwork() {
         />
         <FormInput
           register={register}
-          type="text"
+          type="number"
           name="artwork_year"
           placeholder="Année de l'oeuvre"
           errorMessage={errors.artwork_year ? errors.artwork_year.message : ""}
