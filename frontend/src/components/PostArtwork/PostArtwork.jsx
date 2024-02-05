@@ -111,11 +111,11 @@ function PostArtwork() {
           placeholder="Description de l'oeuvre"
           errorMessage={errors.alt ? errors.alt.message : ""}
         />
-        <label htmlFor="Technique" className="selectTechniqueContainer">
+        <label htmlFor="technique" className="selectTechniqueContainer">
           Choix de la technique
         </label>
         <select
-          id=""
+          id="technique"
           name="technique"
           className="selectTechnique"
           onChange={onTechniqueChange}
