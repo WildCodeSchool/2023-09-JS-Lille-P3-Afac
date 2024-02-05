@@ -12,7 +12,7 @@ const validationSchema = yup
     title: yup.string().required("Nom de l'oeuvre requis").max(100),
     alt: yup.string().required("Description de l'oeuvre requise").max(250),
     format: yup.string().required("Format requis").max(255),
-    artwork_year: yup.string().required("Date requise").max(80),
+    artwork_year: yup.number().required("Date requise"),
   })
   .required();
 
@@ -65,10 +65,23 @@ function PostArtwork() {
       formImage.append("alt", values.alt);
       formImage.append("user_id_ar", values.user_id_ar);
 
-      await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/artwork`, {
+      const data = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`,
+        {
+          method: "POST",
+          body: formImage,
+          cache: "default",
+        }
+      );
+      const artworkId = await data.json();
+      const anecdoteData = {
+        fact: values.anecdote,
+        artwork_id: artworkId.insertId,
+      };
+      await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/anecdote`, {
         method: "POST",
-        body: formImage,
-        cache: "default",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(anecdoteData),
       });
     }
   };
@@ -116,7 +129,7 @@ function PostArtwork() {
         />
         <FormInput
           register={register}
-          type="text"
+          type="number"
           name="artwork_year"
           placeholder="Année de l'oeuvre"
           errorMessage={errors.artwork_year ? errors.artwork_year.message : ""}
