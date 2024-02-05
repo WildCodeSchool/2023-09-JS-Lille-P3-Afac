@@ -178,8 +178,11 @@
 
   @media screen and (min-width: 768px) {
     width: 75.5%;
-    margin: 0 auto;
+    margin: 0.8 auto;
     padding: 0.2rem;
+  }
+  @media screen and (min-width: 1000px) {
+    width: 74%;
   }
   &:focus-visible {
     border-color: black;
