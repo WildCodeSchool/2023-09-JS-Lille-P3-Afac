@@ -23,7 +23,6 @@ function PostArtwork() {
   const [imageUrl, setImageUrl] = useState(null);
   const [image, setImage] = useState(null);
   const [technique, setTechnique] = useState(null);
-  const { userProfil } = useGlobalContext();
 
   function onTechniqueChange(e) {
     setTechnique(e.target.value);
