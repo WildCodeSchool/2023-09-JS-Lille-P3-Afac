@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import YupPassword from "yup-password";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useGlobalContext } from "../Context/GlobalContextProvider";
 import FormInput from "../SignUp/FormInput";
 import "./PostArtwork.scss";
 
@@ -19,6 +20,12 @@ const validationSchema = yup
 function PostArtwork() {
   const [imageUrl, setImageUrl] = useState(null);
   const [image, setImage] = useState(null);
+  const [technique, setTechnique] = useState(null);
+  const { userProfil } = useGlobalContext();
+
+  function onTechniqueChange(e) {
+    setTechnique(e.target.value);
+  }
 
   function onImageChange(e) {
     const file = e.target.files[0];
@@ -55,15 +62,12 @@ function PostArtwork() {
       setImageUrl(null);
       reset();
 
-      values.alt = "halte là";
-      values.user_id_ar = 3;
-      values.technique = "Dessin";
+      formImage.append("technique", technique);
       formImage.append("title", values.title);
-      formImage.append("technique", values.technique);
       formImage.append("artwork_year", values.artwork_year);
       formImage.append("format", values.format);
       formImage.append("alt", values.alt);
-      formImage.append("user_id_ar", values.user_id_ar);
+      formImage.append("user_id_ar", userProfil.id);
 
       const data = await fetch(
         `${import.meta.env.VITE_BACKEND_URL}/api/artwork`,
@@ -120,6 +124,25 @@ function PostArtwork() {
           placeholder="Description de l'oeuvre"
           errorMessage={errors.alt ? errors.alt.message : ""}
         />
+        <label htmlFor="technique" className="selectTechniqueContainer">
+          Choix de la technique
+        </label>
+        <select
+          id="technique"
+          name="technique"
+          className="selectTechnique"
+          onChange={onTechniqueChange}
+        >
+          <option className="techniqueChoice" value="Choix de la technique">
+            Choix de la technique
+          </option>
+          <option className="techniqueChoice" value="Dessin">
+            Dessin
+          </option>
+          <option className="techniqueChoice" value="Aquarelle">
+            Aquarelle
+          </option>
+        </select>
         <FormInput
           register={register}
           type="text"
