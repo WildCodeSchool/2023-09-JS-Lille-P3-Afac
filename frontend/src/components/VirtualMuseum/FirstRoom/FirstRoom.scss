@@ -67,6 +67,7 @@
   transform: rotateX(0deg) rotateY(70deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+  cursor: pointer;
 }
 
 .firstArtworkLeftSideInformations {
@@ -102,6 +103,7 @@
   transform: rotateX(0deg) rotateY(70deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+  cursor: pointer;
 }
 
 .secondArtworkLeftSideInformations {
@@ -135,6 +137,7 @@
   left: 40%;
   width: 12%;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  cursor: pointer;
 }
 
 .firstArtworkBackRoomInformations {
@@ -162,6 +165,7 @@
   right: 34%;
   width: 9%;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  cursor: pointer;
 }
 
 .secondArtworkBackRoomInformations {
@@ -191,6 +195,7 @@
   transform: rotateX(0deg) rotateY(90deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 3px 2px rgb(0 0 0 / 0.4));
+  cursor: pointer;
 }
 
 .firstArtworkRightSideInformations {
@@ -226,6 +231,7 @@
   transform: rotateX(0deg) rotateY(90deg);
   transform-style: preserve-3d;
   filter: drop-shadow(6px 5px 2px rgb(0 0 0 / 0.4));
+  cursor: pointer;
   @media screen and (min-width: 1000px) {
     bottom: 35%;
     right: 4%;

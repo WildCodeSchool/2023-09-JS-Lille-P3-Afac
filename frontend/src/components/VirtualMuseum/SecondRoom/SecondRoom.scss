@@ -23,6 +23,7 @@
   bottom: 2%;
   width: 3%;
   transform: rotate(180deg);
+  cursor: pointer;
 }
 
 // First artwork from the left
@@ -35,6 +36,7 @@
   transform: rotateX(6deg) rotateY(65deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+  cursor: pointer;
   @media screen and (min-width: 1100px) {
     bottom: 25%;
   }
@@ -88,6 +90,7 @@
   transform: rotateX(6deg) rotateY(60deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+  cursor: pointer;
   @media screen and (min-width: 1100px) {
     bottom: 30%;
   }
@@ -130,6 +133,7 @@
   bottom: 30%;
   width: 10%;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  cursor: pointer;
   @media screen and (min-width: 1100px) {
     bottom: 28%;
   }
@@ -163,6 +167,7 @@
   bottom: 30%;
   width: 20%;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  cursor: pointer;
   @media screen and (min-width: 1100px) {
     bottom: 28%;
   }
@@ -198,6 +203,7 @@
   transform: rotateX(4deg) rotateY(270deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+  cursor: pointer;
   @media screen and (min-width: 1650px) {
     width: 10%;
     right: 17%;
@@ -252,6 +258,7 @@
   transform: rotateX(4deg) rotateY(270deg);
   transform-style: preserve-3d;
   filter: drop-shadow(3px 4px 2px rgb(0 0 0 / 0.4));
+  cursor: pointer;
   @media screen and (min-width: 1000px) {
     width: 13%;
     right: 4%;

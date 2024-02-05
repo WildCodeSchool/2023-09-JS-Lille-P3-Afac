@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useGlobalContext } from "../Context/GlobalContextProvider";
 import ProfilCard from "./ProfilCard";
 import "./Profil.scss";
@@ -25,12 +26,12 @@ function Profil() {
             name={userProfil.firstname}
             lastname={userProfil.lastname}
             email={userProfil.email}
-            src={userProfil.src}
+            src={`${import.meta.env.VITE_BACKEND_URL}/${userProfil.src}`}
           />
         </section>
-        <button type="button" className="postArtworkButton">
+        <Link to="/postartwork" className="postArtworkButton">
           Soumettre votre oeuvre
-        </button>
+        </Link>
 
         <section className="favoriteArtworkContainer">
           <h3 className="favoriteTitle">Mes oeuvres favorites</h3>
