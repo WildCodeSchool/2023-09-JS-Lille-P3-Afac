@@ -82,6 +82,7 @@ function LogInPopup() {
               className="input"
               id="Password"
               placeholder="Entrez votre mot de passe"
+              onKeyDown={(e) => e.key === "Enter" && handleConnection()}
             />
           </fieldset>
           {error && (
