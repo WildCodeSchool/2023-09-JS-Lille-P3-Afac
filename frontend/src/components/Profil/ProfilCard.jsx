@@ -11,7 +11,6 @@ function ProfilCard(infoProfil) {
         <p className="profilLastname">Nom: {lastname}</p>
         <p className="profilEmail">E-mail: {email}</p>
         <p className="profilPassword"> Password: **********</p>
-        Modifier le profil
       </section>
     </article>
   );
