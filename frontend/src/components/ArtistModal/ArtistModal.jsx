@@ -1,23 +1,25 @@
 import PropTypes from "prop-types";
+import { useLoaderData } from "react-router-dom";
 import * as Dialog from "@radix-ui/react-dialog";
 import ArtworkModal from "../ArtworkModal/ArtworkModal";
-import { useGlobalContext } from "../Context/GlobalContextProvider";
 import "../ArtworkModal/artworkModal.scss";
 import "./artistModal.scss";
 
 function ArtistModal({ id, page }) {
-  const { artworks, artists } = useGlobalContext();
+  const { artworks, artists } = useLoaderData();
   const artist = artists.find((e) => e.id === id);
-  const arts = artworks.filter((e) => e.artistId === id);
+  const arts = artworks.filter((e) => e.user_id_ar === id);
   const triggers = {
     artist: (
-      <button type="button" aria-label={artist.name} className="trigger">
+      <button type="button" aria-label={artist.lastname} className="trigger">
         <img
-          src={artist.src}
-          alt={`portrait de ${artist.name}`}
+          src={`${import.meta.env.VITE_BACKEND_URL}/${artist.src}`}
+          alt={`portrait de ${artist.firstname} ${artist.lastname}`}
           className="artistPic"
         />
-        <span className="artistName">{artist.name}</span>
+        <span className="artistName">
+          {artist.firstname} {artist.lastname}
+        </span>
       </button>
     ),
   };
@@ -36,10 +38,16 @@ function ArtistModal({ id, page }) {
             />
           </Dialog.Close>
           <figure className="modal__content">
-            <img src={artist.src} alt="" className="modal__content__img" />
+            <img
+              src={`${import.meta.env.VITE_BACKEND_URL}/${artist.src}`}
+              alt=""
+              className="modal__content__img"
+            />
             <figcaption>
               <Dialog.Title className="modal__content__title">
-                <cite>{artist.name}</cite>
+                <cite>
+                  {artist.firstname} {artist.lastname}
+                </cite>
               </Dialog.Title>
               <Dialog.Description className="modal__content__biography">
                 {artist.biography}

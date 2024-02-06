@@ -35,7 +35,11 @@ AnimationButton.propTypes = {
   url: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired,
   animationClassName: PropTypes.string.isRequired,
-  animation: PropTypes.string.isRequired,
+  animation: PropTypes.bool,
+};
+
+AnimationButton.defaultProps = {
+  animation: false,
 };
 
 export default AnimationButton;

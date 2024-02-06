@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLoaderData } from "react-router-dom";
 import { useState, useEffect } from "react";
 import arrow from "../../../assets/arrow.png";
 import "./FirstRoom.scss";
@@ -7,14 +7,17 @@ import AnimationButton from "../AnimationButton";
 import { useGlobalContext } from "../../Context/GlobalContextProvider";
 
 function FirstRoom() {
-  const { ArtworksFirstRoom, buttonInformations } = useGlobalContext();
-  const [animation, setAnimate] = useState(false);
-
+  const {
+    firstRoomButtonInformations,
+    firstRoomClasses,
+    firstRoomThumnailClasses,
+  } = useGlobalContext();
+  const { artworks } = useLoaderData();
   const navigate = useNavigate();
+  const [animation, setAnimate] = useState(false);
   const handleClick = () => {
     setAnimate(true);
   };
-
   useEffect(() => {
     if (animation) {
       setTimeout(() => {
@@ -23,19 +26,26 @@ function FirstRoom() {
     }
   }, [animation]);
 
+  const artworksFirstRoom = artworks.slice(0, 6);
+  artworksFirstRoom.forEach((e, index) => {
+    e.classNameArtwork = firstRoomClasses[index];
+    e.classNameThumbnail = firstRoomThumnailClasses[index];
+  });
+
   return (
     <main className="firstRoom">
-      {ArtworksFirstRoom.map((e) => (
+      {artworksFirstRoom.map((e) => (
         <Artwork
           key={e.id}
-          img={e.img}
           classNameArtwork={e.classNameArtwork}
           classNameThumbnail={e.classNameThumbnail}
-          painter={e.painter}
-          date={e.date}
-          information={e.information}
+          painter={e.user_id_ar}
+          date={e.artwork_year}
+          technique={e.technique}
+          format={e.format}
           title={e.title}
-          description={e.description}
+          alt={e.description}
+          id={e.id}
         />
       ))}
       <button
@@ -50,8 +60,9 @@ function FirstRoom() {
           className="arrow"
         />
       </button>
-      {buttonInformations.map((e) => (
+      {firstRoomButtonInformations.map((e) => (
         <AnimationButton
+          key={e.id}
           url={e.url}
           className={e.className}
           animationClassName={e.animationClassName}

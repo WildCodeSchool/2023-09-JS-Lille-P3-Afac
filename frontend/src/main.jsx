@@ -4,14 +4,18 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { GlobalContextProvider } from "./components/Context/GlobalContextProvider";
 import App from "./App";
 import VirtualMuseum from "./components/VirtualMuseum/FirstRoom/FirstRoom";
-import SecondRoom from "./components/VirtualMuseum/SecondRoom/SecondRoom";
 import FirstWall from "./components/VirtualMuseum/FirstRoom/BackWall";
 import SecondWall from "./components/VirtualMuseum/FirstRoom/RightWall";
 import ThirdWall from "./components/VirtualMuseum/FirstRoom/LeftWall";
+import SecondRoom from "./components/VirtualMuseum/SecondRoom/SecondRoom";
+import FrontWall from "./components/VirtualMuseum/SecondRoom/FrontWall";
+import OnLeft from "./components/VirtualMuseum/SecondRoom/OnLeft";
+import OnRight from "./components/VirtualMuseum/SecondRoom/OnRight";
 import Gallery from "./components/Gallery/Gallery";
 import NavBar from "./components/NavBar/NavBar";
 import Artists from "./components/Artists/Artists";
 import Profil from "./components/Profil/Profil";
+import LogInPopup from "./components/LogInPopup/LogInPopup";
 import SignUp from "./components/SignUp/SignUp";
 import PostArtwork from "./components/PostArtwork/PostArtwork";
 import ReturnMainMenuButton from "./components/ReturnMainMenuButton/ReturnMainMenuButton";
@@ -31,16 +35,44 @@ const router = createBrowserRouter([
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/VirtualMuseumSecondRoom",
     element: (
       <>
+        <LandscapeMessage messageHidden="message__hidden" />
         <SecondRoom />
         <ReturnMainMenuButton />
-        <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/VirtualMuseumFirstWall",
@@ -51,6 +83,20 @@ const router = createBrowserRouter([
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/VirtualMuseumSecondWall",
@@ -61,6 +107,20 @@ const router = createBrowserRouter([
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/VirtualMuseumThirdWall",
@@ -71,6 +131,92 @@ const router = createBrowserRouter([
         <LandscapeMessage messageHidden="message__hidden" />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
+  },
+  {
+    path: "/VirtualMuseumFrontWall",
+    element: (
+      <>
+        <FrontWall />
+        <ReturnMainMenuButton />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
+  },
+  {
+    path: "/VirtualMuseumOnLeft",
+    element: (
+      <>
+        <OnLeft />
+        <ReturnMainMenuButton />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
+  },
+  {
+    path: "/VirtualMuseumOnRight",
+    element: (
+      <>
+        <OnRight />
+        <ReturnMainMenuButton />
+        <LandscapeMessage messageHidden="message__hidden" />
+      </>
+    ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/Gallery",
@@ -80,6 +226,20 @@ const router = createBrowserRouter([
         <Gallery />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/Artists",
@@ -89,15 +249,47 @@ const router = createBrowserRouter([
         <Artists />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
-    path: "/Profil",
+    path: "/LogInPopup",
+    element: <LogInPopup />,
+  },
+  {
+    path: `/Profil`,
     element: (
       <>
         <NavBar />
         <Profil />
       </>
     ),
+    loader: async () => {
+      const artworksResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artwork`
+      );
+      const artistsResponse = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/artist`
+      );
+      const artworks = await artworksResponse.json();
+      const artists = await artistsResponse.json();
+      return {
+        artists,
+        artworks,
+      };
+    },
   },
   {
     path: "/Sign-Up",

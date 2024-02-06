@@ -46,24 +46,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 0.4rem;
-  font-size: 0.8rem;
-  height: 1.5rem;
+  padding: 0 0.2rem;
+  font-size: 0.5rem;
+  height: 0.5rem;
   background-color: $black;
   color: $white;
   position: absolute;
   border-radius: 10rem;
   right: 1%;
   top: 1%;
+  font-family: $fontBold;
   cursor: pointer;
   @media screen and (min-width: 700px) {
-    height: 1.5rem;
-    padding: 0 0.5rem;
-    font-size: 0.7rem;
+    height: 1rem;
   }
   @media screen and (min-width: 1000px) {
-    height: 2rem;
-    padding: 0 0.7rem;
+    height: 1.3rem;
+    padding: 0 0.4rem;
     font-size: 1rem;
   }
 }

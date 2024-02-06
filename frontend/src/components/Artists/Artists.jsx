@@ -1,15 +1,20 @@
-import { useGlobalContext } from "../Context/GlobalContextProvider";
+import { useLoaderData } from "react-router-dom";
 import "./Artists.scss";
 import ArtistCard from "./Artistcard";
 
 function Artists() {
-  const { artists } = useGlobalContext();
+  const { artists } = useLoaderData();
   return (
-    <main className="artistsContainer">
-      {artists.map((e) => (
-        <ArtistCard key={e.id} id={e.id} />
-      ))}
-    </main>
+    artists && (
+      <main className="artistsContainer">
+        <h1 className="artistTitle">Nos artistes</h1>
+        <section className="artistBox">
+          {artists.map((e) => (
+            <ArtistCard key={e.id} id={e.id} />
+          ))}
+        </section>
+      </main>
+    )
   );
 }
 export default Artists;

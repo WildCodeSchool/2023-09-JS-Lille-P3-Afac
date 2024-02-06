@@ -21,7 +21,7 @@ function Carousel() {
       <main className="carousel-container">
         <AliceCarousel
           autoPlay
-          autoPlayInterval={7000}
+          autoPlayInterval={4000}
           infinite
           autoPlayControls
           onSlideChanged={handleSlideChange}
@@ -49,7 +49,7 @@ function Carousel() {
               Une âme d'artiste ?
             </h2>
             <HomePageMenuLink
-              to="/"
+              to="/PostArtwork"
               type="button"
               className="carousel-slide-visit_button carousel-third-slide-visit_button"
               label="Publier"

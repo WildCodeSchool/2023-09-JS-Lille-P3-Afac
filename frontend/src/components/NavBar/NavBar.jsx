@@ -1,10 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.scss";
 import logoImg from "../../assets/LogoVA.png";
+import LogInPopup from "../LogInPopup/LogInPopup";
+import { useGlobalContext } from "../Context/GlobalContextProvider";
 
 function NavBar({ transparent }) {
+  const { userProfil, setUserProfil } = useGlobalContext();
+  const navigate = useNavigate();
+  const handleClick = () => {
+    setUserProfil(null);
+    navigate("/");
+  };
   return (
     <nav className={`navbar ${transparent}`}>
       <Link to="/" className="navbarLogo">
@@ -12,21 +20,33 @@ function NavBar({ transparent }) {
       </Link>
       <ul className="navbarLink">
         <li>
-          <Link to="/" className="navbarLink">
-            S'identifier
-          </Link>
+          <Link to="/">Accueil</Link>
         </li>
         <li>
-          <Link to="/" className="navbarLink">
-            A Propos
-          </Link>
+          {userProfil ? (
+            <Link to="/Profil">{userProfil.firstname}</Link>
+          ) : (
+            <LogInPopup />
+          )}
         </li>
+        {userProfil && (
+          <li>
+            <button
+              type="button"
+              className="signOutButton"
+              onClick={handleClick}
+              aria-label="Se déconnecter"
+            />
+          </li>
+        )}
       </ul>
     </nav>
   );
 }
 NavBar.propTypes = {
-  transparent: PropTypes.string.isRequired,
+  transparent: PropTypes.string,
 };
-
+NavBar.defaultProps = {
+  transparent: "",
+};
 export default NavBar;

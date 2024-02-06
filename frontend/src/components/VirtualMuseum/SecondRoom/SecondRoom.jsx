@@ -1,34 +1,55 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import arrow from "../../../assets/arrow.png";
 import "./SecondRoom.scss";
-import { useGlobalContext } from "../../Context/GlobalContextProvider";
 import Artwork from "../Artwork";
+import AnimationButton from "../AnimationButton";
+import { useGlobalContext } from "../../Context/GlobalContextProvider";
 
 function SecondRoom() {
-  const { ArtworksSecondRoom } = useGlobalContext();
+  const {
+    secondRoomButtonInformations,
+    secondRoomClasses,
+    secondRoomThumnailClasses,
+  } = useGlobalContext();
+  const { artworks } = useLoaderData();
+  const artworksSecondRoom = artworks.slice(6, 12);
+  artworksSecondRoom.forEach((e, index) => {
+    e.classNameArtwork = secondRoomClasses[index];
+    e.classNameThumbnail = secondRoomThumnailClasses[index];
+  });
+
   return (
     <main className="secondRoom">
-      {ArtworksSecondRoom.map((e) => (
+      {artworksSecondRoom.map((e) => (
         <Artwork
           key={e.id}
-          img={e.img}
+          img={e.source}
           classNameArtwork={e.classNameArtwork}
           classNameThumbnail={e.classNameThumbnail}
-          painter={e.painter}
-          date={e.date}
-          information={e.information}
+          painter={e.user_id_ar}
+          date={e.artwork_year}
+          technique={e.technique}
+          format={e.format}
           title={e.title}
-          description={e.description}
+          description={e.alt}
+          id={e.id}
         />
       ))}
       <Link to="/VirtualMuseumFirstRoom">
         <img
           src={arrow}
-          alt="flèche pour passer dans la première salle du musée"
+          alt="flèche pour passer dans la première salle du musée virtuel"
           className="moveOnTheFirstRoom"
-          aria-label="flèche pour aller dans la première salle du musée virtuel"
         />
       </Link>
+      {secondRoomButtonInformations.map((e) => (
+        <AnimationButton
+          key={e.id}
+          url={e.url}
+          className={e.className}
+          animationClassName={e.animationClassName}
+        />
+      ))}
     </main>
   );
 }
