@@ -14,9 +14,22 @@
 
 .favoriteArtworkContainer {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+.favoriteList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  align-items: center;
+  margin: 2%;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .favoriteTitle {
@@ -24,6 +37,11 @@
   text-align: center;
   font-family: $fontBold;
   font-size: 1.5rem;
+}
+
+.favoriteItem {
+  width: 50%;
+  text-align: center;
 }
 
 .favoriteArtwork {
