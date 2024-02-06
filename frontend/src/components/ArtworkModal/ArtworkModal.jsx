@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useLoaderData } from "react-router-dom";
 import * as Dialog from "@radix-ui/react-dialog";
 import "./artworkModal.scss";
+import { useEffect, useState } from "react";
 import LikeFunction from "../LikeFunction/LikeFunction";
 import { useGlobalContext } from "../Context/GlobalContextProvider";
 
@@ -10,6 +11,7 @@ function ArtworkModal({ id, page, className }) {
   const { userProfil } = useGlobalContext();
   const artwork = artworks.find((e) => e.id === id);
   const artist = artists.find((e) => e.id === artwork.user_id_ar);
+  const [anecdote, setAnecdote] = useState(null);
   const triggers = {
     gallery: (
       <button type="button" aria-label={artwork.alt} className="trigger">
@@ -43,6 +45,14 @@ function ArtworkModal({ id, page, className }) {
     ),
   };
 
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/artwork/${id}/anecdote`)
+      .then((response) => response.json())
+      .then((data) => {
+        setAnecdote(data);
+      });
+  }, []);
+
   return (
     artworks && (
       <Dialog.Root>
@@ -73,6 +83,9 @@ function ArtworkModal({ id, page, className }) {
                   {artwork.title}
                 </Dialog.Title>
                 <Dialog.Description className="modal__content__info__details">{`${artwork.artwork_year} - ${artwork.technique} - ${artwork.format}`}</Dialog.Description>
+                {anecdote &&
+                  anecdote.length > 0 &&
+                  anecdote.map((e) => <p key={e.id}>{e.fact}</p>)}
               </figcaption>
               <cite className="modal__content__info__artist">
                 {`${artist.firstname} ${artist.lastname}`}
