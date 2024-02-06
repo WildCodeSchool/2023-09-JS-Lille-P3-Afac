@@ -6,7 +6,7 @@
   position: absolute;
   bottom: 37%;
   left: 15%;
-  width: 25%;
+  width: 20%;
   filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
   &:hover {
     animation: shake 2s ease 0s 1 alternate forwards;
@@ -28,7 +28,7 @@
   height: 5%;
   width: 5%;
   font-size: 0.1rem;
-  left: 42%;
+  left: 37%;
   bottom: 49%;
   line-height: 0;
   filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 0.4));
@@ -55,8 +55,8 @@
     cursor: pointer;
   }
   @media screen and (min-width: 1100px) {
-    bottom: 43%;
-    width: 25%;
+    bottom: 32%;
+    width: 22%;
   }
 }
 

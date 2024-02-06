@@ -26,6 +26,8 @@
   padding: 0;
   align-items: center;
   margin: 2%;
+  gap: 2rem;
+  justify-content: center;
   @media screen and (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -40,7 +42,7 @@
 }
 
 .favoriteItem {
-  width: 50%;
+  width: 40%;
   text-align: center;
 }
 

@@ -74,14 +74,16 @@ function ArtworkModal({ id, page, className }) {
             />
             <figure className="modal__content__info">
               <figcaption className="modalLikeButton">
-                {userProfil && (
-                  <Dialog.Close asChild>
-                    <LikeFunction className="artworkCardLikeButton" id={id} />
-                  </Dialog.Close>
-                )}
-                <Dialog.Title className="modal__content__info__title">
-                  {artwork.title}
-                </Dialog.Title>
+                <section className="likeTitleContainer">
+                  {userProfil && (
+                    <Dialog.Close asChild>
+                      <LikeFunction className="artworkCardLikeButton" id={id} />
+                    </Dialog.Close>
+                  )}
+                  <Dialog.Title className="modal__content__info__title">
+                    {artwork.title}
+                  </Dialog.Title>
+                </section>
                 <Dialog.Description className="modal__content__info__details">{`${artwork.artwork_year} - ${artwork.technique} - ${artwork.format}`}</Dialog.Description>
                 {anecdote &&
                   anecdote.length > 0 &&
