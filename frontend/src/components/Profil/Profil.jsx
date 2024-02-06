@@ -41,7 +41,7 @@ function Profil() {
         <ul className="favoriteList">
           {favoriteArtwork &&
             favoriteArtwork.map((e) => (
-              <li className="favoriteItem" key={e.li}>
+              <li className="favoriteItem" key={e.id}>
                 <ArtworkModal id={e.artwork_id} page="artistModal" />
               </li>
             ))}
