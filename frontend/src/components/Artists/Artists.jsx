@@ -7,9 +7,12 @@ function Artists() {
   return (
     artists && (
       <main className="artistsContainer">
-        {artists.map((e) => (
-          <ArtistCard key={e.id} id={e.id} />
-        ))}
+        <h1 className="artistTitle">Nos artistes</h1>
+        <section className="artistBox">
+          {artists.map((e) => (
+            <ArtistCard key={e.id} id={e.id} />
+          ))}
+        </section>
       </main>
     )
   );

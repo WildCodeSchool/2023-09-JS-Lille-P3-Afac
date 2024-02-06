@@ -344,13 +344,14 @@
   cursor: pointer;
   width: 0rem;
   @media screen and (min-height: 400px) {
-    bottom: 15%;
+    bottom: 13%;
   }
   @media screen and (min-height: 600px) {
     bottom: 17%;
   }
   @media screen and (min-height: 800px) {
-    bottom: 18%;
+    bottom: 14%;
+    font-size: 12rem;
   }
 }
 .zoomFront {
@@ -383,13 +384,14 @@
   cursor: pointer;
   width: 0rem;
   @media screen and (min-height: 400px) {
-    bottom: 12%;
+    bottom: 8%;
   }
   @media screen and (min-height: 600px) {
     bottom: 13%;
   }
   @media screen and (min-height: 800px) {
-    bottom: 14%;
+    bottom: 10%;
+    font-size: 12rem;
   }
 }
 .zoomOnRight {
@@ -428,6 +430,7 @@
   }
   @media screen and (min-height: 800px) {
     bottom: 10%;
+    font-size: 12rem;
   }
 }
 .zoomOnLeft {
