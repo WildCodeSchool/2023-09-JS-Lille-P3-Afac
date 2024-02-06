@@ -72,7 +72,7 @@ const seed = async () => {
       )
     );
 
-    for (let i = 1; i < 7; i += 1) {
+    for (let i = 1; i < 14; i += 1) {
       const rand = Math.floor(Math.min(Math.random() * 10 + 1, 3));
       for (let j = 0; j < rand; j += 1) {
         queries.push(

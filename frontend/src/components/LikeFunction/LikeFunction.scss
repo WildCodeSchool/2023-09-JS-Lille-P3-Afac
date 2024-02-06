@@ -18,7 +18,9 @@
 .artworkCardLikeButton {
   all: unset;
   display: block;
-  position: absolute;
-  bottom: 32%;
-  left: -1%;
+}
+
+.likeTitleContainer {
+  display: flex;
+  align-items: center;
 }
