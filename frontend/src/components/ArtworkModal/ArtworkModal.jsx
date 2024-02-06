@@ -50,7 +50,6 @@ function ArtworkModal({ id, page, className }) {
       .then((response) => response.json())
       .then((data) => {
         setAnecdote(data);
-        console.info(data);
       });
   }, []);
 
