@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState, useEffect } from "react";
+import { createContext, useContext, useMemo, useState } from "react";
 import PropTypes from "prop-types";
 
 const GlobalContext = createContext();
@@ -198,16 +198,6 @@ function GlobalContextProvider({ children }) {
     },
   ];
 
-  const [users, setUsers] = useState();
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user`)
-      .then((response) => response.json())
-      .then((data) => {
-        setUsers(data);
-      })
-      .catch((err) => console.error(err));
-  }, []);
-
   const [userProfil, setUserProfil] = useState(null);
 
   const [favorites, setFavorites] = useState(null);
@@ -235,8 +225,6 @@ function GlobalContextProvider({ children }) {
       secondRoomButtonInformations,
       category,
       homeText,
-      users,
-      setUsers,
       userProfil,
       setUserProfil,
       favorites,
@@ -251,8 +239,6 @@ function GlobalContextProvider({ children }) {
     secondRoomButtonInformations,
     category,
     homeText,
-    users,
-    setUsers,
     userProfil,
     setUserProfil,
     favorites,

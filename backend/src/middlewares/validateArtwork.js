@@ -21,7 +21,7 @@ const validateArtwork = (req, res, next) => {
   );
 
   if (error) {
-    res.status(404).json({ validationErrors: error.details });
+    res.status(400).json({ validationErrors: error.details });
   } else {
     if (!req.file) {
       return res.status(400).send("No file uploaded.");
