@@ -23,18 +23,20 @@ const validateArtist = require("./middlewares/validateArtist");
 const validatePassword = require("./middlewares/validatePassword");
 const uploadImage = require("./middlewares/uploadImage");
 
+const verifyEmail = require("./middlewares/verifyEmail");
+
 router.get("/user/:id", userControllers.getUserById);
 router.get("/user", userControllers.getUsers);
 router.post(
   "/user",
-  userControllers.verifyEmail,
+  verifyEmail.verifyEmail,
   validateUser,
   hashPassword,
   userControllers.addUser
 );
 router.post(
   "/user/login",
-  userControllers.getByMail,
+  verifyEmail.getByMail,
   validatePassword,
   userControllers.userLogin
 );

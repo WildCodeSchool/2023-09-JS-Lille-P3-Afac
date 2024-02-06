@@ -10,7 +10,7 @@ const validateUpdateAnecdote = (req, res, next) => {
   const { error } = factSchema.validate({ fact }, { abortEarly: false });
 
   if (error) {
-    res.status(422).json({ validationErrors: error.details });
+    res.status(400).json({ validationErrors: error.details });
   } else {
     next();
   }

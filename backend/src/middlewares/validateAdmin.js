@@ -9,7 +9,7 @@ const validateAdmin = (req, res, next) => {
   const { error } = adminSchema.validate({ adminId }, { abortEarly: false });
 
   if (error) {
-    res.status(422).json({ validationErrors: error.details });
+    res.status(403).json({ validationErrors: error.details });
   } else {
     next();
   }

@@ -15,7 +15,7 @@ const validateAnecdote = (req, res, next) => {
   );
 
   if (error) {
-    res.status(404).json({ validationErrors: error.details });
+    res.status(400).json({ validationErrors: error.details });
   } else {
     next();
   }

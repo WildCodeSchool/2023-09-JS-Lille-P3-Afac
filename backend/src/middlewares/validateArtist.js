@@ -15,7 +15,7 @@ const validateArtist = (req, res, next) => {
   );
 
   if (error) {
-    res.status(422).json({ validationErrors: error.details });
+    res.status(400).json({ validationErrors: error.details });
   } else {
     next();
   }

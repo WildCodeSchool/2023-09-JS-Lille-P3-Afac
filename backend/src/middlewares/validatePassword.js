@@ -19,7 +19,7 @@ const validatePassword = async (req, res, next) => {
     res.cookie("access_token", token, { httpOnly: true });
     next();
   } else {
-    res.status(400).send("Invalid Password");
+    res.status(404).send("Invalid Password");
   }
 };
 
